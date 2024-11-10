@@ -20,7 +20,7 @@
 
       <h2>Available Packages:</h2>
 
-      <h3>EvolveCORE (Foundation)</h3>
+      <h3>EvolveCORE (Foundation / Prerelease)</h3>
       <ul>
         <li><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
         <li><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
@@ -29,7 +29,7 @@
         <li><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
       </ul>
 
-      <h3>EvolveAPI (Optional)</h3>
+      <h3>EvolveAPI (Optional / Prerelease)</h3>
       <ul>
         <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
         <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
@@ -38,7 +38,7 @@
         <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
       </ul>
 
-      <h3>EvolveUI (Optional)</h3>
+      <h3>EvolveUI (Optional / Prerelease)</h3>
       <ul>
         <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
         <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
