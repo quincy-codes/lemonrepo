@@ -1,7 +1,7 @@
 <template>
   <div id="faq" class="py-24 px-4 relative">
     <div class="relative max-w-6xl mx-auto">
-      <div class="mb-16">
+      <div class="mb-16 text-center ">
         <h2
           class="text-center max-w-2xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
         >
