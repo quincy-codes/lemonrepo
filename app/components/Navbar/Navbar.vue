@@ -11,16 +11,8 @@
         <NavbarWhatsNew />
       </div>
       <div class="hidden items-center gap-2 sm:flex">
-        <UButton
-          to="https://demo.supersaas.dev"
-          external
-          target="_blank"
-          variant="ghost"
-          color="gray"
-          >Demo</UButton
-        >
-        <UButton to="/#faq" variant="ghost" color="gray">FAQ</UButton>
-        <UButton to="/#" variant="ghost" color="gray">Docs</UButton>
+<!--        <UButton to="/#faq" variant="ghost" color="gray">FAQ</UButton>-->
+<!--        <UButton to="/#" variant="ghost" color="gray">Docs</UButton>-->
         <ScriptLemonSqueezy class="w-full block">
           <UButton
             :ui="{ rounded: 'rounded-full' }"
@@ -28,13 +20,13 @@
             :to="productUrl"
             class="shiny-button px-6 py-2"
           >
-            Buy now for $149
+            Buy now for $109.99
           </UButton>
         </ScriptLemonSqueezy>
       </div>
       <div class="sm:hidden flex items-center gap-2">
         <ScriptLemonSqueezy class="w-full block">
-          <UButton label="Buy Now for $149" color="black" :to="productUrl" />
+          <UButton label="Buy Now for $109.99" color="black" :to="productUrl" />
         </ScriptLemonSqueezy>
         <button
           aria-label="Toggle menu"
@@ -58,29 +50,20 @@
       v-show="mobileMenu"
     >
       <div class="flex flex-col gap-4 p-4">
-        <UButton
-          to="/#faq"
-          @click="toggleMobileMenu"
-          variant="ghost"
-          color="gray"
-          >Faq</UButton
-        >
-        <UButton
-          to="https://demo.supersaas.dev"
-          external
-          target="_blank"
-          @click="toggleMobileMenu"
-          variant="ghost"
-          color="gray"
-          >Demo</UButton
-        >
-        <UButton
-          to="/#docs"
-          @click="toggleMobileMenu"
-          variant="ghost"
-          color="gray"
-          >Docs</UButton
-        >
+<!--        <UButton-->
+<!--          to="/#faq"-->
+<!--          @click="toggleMobileMenu"-->
+<!--          variant="ghost"-->
+<!--          color="gray"-->
+<!--          >Faq</UButton-->
+<!--        >-->
+<!--        <UButton-->
+<!--          to="/#docs"-->
+<!--          @click="toggleMobileMenu"-->
+<!--          variant="ghost"-->
+<!--          color="gray"-->
+<!--          >Docs</UButton-->
+<!--        >-->
       </div>
     </div>
   </header>
