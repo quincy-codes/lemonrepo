@@ -1,7 +1,7 @@
 <template>
   <main>
     <HomeHero :count="count" />
-    <HomeVideoIntro />
+<!--    <HomeVideoIntro />-->
     <HomeStickyFeatures />
 <!--    <HomeMoreFeatures />-->
 <!--    <HomeGithubChangelog />-->

@@ -1,6 +1,6 @@
 <template>
   <div
-    ref="stickySectionsContainer"
+<!--    ref="stickySectionsContainer"-->
     class="max-w-6xl mx-auto lg:min-h-[var(--stick-items)] px-5 relative"
   >
     <div
