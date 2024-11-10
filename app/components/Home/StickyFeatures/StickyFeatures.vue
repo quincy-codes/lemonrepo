@@ -105,12 +105,12 @@
 </template>
 
 <script setup>
-const stickySectionsContainer = ref(null);
+// const stickySectionsContainer = ref(null);
 
 onMounted(() => {
-  const stickySectionsInstance = new StickySections(
-    stickySectionsContainer.value
-  );
+  // const stickySectionsInstance = new StickySections(
+  //   stickySectionsContainer.value
+  // );
   window.addEventListener("scroll", stickySectionsInstance.onScroll);
 
   onBeforeUnmount(() => {
