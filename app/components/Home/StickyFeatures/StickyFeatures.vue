@@ -11,7 +11,7 @@
 <!--      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-[var(&#45;&#45;stick-items)] lg:-translate-x-1/2 mb-8 lg:mb-0"-->
 <!--    >-->
     <div
-      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-[var(--stick-items)] lg:-translate-x-1/2 mb-8 lg:mb-0"-->
+        class="static top-8 translate-x-0 lg:min-h-[var(--stick-items)] mb-8 lg:mb-0">
        >
             <h2
               class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
@@ -30,7 +30,7 @@
             >Available Packages:</h2>
 
             <h3
-                class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+                class="mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveCORE (Foundation / Prerelease)</h3>
             <ul>
               <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
@@ -41,7 +41,7 @@
             </ul>
 
             <h3
-                class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+                class="mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveAPI (Optional / Prerelease)</h3>
             <ul>
               <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
@@ -52,7 +52,7 @@
             </ul>
 
             <h3
-                class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+                class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveUI (Optional / Prerelease)</h3>
             <ul>
               <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
