@@ -9,59 +9,95 @@
       <h2
         class="mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
       >
-        Lemonrepo has everything you need to build a SaaS
+        Unlock Boundless Development Magic
       </h2>
-      <p class="mx-auto mt-4 max-w-xl text-gray-600 text-2xl">
-        Made to launch without the headache.
+      <p>
+        Experience the limitless potential of Evolve, a suite of Laravel packages that bring agile CRUD operations, effortless API endpoints,
+        and an elegant user interface to your applications. EvolveCORE is the essential guide, built to empower your app with rich features like
+        model-defined validation, infinitely nested filtering, and event-driven hooks. With the optional EvolveAPI and EvolveUI packages, bring
+        added realms of interactivity and RESTful accessibility to your projects.
+      </p>
+
+      <h2>Available Packages:</h2>
+
+      <h3>EvolveCORE (Foundation)</h3>
+      <ul>
+        <li><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
+        <li><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
+        <li><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
+        <li><strong>Role-Based Permissions</strong>: Integrates with Spatie Permissions, registering policies dynamically based on model configuration.</li>
+        <li><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
+      </ul>
+
+      <h3>EvolveAPI (Optional)</h3>
+      <ul>
+        <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
+        <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
+        <li><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
+        <li><strong>Role-Based Access Control</strong>: Automatically enforces evolveCORE permissions on each request.</li>
+        <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
+      </ul>
+
+      <h3>EvolveUI (Optional)</h3>
+      <ul>
+        <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
+        <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
+        <li><strong>DaisyUI Styling</strong>: Consistent styling across all components, with Jetstream compatibility.</li>
+        <li><strong>Model-Defined Fields</strong>: Respects searchable, sortable, and filterable fields defined in each model’s configuration.</li>
+      </ul>
+
+      <p>
+        Each package is built to be flexible, allowing you to expand functionality as your application grows.
+        Transform your app with Evolve's effortless customization, bringing agile and powerful development tools to your fingertips.
       </p>
     </div>
-    <div class="lg:sticky lg:top-0 lg:h-screen space-y-12 lg:space-y-0">
-      <HomeStickyFeaturesSection
-        title="Authentication"
-        heading="Easy Login and User Management"
-        description="We're all famililar with the pain of writing auth logic and the amount of use cases that come with it. I wanted to make it stupid simple and easy to use."
-      >
-        <HomeStickyFeaturesVideo
-          src="https://essentials.supersaas.dev/essentials_passkeys.mp4"
-        />
-      </HomeStickyFeaturesSection>
-      <HomeStickyFeaturesSection
-        title="Payments"
-        heading="Simple Billing Management"
-        description="Supports Stripe and Lemonsqueezy with a simple and easy to use unified composable."
-      >
-        <HomeStickyFeaturesVideo
-          src="https://essentials.supersaas.dev/essentials_posts-subs.mp4"
-        />
-      </HomeStickyFeaturesSection>
-      <HomeStickyFeaturesSection
-        title="Profile Settings"
-        heading="Let users update their profile info"
-        description="A simple way for users to manage and update their profile settings. It's not just functions, it looks beautiful."
-      >
-        <HomeStickyFeaturesVideo
-          src="https://essentials.supersaas.dev/essentials_settings.mp4"
-        />
-      </HomeStickyFeaturesSection>
-      <HomeStickyFeaturesSection
-        title="File Storage"
-        heading="Supports S3, Local file storage and NuxtHub"
-        description="A unified composable for file storage with demos for Client Upload, Server upload and more."
-      >
-        <HomeStickyFeaturesVideo
-          src="https://essentials.supersaas.dev/essentials_file-storage.mp4"
-        />
-      </HomeStickyFeaturesSection>
-      <HomeStickyFeaturesSection
-        title="Admin"
-        heading="A beautiful admin panel"
-        description="Manage users, ban users, manage subscriptions. View waitlist submissions. View all your transactions from Stripe or Lemonsqueezy. All in one place"
-      >
-        <HomeStickyFeaturesVideo
-          src="https://essentials.supersaas.dev/essentials_admin.mp4"
-        />
-      </HomeStickyFeaturesSection>
-    </div>
+<!--    <div class="lg:sticky lg:top-0 lg:h-screen space-y-12 lg:space-y-0">-->
+<!--      <HomeStickyFeaturesSection-->
+<!--        title="Authentication"-->
+<!--        heading="Easy Login and User Management"-->
+<!--        description="We're all famililar with the pain of writing auth logic and the amount of use cases that come with it. I wanted to make it stupid simple and easy to use."-->
+<!--      >-->
+<!--        <HomeStickyFeaturesVideo-->
+<!--          src="https://essentials.supersaas.dev/essentials_passkeys.mp4"-->
+<!--        />-->
+<!--      </HomeStickyFeaturesSection>-->
+<!--      <HomeStickyFeaturesSection-->
+<!--        title="Payments"-->
+<!--        heading="Simple Billing Management"-->
+<!--        description="Supports Stripe and Lemonsqueezy with a simple and easy to use unified composable."-->
+<!--      >-->
+<!--        <HomeStickyFeaturesVideo-->
+<!--          src="https://essentials.supersaas.dev/essentials_posts-subs.mp4"-->
+<!--        />-->
+<!--      </HomeStickyFeaturesSection>-->
+<!--      <HomeStickyFeaturesSection-->
+<!--        title="Profile Settings"-->
+<!--        heading="Let users update their profile info"-->
+<!--        description="A simple way for users to manage and update their profile settings. It's not just functions, it looks beautiful."-->
+<!--      >-->
+<!--        <HomeStickyFeaturesVideo-->
+<!--          src="https://essentials.supersaas.dev/essentials_settings.mp4"-->
+<!--        />-->
+<!--      </HomeStickyFeaturesSection>-->
+<!--      <HomeStickyFeaturesSection-->
+<!--        title="File Storage"-->
+<!--        heading="Supports S3, Local file storage and NuxtHub"-->
+<!--        description="A unified composable for file storage with demos for Client Upload, Server upload and more."-->
+<!--      >-->
+<!--        <HomeStickyFeaturesVideo-->
+<!--          src="https://essentials.supersaas.dev/essentials_file-storage.mp4"-->
+<!--        />-->
+<!--      </HomeStickyFeaturesSection>-->
+<!--      <HomeStickyFeaturesSection-->
+<!--        title="Admin"-->
+<!--        heading="A beautiful admin panel"-->
+<!--        description="Manage users, ban users, manage subscriptions. View waitlist submissions. View all your transactions from Stripe or Lemonsqueezy. All in one place"-->
+<!--      >-->
+<!--        <HomeStickyFeaturesVideo-->
+<!--          src="https://essentials.supersaas.dev/essentials_admin.mp4"-->
+<!--        />-->
+<!--      </HomeStickyFeaturesSection>-->
+<!--    </div>-->
   </div>
 </template>
 

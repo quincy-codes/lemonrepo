@@ -5,8 +5,7 @@
     >
       <div class="flex items-center gap-5">
         <NuxtLink to="/" class="flex items-center gap-2">
-          <Logo class="h-8 w-auto" role="img" alt="Lemonrepo logo" />
-          <p class="font-bold tracking-tight">Lemonrepo</p>
+          <p class="font-bold tracking-tight">Think Neverland : Evolve</p>
         </NuxtLink>
         <NavbarWhatsNew />
       </div>
@@ -20,13 +19,13 @@
             :to="productUrl"
             class="shiny-button px-6 py-2"
           >
-            Buy now for $109.99
+            Subscribe now for $109.99
           </UButton>
         </ScriptLemonSqueezy>
       </div>
       <div class="sm:hidden flex items-center gap-2">
         <ScriptLemonSqueezy class="w-full block">
-          <UButton label="Buy Now for $109.99" color="black" :to="productUrl" />
+          <UButton label="Subscribe Now for $109.99" color="black" :to="productUrl" />
         </ScriptLemonSqueezy>
         <button
           aria-label="Toggle menu"
