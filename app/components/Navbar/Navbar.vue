@@ -49,13 +49,13 @@
       v-show="mobileMenu"
     >
       <div class="flex flex-col gap-4 p-4">
-<!--        <UButton-->
-<!--          to="/#faq"-->
-<!--          @click="toggleMobileMenu"-->
-<!--          variant="ghost"-->
-<!--          color="gray"-->
-<!--          >Faq</UButton-->
-<!--        >-->
+        <UButton
+          to="/#faq"
+          @click="toggleMobileMenu"
+          variant="ghost"
+          color="gray"
+          >Faq</UButton
+        >
 <!--        <UButton-->
 <!--          to="/#docs"-->
 <!--          @click="toggleMobileMenu"-->

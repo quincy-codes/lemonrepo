@@ -3,9 +3,9 @@
     <HomeHero :count="count" />
     <HomeVideoIntro />
     <HomeStickyFeatures />
-    <HomeMoreFeatures />
+<!--    <HomeMoreFeatures />-->
     <HomeGithubChangelog />
-    <HomeTestimonials />
+<!--    <HomeTestimonials />-->
     <HomeFaq />
   </main>
 </template>

@@ -14,11 +14,11 @@
             class="underline"
             :padded="false"
             color="gray"
-            @click="copy('fayaz@supersaas.dev')"
+            @click="copy('hello@thinkneverland.com')"
           >
-            {{ copied ? "Copied to clipboard" : "fayaz@supersaas.dev" }}
+            {{ copied ? "Copied to clipboard" : "hello@thinkneverland.com" }}
           </button>
-          I'm happy to help!
+          We're happy to help!
         </p>
       </div>
       <UAccordion
@@ -39,61 +39,64 @@ const { copy, copied } = useClipboard();
 
 const items = [
   {
-    label: "Can I try this product for free?",
+    label: "What is Evolve?",
     content:
-      "You can can try the demo, you can also check the docs for videos and tutorials, where I explain the product in detail.",
+        "Evolve is a modular Laravel package suite designed to provide powerful, customizable CRUD operations, RESTful API endpoints, and a Livewire-based user interface. Evolve is split into three packages—evolveCORE, evolveAPI, and evolveUI—so you can tailor it to your app’s needs.",
   },
   {
-    label: "What does Lifetime access mean?",
+    label: "What are the three packages?",
     content:
-      "You get access to all the updates and releases that I push to the project. You can also raise issues and feature requests on GitHub.",
+        "Evolve consists of three packages: evolveCORE, evolveAPI, and evolveUI. evolveCORE is the foundational package that provides core CRUD functionality, evolveAPI adds RESTful endpoints for CRUD actions, and evolveUI provides a Livewire-powered user interface. EvolveAPI and EvolveUI are optional extensions.",
   },
   {
-    label: "Javascript or Typescript?",
+    label: "What features are provided by each package?",
     content:
-      "Lemonrepo is made with Javascript, but some utilities are written in Typescript.",
+        "evolveCORE: Model-defined configuration, dynamic filtering and sorting, permissions, event hooks, and validation.\n\nevolveAPI: API routes with standardized JSON responses, batch operations, and optional Swagger documentation.\n\nevolveUI: A responsive UI with searchable, filterable, and sortable fields, along with a role-based dynamic menu.",
   },
   {
-    label: "What's the tech stack?",
+    label: "How do I install the packages?",
     content:
-      "Lemonrepo is made with Nuxt 3 the fullstack framework, Tailwind CSS for CSS, Nuxt Auth Utils for authentication, Drizzle ORM for database, AWS S3, Nuxthub Blob and Local Storage for file storage, Stripe and Lemonsqueezy for payments, Resend, Sendgrid, Postmark, Plunk for emails, and more.",
+        "Each package can be installed individually via Composer. Start with evolveCORE as the base package, and add evolveAPI and/or evolveUI as needed for additional API or UI functionality.",
   },
   {
-    label: "What happens after I purchase a template?",
+    label: "Can I customize fields, filters, and permissions?",
     content:
-      "After you purchase the template, you will be invited to the respective github repository. You can then fork the repository and start building your project.",
+        "Yes! In evolveCORE, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
   },
   {
-    label: "Do you offer refunds?",
+    label: "How do CRUD event hooks work?",
     content:
-      "Unfortunately due to the nature of this product, where you get complete access to the codebase, and I have no way to verify if you have used it, I cannot offer refunds.",
+        "Hooks like `beforeCreate` and `afterUpdate` are defined directly in controllers named after each model, allowing you to insert custom logic at different stages of CRUD operations.",
   },
   {
-    label:
-      "I did not like the product, and I haven't used it. Can I get a refund?",
+    label: "How does filtering work with nested relationships?",
     content:
-      "I strongly recommend reaching out to me in case you have doubts about Lemonrepo, I will gladly give you an entire tour of the procuct and how to use it. I can also help you with any questions you have. This way you can decide if you want to purchase the product or not.",
+        "Evolve’s filtering supports infinitely nested relationships using dot notation (e.g., `department.manager.name`). You can define filterable relationships and fields within each model.",
   },
   {
-    label: "Can I use Lemonrepo for open source projects?",
-    content: "No, this will break the license, I hope you understand.",
-  },
-  {
-    label: "Can I use Lemonrepo for client projects?",
-    content: "Yes you can, use it for as many projects as you like.",
-  },
-  {
-    label: "Can I use Lemonrepo for commercial projects?",
-    content: "Yes you can, Lemonrepo was made for this very purpose.",
-  },
-  {
-    label: "Can I resell this product?",
-    content: "Absolutely not, please read the license for more details.",
-  },
-  {
-    label: "Do you offer technical support?",
+    label: "Is EvolveUI dependent on EvolveAPI?",
     content:
-      "Yes, as long as it's related to the template codebase. I cannot help with your business logic or customizations that you may have made.",
+        "No, evolveUI only requires evolveCORE. You can use evolveUI without evolveAPI if you only need a UI for CRUD operations without API endpoints.",
+  },
+  {
+    label: "What optional packages are supported?",
+    content:
+        "Evolve integrates with Spatie Permissions for role-based access, DaisyUI for styling, and Swagger for API documentation (optional with evolveAPI).",
+  },
+  {
+    label: "Where can I find API documentation for evolveAPI?",
+    content:
+        "If Swagger is installed, API documentation is generated automatically and can be accessed at `/api/documentation`.",
+  },
+  {
+    label: "Is Evolve suitable for large applications?",
+    content:
+        "Yes, Evolve is designed to scale. Its modular design and configuration-based control make it suitable for both small projects and large applications with complex relationships and access requirements.",
+  },
+  {
+    label: "Can I use Evolve with my existing models?",
+    content:
+        "Absolutely. Simply add the EvolveModelInterface and EvolveTrait to your models, and they’ll be ready to interact with the evolve ecosystem, inheriting configuration and CRUD capabilities.",
   },
 ];
 </script>

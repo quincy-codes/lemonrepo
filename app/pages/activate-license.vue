@@ -67,10 +67,10 @@
             variant="ghost"
             color="gray"
             block
-            @click="copy('fayaz@supersaas.dev')"
+            @click="copy('hello@thinkneverland.com')"
             class="text-gray-400 font-normal"
           >
-            {{ copied ? "Copied to clipboard" : "help@supersaas.dev" }}
+            {{ copied ? "Copied to clipboard" : "copy('hello@thinkneverland.com" }}
           </UButton>
           <UDivider
             orientation="vertical"

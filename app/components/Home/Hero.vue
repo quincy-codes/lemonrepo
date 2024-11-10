@@ -4,13 +4,14 @@
     <h1
       class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto"
     >
-      Your site will change why shouldn't your
+      Things will change why shouldn't your
       <span
         class="inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden"
       >
         <ul
           class="block text-left leading-tight [&_li]:block animate-text-slide-5"
         >
+          <li>APP</li>
           <li>API</li>
           <li>Docs</li>
           <li>UI</li>
@@ -23,7 +24,7 @@
         class="max-w-max mx-auto rounded-xl bg-gray-100 ring-4 ring-gray-500/10 border p-1 space-y-2"
       >
         <BuyButton
-          label="Buy Now for $149"
+          label="Buy Now for $109.99"
           class="flex items-center justify-center w-full"
           size="md"
           rounded="lg"
@@ -35,6 +36,8 @@
 </template>
 
 <script setup>
+import Logo from "../Logo.vue";
+
 defineProps({
   count: {
     type: Number,

@@ -7,7 +7,7 @@
       class="text-center static lg:absolute top-8 left-1/2 translate-x-0 lg:-translate-x-1/2 mb-8 lg:mb-0"
     >
       <h2
-        class="mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
+        class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
       >
         Unlock Boundless Development Magic
       </h2>

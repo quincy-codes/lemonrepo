@@ -7,28 +7,28 @@
           <div>
             <div class="flex items-center gap-2 text-white">
               <Logo class="h-7 w-auto" />
-              <p>Lemonrepo</p>
+              <p>Think Never Land : Evolve</p>
             </div>
             <p class="text-white text-sm mt-4">
-              The No Nonsense AI SaaS Starter Kit.
+              Laravel Apps Evolved
             </p>
           </div>
           <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-white">
-                  Features
-                </h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li v-for="item in navigation.features" :key="item.name">
-                    <NuxtLink
-                      :href="item.href"
-                      class="text-sm leading-6 text-gray-300 hover:text-white"
-                      >{{ item.name }}</NuxtLink
-                    >
-                  </li>
-                </ul>
-              </div>
+<!--              <div>-->
+<!--                <h3 class="text-sm font-semibold leading-6 text-white">-->
+<!--                  Features-->
+<!--                </h3>-->
+<!--                <ul role="list" class="mt-6 space-y-4">-->
+<!--                  <li v-for="item in navigation.features" :key="item.name">-->
+<!--                    <NuxtLink-->
+<!--                      :href="item.href"-->
+<!--                      class="text-sm leading-6 text-gray-300 hover:text-white"-->
+<!--                      >{{ item.name }}</NuxtLink-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
               <div class="mt-10 md:mt-0">
                 <h3 class="text-sm font-semibold leading-6 text-white">
                   Support
@@ -45,20 +45,20 @@
               </div>
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 class="text-sm font-semibold leading-6 text-white">
-                  Resources
-                </h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li v-for="item in navigation.resources" :key="item.name">
-                    <NuxtLink
-                      :href="item.href"
-                      class="text-sm leading-6 text-gray-300 hover:text-white"
-                      >{{ item.name }}</NuxtLink
-                    >
-                  </li>
-                </ul>
-              </div>
+<!--              <div>-->
+<!--                <h3 class="text-sm font-semibold leading-6 text-white">-->
+<!--                  Resources-->
+<!--                </h3>-->
+<!--                <ul role="list" class="mt-6 space-y-4">-->
+<!--                  <li v-for="item in navigation.resources" :key="item.name">-->
+<!--                    <NuxtLink-->
+<!--                      :href="item.href"-->
+<!--                      class="text-sm leading-6 text-gray-300 hover:text-white"-->
+<!--                      >{{ item.name }}</NuxtLink-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
               <div class="mt-10 md:mt-0">
                 <h3 class="text-sm font-semibold leading-6 text-white">
                   Legal
@@ -92,10 +92,10 @@ const navigation = {
   ],
   support: [
     { name: "Activate License", href: "/activate-license" },
-    { name: "Discord", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Email Us", href: "#" },
-    { name: "Telegram", href: "#" },
+    // { name: "Discord", href: "#" },
+    // { name: "Documentation", href: "#" },
+    // { name: "Email Us", href: "#" },
+    // { name: "Telegram", href: "#" },
   ],
   resources: [
     { name: "About", href: "#" },
