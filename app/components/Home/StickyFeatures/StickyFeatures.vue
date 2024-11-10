@@ -4,7 +4,8 @@
 <!--    class="max-w-6xl mx-auto lg:min-h-[var(&#45;&#45;stick-items)] px-5 relative"-->
 <!--  >-->
   <div
-      class="max-w-6xl mx-auto px-5 relative"
+      ref="stickySectionsContainer"
+      class="max-w-6xl mx-auto lg:min-h-[var(--stick-items)] px-5 relative"
   >
     <div
       class="static lg:absolute top-8 left-1/2 translate-x-0 lg:-translate-x-1/2 mb-8 lg:mb-0"
@@ -105,12 +106,12 @@
 </template>
 
 <script setup>
-// const stickySectionsContainer = ref(null);
+const stickySectionsContainer = ref(null);
 
 onMounted(() => {
-  // const stickySectionsInstance = new StickySections(
-  //   stickySectionsContainer.value
-  // );
+  const stickySectionsInstance = new StickySections(
+    stickySectionsContainer.value
+  );
   window.addEventListener("scroll", stickySectionsInstance.onScroll);
 
   onBeforeUnmount(() => {
