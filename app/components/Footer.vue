@@ -6,7 +6,7 @@
         <div class="xl:grid xl:grid-cols-3 xl:gap-12">
           <div>
             <div class="flex items-center gap-2 text-white">
-              <Logo class="h-7 w-auto" />
+              <Logo class="h-7 w-auto fill-white" />" />
               <p>Think Never Land : Evolve</p>
             </div>
             <p class="text-white text-sm mt-4">
