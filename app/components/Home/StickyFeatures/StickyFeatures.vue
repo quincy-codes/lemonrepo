@@ -4,7 +4,7 @@
     class="max-w-6xl mx-auto lg:min-h-[var(--stick-items)] px-5 relative"
   >
     <div
-      class="text-center static lg:absolute top-8 left-1/2 translate-x-0 lg:-translate-x-1/2 mb-8 lg:mb-0"
+      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:-translate-x-1/2 mb-8 lg:mb-0"
     >
       <h2
         class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"

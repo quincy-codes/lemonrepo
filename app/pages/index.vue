@@ -4,7 +4,7 @@
     <HomeVideoIntro />
     <HomeStickyFeatures />
 <!--    <HomeMoreFeatures />-->
-    <HomeGithubChangelog />
+<!--    <HomeGithubChangelog />-->
 <!--    <HomeTestimonials />-->
     <HomeFaq />
   </main>
