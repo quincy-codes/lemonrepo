@@ -11,7 +11,7 @@
       class="static lg:absolute top-8 left-1/2 translate-x-0 lg:-translate-x-1/2 mb-8 lg:mb-0"
     >
       <h2
-        class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
+        class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
       >
         Unlock Boundless Development Magic
       </h2>
@@ -22,18 +22,24 @@
         added realms of interactivity and RESTful accessibility to your projects.
       </p>
 
-      <h2>Available Packages:</h2>
+      <h2
+          class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+      >Available Packages:</h2>
 
-      <h3>EvolveCORE (Foundation / Prerelease)</h3>
+      <h3
+          class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+      >EvolveCORE (Foundation / Prerelease)</h3>
       <ul>
-        <li><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
-        <li><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
-        <li><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
-        <li><strong>Role-Based Permissions</strong>: Integrates with Spatie Permissions, registering policies dynamically based on model configuration.</li>
-        <li><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
+        <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
+        <li class="mb-2"><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
+        <li class="mb-2"><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
+        <li class="mb-2"><strong>Role-Based Permissions</strong>: Integrates with Spatie Permissions, registering policies dynamically based on model configuration.</li>
+        <li class="mb-2"><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
       </ul>
 
-      <h3>EvolveAPI (Optional / Prerelease)</h3>
+      <h3
+          class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+      >EvolveAPI (Optional / Prerelease)</h3>
       <ul>
         <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
         <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
@@ -42,7 +48,9 @@
         <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
       </ul>
 
-      <h3>EvolveUI (Optional / Prerelease)</h3>
+      <h3
+          class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+      >EvolveUI (Optional / Prerelease)</h3>
       <ul>
         <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
         <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
