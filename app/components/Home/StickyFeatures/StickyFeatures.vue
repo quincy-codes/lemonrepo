@@ -11,7 +11,7 @@
 <!--      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-[var(&#45;&#45;stick-items)] lg:-translate-x-1/2 mb-8 lg:mb-0"-->
 <!--    >-->
     <div
-   class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-1000 lg:-translate-x-1/2 mb-8">
+      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-[var(--stick-items)] lg:-translate-x-1/2 mb-8 lg:mb-0"-->
        >
             <h2
               class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
