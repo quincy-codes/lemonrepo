@@ -7,63 +7,66 @@
       ref="stickySectionsContainer"
       class="max-w-6xl mx-auto px-5 relative"
   >
+<!--    <div-->
+<!--      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-[var(&#45;&#45;stick-items)] lg:-translate-x-1/2 mb-8 lg:mb-0"-->
+<!--    >-->
     <div
-      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:-translate-x-1/2 mb-8 lg:mb-0"
-    >
-      <h2
-        class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
-      >
-        Unlock Boundless Development Magic
-      </h2>
-      <p>
-        Experience the limitless potential of Evolve, a suite of Laravel packages that bring agile CRUD operations, effortless API endpoints,
-        and an elegant user interface to your applications. EvolveCORE is the essential guide, built to empower your app with rich features like
-        model-defined validation, infinitely nested filtering, and event-driven hooks. With the optional EvolveAPI and EvolveUI packages, bring
-        added realms of interactivity and RESTful accessibility to your projects.
-      </p>
+      class="mt-8 left-1/2 lg:-translate-x-1/2 mb-8"
+       >
+            <h2
+              class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+            >
+              Unlock Boundless Development Magic
+            </h2>
+            <p>
+              Experience the limitless potential of Evolve, a suite of Laravel packages that bring agile CRUD operations, effortless API endpoints,
+              and an elegant user interface to your applications. EvolveCORE is the essential guide, built to empower your app with rich features like
+              model-defined validation, infinitely nested filtering, and event-driven hooks. With the optional EvolveAPI and EvolveUI packages, bring
+              added realms of interactivity and RESTful accessibility to your projects.
+            </p>
 
-      <h2
-          class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-8"
-      >Available Packages:</h2>
+            <h2
+                class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+            >Available Packages:</h2>
 
-      <h3
-          class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
-      >EvolveCORE (Foundation / Prerelease)</h3>
-      <ul>
-        <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
-        <li class="mb-2"><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
-        <li class="mb-2"><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
-        <li class="mb-2"><strong>Role-Based Permissions</strong>: Integrates with Spatie Permissions, registering policies dynamically based on model configuration.</li>
-        <li class="mb-2"><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
-      </ul>
+            <h3
+                class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+            >EvolveCORE (Foundation / Prerelease)</h3>
+            <ul>
+              <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
+              <li class="mb-2"><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
+              <li class="mb-2"><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
+              <li class="mb-2"><strong>Role-Based Permissions</strong>: Integrates with Spatie Permissions, registering policies dynamically based on model configuration.</li>
+              <li class="mb-2"><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
+            </ul>
 
-      <h3
-          class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
-      >EvolveAPI (Optional / Prerelease)</h3>
-      <ul>
-        <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
-        <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
-        <li><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
-        <li><strong>Role-Based Access Control</strong>: Automatically enforces evolveCORE permissions on each request.</li>
-        <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
-      </ul>
+            <h3
+                class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+            >EvolveAPI (Optional / Prerelease)</h3>
+            <ul>
+              <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
+              <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
+              <li><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
+              <li><strong>Role-Based Access Control</strong>: Automatically enforces evolveCORE permissions on each request.</li>
+              <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
+            </ul>
 
-      <h3
-          class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
-      >EvolveUI (Optional / Prerelease)</h3>
-      <ul>
-        <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
-        <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
-        <li><strong>DaisyUI Styling</strong>: Consistent styling across all components, with Jetstream compatibility.</li>
-        <li><strong>Model-Defined Fields</strong>: Respects searchable, sortable, and filterable fields defined in each model’s configuration.</li>
-      </ul>
+            <h3
+                class="text-center mx-auto max-w-xl text-1xl sm:text-1xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+            >EvolveUI (Optional / Prerelease)</h3>
+            <ul>
+              <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
+              <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
+              <li><strong>DaisyUI Styling</strong>: Consistent styling across all components, with Jetstream compatibility.</li>
+              <li><strong>Model-Defined Fields</strong>: Respects searchable, sortable, and filterable fields defined in each model’s configuration.</li>
+            </ul>
 
-      <p>
-        Each package is built to be flexible, allowing you to expand functionality as your application grows.
-        Transform your app with Evolve's effortless customization, bringing agile and powerful development tools to your fingertips.
-      </p>
-    </div>
-<!--    <div class="lg:sticky lg:top-0 lg:h-screen space-y-12 lg:space-y-0">-->
+            <p>
+              Each package is built to be flexible, allowing you to expand functionality as your application grows.
+              Transform your app with Evolve's effortless customization, bringing agile and powerful development tools to your fingertips.
+            </p>
+          </div>
+      <!--    <div class="lg:sticky lg:top-0 lg:h-screen space-y-12 lg:space-y-0">-->
 <!--      <HomeStickyFeaturesSection-->
 <!--        title="Authentication"-->
 <!--        heading="Easy Login and User Management"-->
