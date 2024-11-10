@@ -11,9 +11,11 @@
         <ul
           class="block text-left leading-tight [&_li]:block animate-text-slide-5"
         >
-          <li>APP</li>
+          <li>App</li>
           <li>API</li>
-          <li>Docs</li>
+          <li>UI</li>
+          <li>App</li>
+          <li>API</li>
           <li>UI</li>
         </ul>
       </span>

@@ -69,6 +69,19 @@ const items = [
         "Hooks like `beforeCreate` and `afterUpdate` are defined directly in controllers named after each model, allowing you to insert custom logic at different stages of CRUD operations.",
   },
   {
+    label: "What is the tech stack for Evolve?",
+    content: `
+    - **Laravel**: The primary framework for Evolve, providing a robust foundation for building scalable web applications.
+    - **Livewire**: Enables dynamic, reactive components in the EvolveUI package, allowing for seamless and interactive CRUD interfaces without JavaScript.
+    - **DaisyUI (with Tailwind CSS)**: A UI component library styled with Tailwind CSS, used in EvolveUI for consistent and modern styling across all components.
+    - **Spatie Permissions (Optional)**: Provides role and permission management in EvolveCORE, allowing for fine-grained access control across CRUD operations.
+    - **Swagger (Optional)**: Used in EvolveAPI to generate interactive API documentation, making it easy to explore and test API endpoints.
+    - **PHP (8.1+)**: Evolve requires PHP 8.1 or newer, taking advantage of the latest PHP features for performance and compatibility.
+    - **MySQL / MariaDB**: Recommended database for running Evolve, ensuring compatibility with relational data and efficient query handling.
+    - **Composer**: Used to manage Laravel, Livewire, and other dependencies, making it easy to install and update packages in the Evolve suite.
+  `
+  },
+  {
     label: "How does filtering work with nested relationships?",
     content:
         "Evolve’s filtering supports infinitely nested relationships using dot notation (e.g., `department.manager.name`). You can define filterable relationships and fields within each model.",

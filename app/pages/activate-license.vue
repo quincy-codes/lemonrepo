@@ -7,7 +7,7 @@
         Activate License
       </h1>
       <p class="max-w-xl text-gray-600 text-xl">
-        You need to activate your license to use Lemonrepo. Please enter the
+        You need to activate your license to use Evolve. Please enter the
         github username you want to activate the license for.
       </p>
       <UForm
