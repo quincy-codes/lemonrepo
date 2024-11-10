@@ -104,9 +104,9 @@ const navigation = {
     { name: "Self Host", href: "#" },
   ],
   legal: [
-    { name: "License", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "License", href: "/license" },
+    { name: "Privacy", href: "/privacy-policy" },
+    { name: "Terms", href: "/terms-of-service" },
   ],
 };
 </script>
