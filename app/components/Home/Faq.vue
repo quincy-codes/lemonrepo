@@ -3,11 +3,11 @@
     <div class="relative max-w-6xl mx-auto">
       <div class="mb-16">
         <h2
-          class="max-w-2xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
+          class="text-center max-w-2xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
         >
           Got Questions? We've got some answers!
         </h2>
-        <p class="mt-12 max-w-2xl text-gray-600 text-2xl">
+        <p class="text-center mt-12 max-w-2xl text-gray-600 text-2xl">
           If you have any other questions, feel free to reach out to me at
           <button
             variant="link"

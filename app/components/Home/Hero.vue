@@ -1,7 +1,7 @@
 <template>
   <section class="pt-20 pb-12">
     <div class="flex justify-center items-center">
-      <Logo class="h-36 w-auto fill-0c111d" role="img" alt="Thing Neverland logo" />
+      <Logo class="h-36 w-auto fill-black" alt="Thing Neverland logo" />
     </div>
     <h1
       class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto"
@@ -40,8 +40,6 @@
 </template>
 
 <script setup>
-import Logo from "../Logo.vue";
-
 defineProps({
   count: {
     type: Number,
