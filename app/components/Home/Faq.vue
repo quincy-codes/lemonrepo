@@ -27,7 +27,7 @@
         color="gray"
         variant="soft"
         size="xl"
-        :ui="{ item: { size: 'text-base leading-relaxed', padding: 'py-4 pl-4', base: 'max-w-3xl' } }"
+        :ui="{ item: { size: 'text-base leading-relaxed', padding: 'py-4 pl-4', base: 'max-w' } }"
       />
     </div>
   </div>
