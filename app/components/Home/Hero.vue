@@ -16,9 +16,9 @@
           <li>App</li>
           <li>API</li>
           <li>UI</li>
-          <li>App</li>
           <li>API</li>
           <li>UI</li>
+          <li aria-hidden="true">App</li>
         </ul>
       </span>
       <span class="block"> Evolve Too?</span>
