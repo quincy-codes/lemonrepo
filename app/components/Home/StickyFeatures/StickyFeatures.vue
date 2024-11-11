@@ -26,11 +26,11 @@
             </p>
 
             <h2
-                class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-8"
-            >Available Packages:</h2>
+                class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-8"
+            >Available Components:</h2>
 
             <h3
-                class="mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
+                class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveCORE (Foundation / Prerelease)</h3>
             <ul>
               <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
@@ -41,7 +41,7 @@
             </ul>
 
             <h3
-                class="mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
+                class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveAPI (Optional / Prerelease)</h3>
             <ul>
               <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
@@ -52,7 +52,7 @@
             </ul>
 
             <h3
-                class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
+                class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveUI (Optional / Prerelease)</h3>
             <ul>
               <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
