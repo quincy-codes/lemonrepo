@@ -10,7 +10,7 @@
         <NavbarWhatsNew />
       </div>
       <div class="hidden items-center gap-2 sm:flex">
-<!--        <UButton to="/#faq" variant="ghost" color="gray">FAQ</UButton>-->
+        <UButton to="/#faq" variant="ghost" color="gray">FAQ</UButton>
 <!--        <UButton to="/#" variant="ghost" color="gray">Docs</UButton>-->
         <ScriptLemonSqueezy class="w-full block">
           <UButton
