@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-xl mx-auto">
-    <UContainer class="max-w-4xl py-12 space-y-6">
+  <div class="mx-auto">
+    <UContainer class="py-12 space-y-6">
       <h1
           class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black"
       >
         EvolveCORE License (Proprietary)</h1>
-      <p>This License Agreement ("Agreement") is a legal agreement between you and ThinkNeverland for the use of EvolveCORE ("Software"). By downloading or using the Software, you agree to be bound by the terms of this Agreement.</p>
+      <p>This License Agreement ("Agreement") is a legal agreement between you and Think Neverland for the use of EvolveCORE ("Software"). By downloading or using the Software, you agree to be bound by the terms of this Agreement.</p>
 
       <h3
 class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">1. License Grant</h3>
@@ -33,7 +33,7 @@ class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">Co
 
       <hr>
 
-      <h1>EvolveAPI and EvolveUI Licenses (MIT License)</h1>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black">EvolveAPI and EvolveUI Licenses (MIT License)</h1>
       <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
       <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
