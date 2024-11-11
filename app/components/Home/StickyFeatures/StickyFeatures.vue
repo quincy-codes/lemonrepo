@@ -26,7 +26,7 @@
             </p>
 
             <h2
-                class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
+                class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24"
             >Available Components:</h2>
 
             <h3
