@@ -338,7 +338,3 @@ protected function getRelations()
     </UContainer>
   </div>
 </template>
-</script>
-<script setup lang="ts">
-import ButtonLink from "../components/ButtonLink.vue";
-</script>
