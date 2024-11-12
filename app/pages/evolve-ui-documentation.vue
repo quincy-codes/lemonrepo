@@ -65,7 +65,7 @@
         <p class="text-gray-600 mb-4">
           After publishing the configuration file, you can find it at <code>config/evolve-ui.php</code>. Available options:
         </p>
-        <pre><code class="language-php"><?php
+        <pre><code class="language-php">
 return [
     // URL prefix for all EvolveUI routes
     'prefix' => env('EVOLVE_UI_PREFIX', ''),
