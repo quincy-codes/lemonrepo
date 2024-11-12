@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-20 pb-12">
+  <section class="pt-20 pb-24">
     <div class="flex justify-center items-center">
       <Logo class="h-36 w-auto fill-black mb-8" alt="Thing Neverland logo" />
     </div>
