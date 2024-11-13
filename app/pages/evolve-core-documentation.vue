@@ -1,17 +1,17 @@
 <template>
   <div class="max-w-xl mx-auto">
     <UContainer class="max-w-4xl py-12 space-y-6">
-      <div class="container mx-auto px-4 py-8 max-w-4xl">
+
         <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
-          EvolveCore Documentation
+          Evolve Documentation
         </h1>
 
-        <ButtonLink label="Core" size="md" rounded="md" href="/evolve-core-documentation" />
-        <ButtonLink label="API" size="md" rounded="md" href="/evolve-api-documentation" />
-        <ButtonLink label="UI" size="md" rounded="md" href="/evolve-UI-documentation" />
+        <ButtonLink label="Core" size="sm" rounded="md" href="/evolve-core-documentation" />
+        <ButtonLink label="API" size="sm" rounded="md" href="/evolve-api-documentation" />
+        <ButtonLink label="UI" size="sm" rounded="md" href="/evolve-UI-documentation" />
 
         <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
-          Foundation / Prerelease
+          EvolveCore (Foundation / Prerelease)
         </h3>
 
         <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
@@ -77,8 +77,6 @@
           <li>Integrated permission management</li>
         </ul>
 
-      </div>
-      <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
           3. Getting Started
         </h2>
@@ -180,8 +178,7 @@ public static function validationRules(): array
           <li>Handles nested relations validation</li>
           <li>Merges custom rules with database rules</li>
         </ul>
-      </div>
-      <div class="container mx-auto px-4 py-8 max-w-4xl">
+
         <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
           4.2 Filtering
         </h3>
@@ -283,7 +280,7 @@ protected $listen = [
         Log::info("Model created: " . get_class($model) . " #{$model->id}");
     }
 }</code></pre>
-      </div>
+
       <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
           4.5 Policies

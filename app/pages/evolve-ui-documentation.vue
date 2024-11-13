@@ -2,99 +2,78 @@
   <div class="max-w-xl mx-auto">
     <UContainer class="max-w-4xl py-12 space-y-6">
       <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
-        EvolveUI Documentation
+        Evolve Documentation
       </h1>
 
-      <ButtonLink label="Core" size="md" rounded="md" href="/evolve-core-documentation" />
-      <ButtonLink label="API" size="md" rounded="md" href="/evolve-api-documentation" />
-      <ButtonLink label="UI" size="md" rounded="md" href="/evolve-UI-documentation" />
+      <ButtonLink label="Core" size="sm" rounded="md" href="/evolve-core-documentation" />
+      <ButtonLink label="API" size="sm" rounded="md" href="/evolve-api-documentation" />
+      <ButtonLink label="UI" size="sm" rounded="md" href="/evolve-UI-documentation" />
 
       <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
-        Extension for EvolveCORE (Foundation / Prerelease)
+        EvolveUI (Extension / Prerelease)
       </h3>
-      <nav class="my-8 p-6 bg-gray-50 rounded-lg">
-        <h2 class="text-2xl font-semibold mb-4">Table of Contents</h2>
-        <ul class="space-y-2">
-          <li><a href="#introduction" class="text-blue-600 hover:text-blue-800">Introduction</a></li>
-          <li><a href="#installation" class="text-blue-600 hover:text-blue-800">Installation</a></li>
-          <li><a href="#configuration" class="text-blue-600 hover:text-blue-800">Configuration</a></li>
-          <li><a href="#model-setup" class="text-blue-600 hover:text-blue-800">Model Setup</a></li>
-          <li><a href="#routing" class="text-blue-600 hover:text-blue-800">Automatic Routing</a></li>
-          <li>
-            <a href="#components" class="text-blue-600 hover:text-blue-800">Components</a>
-            <ul class="ml-4 mt-2 space-y-1">
-              <li><a href="#index-component" class="text-blue-600 hover:text-blue-800">Index Component</a></li>
-              <li><a href="#create-component" class="text-blue-600 hover:text-blue-800">Create Component</a></li>
-              <li><a href="#edit-component" class="text-blue-600 hover:text-blue-800">Edit Component</a></li>
-              <li><a href="#show-component" class="text-blue-600 hover:text-blue-800">Show Component</a></li>
-              <li><a href="#fields-partial" class="text-blue-600 hover:text-blue-800">Fields Partial</a></li>
-            </ul>
-          </li>
-          <li><a href="#customization" class="text-blue-600 hover:text-blue-800">Customization</a></li>
-        </ul>
-      </nav>
-      <section id="introduction" class="my-8">
-        <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
-          Introduction
-        </h2>
-        <p class="text-gray-600 max-w-3xl mx-auto">
-          EvolveUI is a powerful Laravel package that extends EvolveCORE to provide a complete CRUD interface built with Livewire and DaisyUI. It automatically generates user interfaces for your models with support for complex relationships and nested data structures.
-        </p>
-      </section>
-      <section id="installation" class="my-8">
-        <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
-          Installation
-        </h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-gray-600 mb-4">
-            1. Install the package via Composer:
-          </p>
-          <pre><code class="language-bash">composer require thinkneverland/evolve-ui</code></pre>
 
-          <p class="text-gray-600 mt-4 mb-4">
-            2. Publish the configuration and views:
-          </p>
-          <pre><code class="language-bash">php artisan vendor:publish --provider="Thinkneverland\Evolve\UI\EvolveUiServiceProvider"</code></pre>
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4" id="table-of-contents">Table of Contents</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><a href="#installation" class="text-blue-600 hover:underline">Installation</a></li>
+            <li><a href="#configuration" class="text-blue-600 hover:underline">Configuration</a></li>
+            <li><a href="#basic-usage" class="text-blue-600 hover:underline">Basic Usage</a></li>
+            <li><a href="#model-integration" class="text-blue-600 hover:underline">Model Integration</a></li>
+            <li><a href="#crud-operations" class="text-blue-600 hover:underline">CRUD Operations</a>
+              <ul class="list-disc pl-6 mt-2">
+                <li><a href="#index-view" class="text-blue-600 hover:underline">Index View</a></li>
+                <li><a href="#create-form" class="text-blue-600 hover:underline">Create Form</a></li>
+                <li><a href="#edit-form" class="text-blue-600 hover:underline">Edit Form</a></li>
+                <li><a href="#show-view" class="text-blue-600 hover:underline">Show View</a></li>
+              </ul>
+            </li>
+            <li><a href="#relationship-handling" class="text-blue-600 hover:underline">Relationship Handling</a></li>
+            <li><a href="#customization" class="text-blue-600 hover:underline">Customization</a></li>
+          </ul>
         </div>
-      </section>
-      <section id="configuration" class="my-8">
-      <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
-        Configuration
-      </h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-gray-600 mb-4">
-          After publishing the configuration file, you can find it at <code>config/evolve-ui.php</code>. Available options:
-        </p>
-        <pre><code class="language-php">
+
+        <section id="installation" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Installation</h2>
+          <p class="mb-4">Install Evolve UI via Composer:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">composer require thinkneverland/evolve-ui</pre>
+
+          <p class="mb-4">Publish the configuration file:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">php artisan vendor:publish --tag=evolve-ui-config</pre>
+        </section>
+
+        <section id="configuration" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Configuration</h2>
+          <p class="mb-4">Configure Evolve UI in <code>config/evolve-ui.php</code>:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">
 return [
-    // URL prefix for all EvolveUI routes
     'prefix' => env('EVOLVE_UI_PREFIX', ''),
-
-    // Middleware applied to all EvolveUI routes
     'middleware' => ['web', 'auth'],
-
-    // Number of items to show per page in index views
     'per_page' => 10,
-
-    // View customization
     'views' => [
-        'layout' => 'layouts.app', // The layout view to extend
+        'layout' => 'layouts.app',
     ],
-];</code></pre>
-      </div>
-    </section>
-      <section id="model-setup" class="my-8">
-        <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
-          Model Setup
-        </h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-gray-600 mb-4">
-            To use EvolveUI with your models, implement the EvolveModelInterface and add required methods:
-          </p>
-          <pre><code class="language-php">use Thinkneverland\Evolve\Core\Contracts\EvolveModelInterface;
+];
+</pre>
+          <ul class="list-disc pl-6 space-y-2 mb-4">
+            <li><code>prefix</code>: URL prefix for all Evolve UI routes</li>
+            <li><code>middleware</code>: Middleware applied to all routes</li>
+            <li><code>per_page</code>: Default pagination count</li>
+            <li><code>views.layout</code>: Default layout template</li>
+          </ul>
+        </section>
+
+        <section id="basic-usage" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Basic Usage</h2>
+          <p class="mb-4">To use Evolve UI with your models:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">
+use Thinkneverland\Evolve\Core\Contracts\EvolveModelInterface;
+use Thinkneverland\Evolve\Core\Traits\EvolveModel;
 
 class User extends Model implements EvolveModelInterface
 {
+    use EvolveModel;
+
     public static function shouldEvolve(): bool
     {
         return true;
@@ -102,239 +81,167 @@ class User extends Model implements EvolveModelInterface
 
     public static function excludedFields(): array
     {
-        return ['password', 'remember_token'];
+        return ['password'];
     }
 
     public static function excludedRelations(): array
     {
         return [];
     }
+}
+</pre>
+        </section>
 
-    public static function getValidationRules(string $operation): array
+        <section id="model-integration" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Model Integration</h2>
+          <p class="mb-4">Evolve UI automatically discovers and generates CRUD interfaces for models that:</p>
+          <ul class="list-disc pl-6 space-y-2 mb-4">
+            <li>Implement <code>EvolveModelInterface</code></li>
+            <li>Use the <code>EvolveModel</code> trait</li>
+            <li>Return <code>true</code> from <code>shouldEvolve()</code></li>
+          </ul>
+
+          <p class="mb-4">Key model configuration methods:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">
+public static function excludedFields(): array
+{
+    return ['password', 'remember_token'];
+}
+
+public static function excludedRelations(): array
+{
+    return ['secretData'];
+}
+
+public static function getValidationRules(string $action, $model = null): array
+{
+    return [
+        'fields.name' => 'required|string|max:255',
+        'fields.email' => 'required|email|unique:users,email'
+    ];
+}
+</pre>
+        </section>
+
+        <section id="crud-operations" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">CRUD Operations</h2>
+
+          <section id="index-view" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Index View</h3>
+            <p class="mb-4">Features:</p>
+            <ul class="list-disc pl-6 space-y-2 mb-4">
+              <li>Searchable columns</li>
+              <li>Sortable columns</li>
+              <li>Configurable pagination</li>
+              <li>Delete confirmation modal</li>
+            </ul>
+            <p class="mb-4">Routes are automatically generated as:</p>
+            <pre class="bg-gray-100 p-4 rounded-md mb-4">/evolve/{model-plural}</pre>
+          </section>
+
+          <section id="create-form" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Create Form</h3>
+            <p class="mb-4">Features:</p>
+            <ul class="list-disc pl-6 space-y-2 mb-4">
+              <li>Automatic field generation based on model attributes</li>
+              <li>Nested relationship support</li>
+              <li>Validation using model rules</li>
+              <li>Transaction support for related data</li>
+            </ul>
+            <p class="mb-4">Routes are automatically generated as:</p>
+            <pre class="bg-gray-100 p-4 rounded-md mb-4">/evolve/{model-plural}/create</pre>
+          </section>
+
+          <section id="edit-form" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Edit Form</h3>
+            <p class="mb-4">Features:</p>
+            <ul class="list-disc pl-6 space-y-2 mb-4">
+              <li>Pre-populated fields</li>
+              <li>Nested relationship editing</li>
+              <li>Validation with existing model context</li>
+              <li>Transaction support for updates</li>
+            </ul>
+            <p class="mb-4">Routes are automatically generated as:</p>
+            <pre class="bg-gray-100 p-4 rounded-md mb-4">/evolve/{model-plural}/{id}/edit</pre>
+          </section>
+
+          <section id="show-view" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Show View</h3>
+            <p class="mb-4">Features:</p>
+            <ul class="list-disc pl-6 space-y-2 mb-4">
+              <li>Detailed model attribute display</li>
+              <li>Related data visualization</li>
+              <li>Formatted date/time fields</li>
+              <li>JSON data pretty printing</li>
+            </ul>
+            <p class="mb-4">Routes are automatically generated as:</p>
+            <pre class="bg-gray-100 p-4 rounded-md mb-4">/evolve/{model-plural}/{id}</pre>
+          </section>
+        </section>
+
+        <section id="relationship-handling" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Relationship Handling</h2>
+          <p class="mb-4">Evolve UI supports nested relationships in forms:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">
+class Order extends Model implements EvolveModelInterface
+{
+    use EvolveModel;
+
+    public function customer()
     {
-        return [
-            'fields.name' => 'required|string|max:255',
-            'fields.email' => 'required|email|unique:users,email',
-        ];
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function items()
+    {
+        return $this->hasMany(OrderItem::class);
     }
 
     public static function getAllRelations(): array
     {
         return [
-            'profile' => Profile::class,
-            'posts' => Post::class,
+            'customer' => ['type' => 'belongsTo'],
+            'items' => ['type' => 'hasMany']
         ];
     }
-}</code></pre>
-        </div>
-      </section>
-
-      <section id="routing" class="my-8">
-        <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
-          Automatic Routing
-        </h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-gray-600 mb-4">
-            EvolveUI automatically registers RESTful routes for all models implementing EvolveModelInterface. Routes are prefixed based on your configuration:
-          </p>
-          <pre><code class="language-php">// Example routes for User model:
-evolve/users             // Index
-evolve/users/create      // Create form
-evolve/users/{id}        // Show
-evolve/users/{id}/edit   // Edit form</code></pre>
-        </div>
-      </section>
-      <section id="components" class="my-8">
-        <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24">
-          Components
-        </h2>
-
-        <div id="index-component" class="max-w-3xl mx-auto mt-8">
-          <h3 class="text-xl font-semibold mb-4">Index Component</h3>
-          <p class="text-gray-600 mb-4">The Index Component provides a powerful data grid with built-in features:</p>
-          <ul class="list-disc ml-6 mb-4 text-gray-600">
-            <li>Real-time search with automatic field detection</li>
-            <li>Column sorting with persistent state</li>
-            <li>Pagination with configurable items per page</li>
-            <li>Delete confirmation modal</li>
-            <li>Query string parameters for sharing filtered views</li>
-          </ul>
-          <p class="text-gray-600 mb-4">Implementation example:</p>
-          <pre><code class="language-php">class EvolveIndexComponent extends Component
-{
-    use WithPagination;
-
-    public $search = '';
-    public $sortField = 'id';
-    public $sortDirection = 'asc';
-    public $perPage;
-
-    protected $queryString = [
-        'search',
-        'sortField',
-        'sortDirection',
-        'perPage'
-    ];
-
-    public function sortBy($field)
-    {
-        if ($this->sortField === $field) {
-            $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
-        } else {
-            $this->sortField = $field;
-            $this->sortDirection = 'asc';
-        }
-    }
-
-    protected function getSearchableFields()
-    {
-        $model = new $this->modelClass;
-        $columns = \Schema::getColumnListing($model->getTable());
-        return array_diff($columns, $this->modelClass::excludedFields());
-    }
-}</code></pre>
-        </div>
-        <div id="create-component" class="max-w-3xl mx-auto mt-8">
-          <h3 class="text-xl font-semibold mb-4">Create Component</h3>
-          <p class="text-gray-600 mb-4">The Create Component handles complex form generation and data persistence:</p>
-          <ul class="list-disc ml-6 mb-4 text-gray-600">
-            <li>Automatic field generation based on model attributes</li>
-            <li>Support for nested relationships</li>
-            <li>Transaction-based saving</li>
-            <li>Dynamic validation rules</li>
-            <li>Error handling with user feedback</li>
-          </ul>
-          <p class="text-gray-600 mb-4">Relationship handling example:</p>
-          <pre><code class="language-php">protected function createModelWithRelations($modelClass, $data)
-{
-    $relations = array_diff(
-        array_keys($modelClass::getAllRelations()),
-        $modelClass::excludedRelations()
-    );
-
-    // Filter out relation data
-    $modelData = array_filter($data, function ($key) use ($relations) {
-        return !in_array($key, $relations);
-    }, ARRAY_FILTER_USE_KEY);
-
-    // Create main model
-    $model = $modelClass::create($modelData);
-
-    // Create related models
-    foreach ($relations as $relation) {
-        if (isset($data[$relation])) {
-            $relationData = $data[$relation];
-            $relationClass = get_class($model->$relation()->getRelated());
-            $relationModel = $this->createModelWithRelations(
-                $relationClass,
-                $relationData
-            );
-            $model->$relation()->save($relationModel);
-        }
-    }
-
-    return $model;
-}</code></pre>
-        </div>
-        <div id="edit-component" class="max-w-3xl mx-auto mt-8">
-          <h3 class="text-xl font-semibold mb-4">Edit Component</h3>
-          <p class="text-gray-600 mb-4">The Edit Component extends creation functionality with advanced features:</p>
-          <ul class="list-disc ml-6 mb-4 text-gray-600">
-            <li>Recursive relationship loading</li>
-            <li>Smart field extraction</li>
-            <li>Handles both single and many-to-many relationships</li>
-            <li>Maintains data integrity with transactions</li>
-            <li>Context-aware validation rules</li>
-          </ul>
-          <p class="text-gray-600 mb-4">Relationship update example:</p>
-          <pre><code class="language-php">protected function updateModelWithRelations($model, $data)
-{
-    $relations = array_diff(
-        array_keys($this->modelClass::getAllRelations()),
-        $this->modelClass::excludedRelations()
-    );
-
-    // Update main model
-    $modelData = array_filter($data, function ($key) use ($relations) {
-        return !in_array($key, $relations);
-    }, ARRAY_FILTER_USE_KEY);
-
-    $model->update($modelData);
-
-    // Update relationships
-    foreach ($relations as $relation) {
-        if (isset($data[$relation])) {
-            $relationData = $data[$relation];
-            if (is_array($relationData) && array_key_exists(0, $relationData)) {
-                // Handle many relations
-                $model->$relation()->delete();
-                foreach ($relationData as $item) {
-                    $relationClass = get_class($model->$relation()->getRelated());
-                    $relationModel = $this->createModelWithRelations(
-                        $relationClass,
-                        $item
-                    );
-                    $model->$relation()->save($relationModel);
-                }
-            } else {
-                // Handle single relation
-                $relationClass = get_class($model->$relation()->getRelated());
-                if ($model->$relation) {
-                    $this->updateModelWithRelations(
-                        $model->$relation,
-                        $relationData
-                    );
-                } else {
-                    $relationModel = $this->createModelWithRelations(
-                        $relationClass,
-                        $relationData
-                    );
-                    $model->$relation()->save($relationModel);
-                }
-            }
-        }
-    }
-
-    return $model;
-}</code></pre>
-        </div>
-        <div id="show-component" class="max-w-3xl mx-auto mt-8">
-          <h3 class="text-xl font-semibold mb-4">Show Component</h3>
-          <p class="text-gray-600 mb-4">The Show Component provides detailed record viewing:</p>
-          <ul class="list-disc ml-6 mb-4 text-gray-600">
-            <li>Automatic relationship loading</li>
-            <li>Smart data type formatting</li>
-            <li>Handles nested relationship display</li>
-            <li>Quick navigation to edit view</li>
-            <li>Responsive layout for all screen sizes</li>
-          </ul>
-          <p class="text-gray-600 mb-4">Model loading example:</p>
-          <pre><code class="language-php">protected function loadModel()
-{
-    $this->modelInstance = $this->modelClass::with($this->getRelations())
-        ->findOrFail($this->modelId);
 }
-
-protected function getRelations()
-{
-    return array_diff(
-        array_keys($this->modelClass::getAllRelations()),
-        $this->modelClass::excludedRelations()
-    );
-}</code></pre>
-        </div>
-        <div id="best-practices" class="max-w-3xl mx-auto mt-8">
-          <h3 class="text-xl font-semibold mb-4">Best Practices</h3>
-          <ul class="list-disc ml-6 mb-4 text-gray-600">
-            <li>Always implement model interfaces correctly</li>
-            <li>Use transactions for complex operations</li>
-            <li>Define clear validation rules</li>
-            <li>Properly exclude sensitive fields</li>
-            <li>Handle relationships carefully</li>
-            <li>Test recursive operations with deep relationships</li>
+</pre>
+          <p class="mb-4">The UI will automatically:</p>
+          <ul class="list-disc pl-6 space-y-2 mb-4">
+            <li>Generate nested forms for related models</li>
+            <li>Handle creation/updates in transactions</li>
+            <li>Support both single and multiple relationships</li>
+            <li>Apply validation rules recursively</li>
           </ul>
-        </div>
-      </section>
+        </section>
+
+        <section id="customization" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Customization</h2>
+          <p class="mb-4">Publish views for customization:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">php artisan vendor:publish --tag=evolve-ui-views</pre>
+
+          <p class="mb-4">Available views for customization:</p>
+          <ul class="list-disc pl-6 space-y-2 mb-4">
+            <li><code>index.blade.php</code>: List view template</li>
+            <li><code>create.blade.php</code>: Creation form template</li>
+            <li><code>edit.blade.php</code>: Edit form template</li>
+            <li><code>show.blade.php</code>: Detail view template</li>
+            <li><code>fields.blade.php</code>: Field rendering partial</li>
+          </ul>
+
+          <p class="mb-4">Change the layout template in config:</p>
+          <pre class="bg-gray-100 p-4 rounded-md mb-4">
+// config/evolve-ui.php
+return [
+    'views' => [
+        'layout' => 'admin.layouts.app'
+    ]
+];
+</pre>
+        </section>
+
     </UContainer>
   </div>
 </template>
+<script setup lang="ts">
+</script>
