@@ -6,11 +6,11 @@
           Evolve Documentation
         </h1>
 
-        <div class="w-full columns-2 py-4" >
-          <ButtonLink href="/evolve-core-documentation" />
-          <ButtonLink href="/evolve-api-documentation" />
-          <ButtonLink href="/evolve-UI-documentation" />
-        </div>
+      <div class="w-full columns-3 py-4" >
+        <ButtonLink label="Core" size="sm" rounded="sm" href="/evolve-core-documentation" />
+        <ButtonLink label="API" size="sm" rounded="sm" href="/evolve-api-documentation" />
+        <ButtonLink label="UI" size="sm" rounded="sm" href="/evolve-UI-documentation" />
+      </div>
 
         <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
           EvolveCore (Foundation / Prerelease)
