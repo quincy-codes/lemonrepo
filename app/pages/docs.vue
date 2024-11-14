@@ -5,9 +5,9 @@
           EvolveAPI Documentation
         </h1>
         <div class="w-full columns-3 py-4" >
-          <ButtonLink label="Core" size="sm" rounded="sm" href="/evolve-core-documentation" />
-          <ButtonLink label="API" size="sm" rounded="sm" href="/evolve-api-documentation" />
-          <ButtonLink label="UI" size="sm" rounded="sm" href="/evolve-UI-documentation" />
+          <ButtonLink label="Core" size="sm" rounded="md" href="/evolve-core-documentation" />
+          <ButtonLink label="API" size="sm" rounded="md" href="/evolve-api-documentation" />
+          <ButtonLink label="UI" size="sm" rounded="md" href="/evolve-UI-documentation" />
         </div>
     </UContainer>
   </div>

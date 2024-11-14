@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-xl mx-auto">
+  <div class="max-w-4xl mx-auto">
     <UContainer class="max-w-8xl py-12 space-y-6">
       <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
         Evolve Documentation
@@ -16,17 +16,20 @@
         </h3>
 
         <!-- Navigation Buttons -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 mt-8">
-          <a href="#installation" class="bg-gray-800 text-white px-6 py-3 rounded-lg text-center hover:bg-gray-700">
-            Quick Start
-          </a>
-          <a href="#features" class="bg-gray-800 text-white px-6 py-3 rounded-lg text-center hover:bg-gray-700">
-            Features
-          </a>
-          <a href="#advanced" class="bg-gray-800 text-white px-6 py-3 rounded-lg text-center hover:bg-gray-700">
-            Advanced Usage
-          </a>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <a href="#installation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">Quick Start</h3>
+          <p class="text-gray-600">Installation, configuration and core setup instructions</p>
+        </a>
+        <a href="#features" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">Features</h3>
+          <p class="text-gray-600">Validation, filtering, sorting and events</p>
+        </a>
+        <a href="#advanced" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">Advanced Usage</h3>
+          <p class="text-gray-600">Complex configurations, events and policies</p>
+        </a>
+      </div>
 
         <!-- Table of Contents -->
         <div class="bg-gray-100 p-6 rounded-lg mb-12">
