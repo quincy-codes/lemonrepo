@@ -4,9 +4,11 @@
         <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
           EvolveAPI Documentation
         </h1>
-        <ButtonLink label="Core" size="md" rounded="md" href="/evolve-core-documentation" />
-        <ButtonLink label="API" size="md" rounded="md" href="/evolve-api-documentation" />
-        <ButtonLink label="UI" size="md" rounded="md" href="/evolve-UI-documentation" />
+        <div class="w-full columns-3 py-4" >
+          <ButtonLink href="/evolve-core-documentation" />
+          <ButtonLink href="/evolve-api-documentation" />
+          <ButtonLink href="/evolve-UI-documentation" />
+        </div>
     </UContainer>
   </div>
 </template>

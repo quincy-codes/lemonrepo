@@ -1,14 +1,16 @@
 <template>
   <div class="max-w-xl mx-auto">
-    <UContainer class="max-w-4xl py-12 space-y-6">
+    <UContainer class="max-w-8xl py-12 space-y-6">
 
         <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
           Evolve Documentation
         </h1>
 
-        <ButtonLink label="Core" size="sm" rounded="md" href="/evolve-core-documentation" />
-        <ButtonLink label="API" size="sm" rounded="md" href="/evolve-api-documentation" />
-        <ButtonLink label="UI" size="sm" rounded="md" href="/evolve-UI-documentation" />
+        <div class="w-full columns-2 py-4" >
+          <ButtonLink href="/evolve-core-documentation" />
+          <ButtonLink href="/evolve-api-documentation" />
+          <ButtonLink href="/evolve-UI-documentation" />
+        </div>
 
         <h3 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
           EvolveCore (Foundation / Prerelease)
@@ -48,7 +50,7 @@
         </h2>
 
         <p class="mb-4">Install EvolveCore using Composer:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>composer require thinkneverland/evolve-core</code></pre>
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">composer require thinkneverland/evolve-core</code></pre>
 
         <p class="mb-4">The package requires:</p>
         <ul class="list-disc ml-6 mb-4">
@@ -59,7 +61,7 @@
         </ul>
 
         <p class="mb-4">The service provider will be automatically registered. If you need to register it manually, add to config/app.php:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto"><code>'providers' => [
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto"><code class="text-green-400">'providers' => [
     // ...
     Thinkneverland\Evolve\Core\EvolveCoreServiceProvider::class,
 ];</code></pre>
@@ -86,7 +88,7 @@
         </h3>
 
         <p class="mb-4">To use EvolveCore in your models, implement the interface and use the trait:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>namespace App\Models;
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Thinkneverland\Evolve\Core\Contracts\EvolveModelInterface;
@@ -129,7 +131,7 @@ class Post extends Model implements EvolveModelInterface
         </h3>
 
         <p class="mb-4">Once your model is set up, you can use the enhanced functionality:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Basic filtering
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Basic filtering
 $posts = Post::filter([
     'status' => 'published',
     'author.id' => 1
@@ -153,7 +155,7 @@ $posts = Post::evolve(
         </h3>
 
         <p class="mb-4">EvolveCore provides automatic validation based on your database schema and custom rules:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Get validation rules for a model
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Get validation rules for a model
 $rules = Post::getValidationRules();
 
 // Get validation rules for specific action
@@ -184,7 +186,7 @@ public static function validationRules(): array
         </h3>
 
         <p class="mb-4">The filtering system supports simple and complex queries:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Simple filtering
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Simple filtering
 $posts = Post::filter([
     'status' => 'published',
     'featured' => true
@@ -205,7 +207,7 @@ $posts = Post::filter([
 ])->get();</code></pre>
 
         <p class="mb-4">To exclude fields from filtering:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>public static function excludedFields(): array
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">public static function excludedFields(): array
 {
     return ['internal_notes', 'secret_key'];
 }
@@ -220,7 +222,7 @@ public static function excludedRelations(): array
         </h3>
 
         <p class="mb-4">Multiple sorting methods are supported:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Simple sorting
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Simple sorting
 $posts = Post::evolve(null, ['created_at' => 'desc'])->get();
 
 // Multiple field sorting
@@ -249,7 +251,7 @@ $posts = Post::evolve(
         </h3>
 
         <p class="mb-4">EvolveCore automatically dispatches events for model operations:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Listen for events in your EventServiceProvider
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Listen for events in your EventServiceProvider
 use Thinkneverland\Evolve\Core\Events\EvolveModelCreated;
 use Thinkneverland\Evolve\Core\Events\EvolveModelUpdated;
 use Thinkneverland\Evolve\Core\Events\EvolveModelDeleted;
@@ -271,7 +273,7 @@ protected $listen = [
 ];</code></pre>
 
         <p class="mb-4">Example event handler:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>class HandleModelCreated
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">class HandleModelCreated
 {
     public function handle(EvolveModelCreated $event)
     {
@@ -287,7 +289,7 @@ protected $listen = [
         </h3>
 
         <p class="mb-4">EvolveCore automatically registers policies for your models:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// The default policy checks permissions using spatie/laravel-permission
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// The default policy checks permissions using spatie/laravel-permission
 public function viewAny(User $user)
 {
     return $user->hasPermissionTo('view any');
@@ -314,7 +316,7 @@ public function delete(User $user, $model)
 }</code></pre>
 
         <p class="mb-4">To customize permissions, extend the EvolvePolicy:</p>
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>namespace App\Policies;
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">namespace App\Policies;
 
 use Thinkneverland\Evolve\Core\Policies\EvolvePolicy;
 
@@ -334,7 +336,7 @@ class PostPolicy extends EvolvePolicy
           5.1 Complex Filtering Scenarios
         </h3>
 
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Deep nested relations
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Deep nested relations
 $orders = Order::filter([
     'customer.company.country.code' => 'US',
     'items.product.category.name' => 'Electronics',
@@ -355,7 +357,7 @@ $posts = Post::evolve(
           5.2 Custom Validation Implementation
         </h3>
 
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>class Order extends Model implements EvolveModelInterface
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">class Order extends Model implements EvolveModelInterface
 {
     use EvolveModelTrait;
 
@@ -408,7 +410,7 @@ $posts = Post::evolve(
           5.3 Advanced Event Handling
         </h3>
 
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>// Complex event handler example
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">// Complex event handler example
 class HandleOrderCreated
 {
     protected $notificationService;
@@ -456,7 +458,7 @@ class HandleOrderCreated
           5.4 Advanced Policy Implementation
         </h3>
 
-        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code>class OrderPolicy extends EvolvePolicy
+        <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-4"><code class="text-green-400">class OrderPolicy extends EvolvePolicy
 {
     public function view(User $user, Order $order)
     {
