@@ -7,10 +7,10 @@
           <div>
             <div class="flex items-center gap-2 text-white">
               <Logo class="h-7 w-auto fill-white" />
-              <p>Think Never Land : Evolve</p>
+              <p>Think Never Land</p>
             </div>
             <p class="text-white text-sm mt-4">
-              Laravel Apps Evolved
+              Laravel Packages Inspired By What If.
             </p>
           </div>
           <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -92,9 +92,10 @@ const navigation = {
   ],
   support: [
     { name: "Activate License", href: "/activate-license" },
+    { name: "Think Never Land", href: "https://thinkneverland.com" },
     // { name: "Discord", href: "#" },
     // { name: "Documentation", href: "#" },
-    // { name: "Email Us", href: "#" },
+    { name: "Email Us", href: "mailto:hello@thinkneverland.com" },
     // { name: "Telegram", href: "#" },
   ],
   resources: [
