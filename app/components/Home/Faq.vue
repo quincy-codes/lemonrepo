@@ -1,6 +1,6 @@
 <template>
   <div id="faq" class="py-24 px-4 relative">
-    <div class="relative max-w-6xl mx-auto">
+    <div class="relative max-w-4xl mx-auto">
       <div class="mb-16 text-center ">
         <h2
           class="mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-4"
