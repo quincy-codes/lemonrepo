@@ -685,9 +685,9 @@ $posts = Post::evolve(
             <div class="p-4">
               <h4 class="font-semibold mb-2">Package Installation Fails</h4>
               <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
-                <code>composer config --global github-oauth.github.com YOUR-TOKEN
-                  composer clear-cache
-                  composer update</code>
+<code>composer config --global github-oauth.github.com YOUR-TOKEN
+composer clear-cache
+composer update</code>
               </pre>
               <p class="text-gray-600">Ensure your GitHub token has the correct permissions and your composer.json is properly configured.</p>
             </div>
@@ -696,7 +696,7 @@ $posts = Post::evolve(
             <div class="p-4">
               <h4 class="font-semibold mb-2">Validation Rules Not Working</h4>
               <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
-                <code>// Check implementation
+<code>// Check implementation
 class YourModel extends Model implements EvolveModelInterface
 {
     use EvolveModelTrait;
@@ -715,14 +715,14 @@ class YourModel extends Model implements EvolveModelInterface
           <div class="p-4">
             <h4 class="font-semibold mb-2">Relationship Filtering Issues</h4>
             <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
-              <code>// Ensure proper relationship definition
-                public function author()
-                {
-                return $this->belongsTo(User::class);
-                }
+<code>// Ensure proper relationship definition
+public function author()
+{
+  return $this->belongsTo(User::class);
+}
 
-                // Use proper dot notation
-                Post::filter(['author.name' => 'John'])->get();</code>
+// Use proper dot notation
+Post::filter(['author.name' => 'John'])->get();</code>
             </pre>
           </div>
         </div>
@@ -759,17 +759,16 @@ class YourModel extends Model implements EvolveModelInterface
             <ul class="list-disc ml-6">
               <li><a href="https://github.com/thinkneverland/evolve-core/issues" class="text-blue-600 hover:underline">GitHub Issues</a></li>
               <li><a href="https://evolve.thinkneverland.com" class="text-blue-600 hover:underline">Official Documentation</a></li>
-              <li>Community Discord Channel</li>
-              <li>Support Email: support@thinkneverland.com</li>
+              <li>Support Email: <a href="mailto:hello@thinkneverland.com">support@thinkneverland.com</a></li>
             </ul>
           </div>
           <div class="bg-white p-6 rounded-lg shadow">
             <h4 class="font-semibold mb-2">Contributing</h4>
             <ul class="list-disc ml-6">
-              <li>Submit bug reports</li>
-              <li>Propose new features</li>
-              <li>Create pull requests</li>
-              <li>Share your experience</li>
+              <li><a href="mailto:hello@thinkneverland.com">Submit bug reports</a></li>
+              <li><a href="mailto:hello@thinkneverland.com">Propose new features</a></li>
+              <li><a href="mailto:hello@thinkneverland.com">Create pull requests</a></li>
+              <li><a href="mailto:hello@thinkneverland.com">Share your experience</a></li>
             </ul>
           </div>
         </div>
