@@ -19,7 +19,7 @@
             :to="productUrl"
             class="shiny-button px-6 py-2"
           >
-            Buy now for $149
+            Buy Now for $149
           </UButton>
         </ScriptLemonSqueezy>
       </div>
