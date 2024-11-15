@@ -28,7 +28,7 @@
         class="max-w-max mx-auto rounded-xl bg-gray-100 ring-4 ring-gray-500/10 border p-1 space-y-2"
       >
         <BuyButton
-          label="Subscribe Now for $149"
+          label="Buy Now for $149"
           class="flex items-center justify-center w-full"
           size="md"
           rounded="lg"

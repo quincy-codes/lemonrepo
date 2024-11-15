@@ -5,7 +5,7 @@
 <!--  >-->
   <div
       ref="stickySectionsContainer"
-      class="max-w-6xl mx-auto px-5 relative"
+      class="max-w-4xl mx-auto px-5 relative"
   >
 <!--    <div-->
 <!--      class="static lg:absolute top-8 left-1/2 translate-x-0 lg:min-h-[var(&#45;&#45;stick-items)] lg:-translate-x-1/2 mb-8 lg:mb-0"-->

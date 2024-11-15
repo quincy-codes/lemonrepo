@@ -19,13 +19,13 @@
             :to="productUrl"
             class="shiny-button px-6 py-2"
           >
-            Subscribe now for $149
+            Buy now for $149
           </UButton>
         </ScriptLemonSqueezy>
       </div>
       <div class="sm:hidden flex items-center gap-2">
         <ScriptLemonSqueezy class="w-full block">
-          <UButton label="Subscribe Now for $109.99" color="black" :to="productUrl" />
+          <UButton label="Buy Now for $149" color="black" :to="productUrl" />
         </ScriptLemonSqueezy>
         <button
           aria-label="Toggle menu"
