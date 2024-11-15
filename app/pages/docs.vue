@@ -20,23 +20,14 @@
           <a href="/evolve-core-documentation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-2">Core Package</h3>
             <p class="text-gray-600">Foundation layer providing enhanced model capabilities, validation, filtering, and authorization.</p>
-            <div class="mt-4 text-sm text-blue-600">
-              View Documentation →
-            </div>
           </a>
           <a href="/evolve-api-documentation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-2">API Package</h3>
             <p class="text-gray-600">RESTful API implementation with automatic endpoint generation and response handling.</p>
-            <div class="mt-4 text-sm text-blue-600">
-              View Documentation →
-            </div>
           </a>
           <a href="/evolve-ui-documentation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-2">UI Package</h3>
             <p class="text-gray-600">Pre-built UI components and interfaces that integrate with Core and API packages.</p>
-            <div class="mt-4 text-sm text-blue-600">
-              View Documentation →
-            </div>
           </a>
         </div>
 
@@ -50,7 +41,7 @@
             <p class="text-gray-600 mb-4">
               The foundation of the Evolve ecosystem, providing enhanced model functionality with automatic:
             </p>
-            <ul class="list-disc ml-6 text-gray-600">
+            <ul class="list-disc ml-6 text-gray-600 mb-8">
               <li>Database-aware validation</li>
               <li>Advanced filtering and sorting</li>
               <li>Event handling</li>
@@ -65,7 +56,7 @@
             <p class="text-gray-600 mb-4">
               Builds on Core to provide RESTful API functionality with:
             </p>
-            <ul class="list-disc ml-6 text-gray-600">
+            <ul class="list-disc ml-6 text-gray-600 mb-8">
               <li>Automatic endpoint generation</li>
               <li>Standardized response formatting</li>
               <li>Built-in pagination</li>
@@ -81,7 +72,7 @@
             <p class="text-gray-600 mb-4">
               Complete frontend solution that integrates with Core and API:
             </p>
-            <ul class="list-disc ml-6 text-gray-600">
+            <ul class="list-disc ml-6 text-gray-600 mb-8">
               <li>Pre-built CRUD interfaces</li>
               <li>Form generation and validation</li>
               <li>Data tables with sorting and filtering</li>
