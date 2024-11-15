@@ -5,7 +5,7 @@
         Evolve Documentation
       </h1>
 
-      <div class="w-full columns-3 py-4" >
+      <div class="w-full columns-3 py-4">
         <ButtonLink label="Core" size="sm" rounded="md" href="/evolve-core-documentation" />
         <ButtonLink label="API" size="sm" rounded="md" href="/evolve-api-documentation" />
         <ButtonLink label="UI" size="sm" rounded="md" href="/evolve-UI-documentation" />
@@ -36,20 +36,23 @@
           Contents
         </h3>
         <ul class="space-y-2">
-          <li><a href="#installation" class="text-blue-600 hover:underline">Installation</a>
+          <li>
+            <a href="#installation" class="text-blue-600 hover:underline">Installation</a>
             <ul class="ml-4 mt-2 space-y-1">
               <li><a href="#github-auth" class="text-blue-600 hover:underline">GitHub Authentication</a></li>
               <li><a href="#composer-setup" class="text-blue-600 hover:underline">Composer Setup</a></li>
               <li><a href="#package-install" class="text-blue-600 hover:underline">Package Installation</a></li>
             </ul>
           </li>
-          <li><a href="#getting-started" class="text-blue-600 hover:underline">Getting Started</a>
+          <li>
+            <a href="#getting-started" class="text-blue-600 hover:underline">Getting Started</a>
             <ul class="ml-4 mt-2 space-y-1">
               <li><a href="#model-setup" class="text-blue-600 hover:underline">Model Configuration</a></li>
               <li><a href="#basic-usage" class="text-blue-600 hover:underline">Basic Usage</a></li>
             </ul>
           </li>
-          <li><a href="#features" class="text-blue-600 hover:underline">Core Features</a>
+          <li>
+            <a href="#features" class="text-blue-600 hover:underline">Core Features</a>
             <ul class="ml-4 mt-2 space-y-1">
               <li><a href="#validation" class="text-blue-600 hover:underline">Validation</a></li>
               <li><a href="#filtering" class="text-blue-600 hover:underline">Filtering</a></li>
@@ -78,28 +81,31 @@
         </ul>
       </div>
 
-      <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-        <code>composer config --global github-oauth.github.com YOUR-TOKEN</code></div>
+      <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>composer config --global github-oauth.github.com YOUR-TOKEN</code>
+      </pre>
 
       <h3 id="composer-setup" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
         2. Add Repository to composer.json
       </h3>
       <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-        <code>{
-          "repositories": [
-          {
-          "type": "vcs",
-          "url": "https://github.com/thinkneverland/evolve-core"
-          }
-          ]
-          }</code></pre>
+<code>{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/thinkneverland/evolve-core"
+    }
+  ]
+}</code>
+      </pre>
 
       <h3 id="package-install" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
         3. Install Package
       </h3>
 
-      <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-        <code>composer require thinkneverland/evolve-core</code></div>
+      <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>composer require thinkneverland/evolve-core</code>
+      </pre>
 
       <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h2 id="getting-started" class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
@@ -122,40 +128,41 @@
           Model Configuration
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>namespace App\Models;
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>namespace App\Models;
 
-            use Illuminate\Database\Eloquent\Model;
-            use Thinkneverland\Evolve\Core\Contracts\EvolveModelInterface;
-            use Thinkneverland\Evolve\Core\Traits\EvolveModelTrait;
+use Illuminate\Database\Eloquent\Model;
+use Thinkneverland\Evolve\Core\Contracts\EvolveModelInterface;
+use Thinkneverland\Evolve\Core\Traits\EvolveModelTrait;
 
-            class Post extends Model implements EvolveModelInterface
-            {
-            use EvolveModelTrait;
+class Post extends Model implements EvolveModelInterface
+{
+  use EvolveModelTrait;
 
-            public static function excludedFields(): array
-            {
-            return ['secret_field', 'internal_notes'];
-            }
+  public static function excludedFields(): array
+  {
+    return ['secret_field', 'internal_notes'];
+  }
 
-            public static function excludedRelations(): array
-            {
-            return ['internalComments'];
-            }
+  public static function excludedRelations(): array
+  {
+    return ['internalComments'];
+  }
 
-            public static function validationRules(): array
-            {
-            return [
-            'title' => ['required', 'string', 'max:255'],
-            'content' => ['required', 'string']
-            ];
-            }
+  public static function validationRules(): array
+  {
+    return [
+      'title' => ['required', 'string', 'max:255'],
+      'content' => ['required', 'string']
+    ];
+  }
 
-            public static function shouldEvolve(): bool
-            {
-            return true;
-            }
-            }</code></div>
+  public static function shouldEvolve(): bool
+  {
+    return true;
+  }
+}</code>
+        </pre>
 
         <div class="bg-blue-50 p-6 rounded-lg mb-8">
           <h4 class="font-semibold mb-2">Key Configuration Points:</h4>
@@ -172,21 +179,22 @@
           Basic Usage
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// Basic filtering
-            $posts = Post::filter([
-            'status' => 'published',
-            'author.id' => 1
-            ])->get();
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// Basic filtering
+$posts = Post::filter([
+  'status' => 'published',
+  'author.id' => 1
+])->get();
 
-            // Basic sorting
-            $posts = Post::evolve(null, ['created_at' => 'desc'])->get();
+// Basic sorting
+$posts = Post::evolve(null, ['created_at' => 'desc'])->get();
 
-            // Combined filtering and sorting
-            $posts = Post::evolve(
-            ['status' => 'published'],
-            ['created_at' => 'desc']
-            )->get();</code></div>
+// Combined filtering and sorting
+$posts = Post::evolve(
+  ['status' => 'published'],
+  ['created_at' => 'desc']
+)->get();</code>
+        </pre>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div class="bg-white p-6 rounded-lg shadow">
@@ -209,6 +217,7 @@
           </div>
         </div>
       </div>
+
       <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h2 id="features" class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Core Features
@@ -233,49 +242,51 @@
           Validation System
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// Get validation rules
-            $rules = Post::getValidationRules();
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// Get validation rules
+$rules = Post::getValidationRules();
 
-            // Action-specific validation
-            $updateRules = Post::getValidationRules('update', $post);
+// Action-specific validation
+$updateRules = Post::getValidationRules('update', $post);
 
-            // Custom validation rules
-            public static function validationRules(): array
-            {
-            return [
-            'title' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'unique:posts,slug'],
-            'category_id' => ['required', 'exists:categories,id'],
-            'tags' => ['array'],
-            'tags.*.id' => ['required', 'exists:tags,id'],
-            'content' => ['required', 'string', 'min:100']
-            ];
-            }</code></div>
+// Custom validation rules
+public static function validationRules(): array
+{
+  return [
+    'title' => ['required', 'string', 'max:255'],
+    'slug' => ['required', 'string', 'unique:posts,slug'],
+    'category_id' => ['required', 'exists:categories,id'],
+    'tags' => ['array'],
+    'tags.*.id' => ['required', 'exists:tags,id'],
+    'content' => ['required', 'string', 'min:100']
+  ];
+}</code>
+        </pre>
 
         <h3 id="filtering" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Advanced Filtering
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// Simple filtering
-            $posts = Post::filter([
-            'status' => 'published',
-            'featured' => true
-            ])->get();
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// Simple filtering
+$posts = Post::filter([
+  'status' => 'published',
+  'featured' => true
+])->get();
 
-            // Relation filtering
-            $posts = Post::filter([
-            'author.name' => 'John Doe',
-            'category.slug' => 'technology',
-            'tags.name' => 'Laravel'
-            ])->get();
+// Relation filtering
+$posts = Post::filter([
+  'author.name' => 'John Doe',
+  'category.slug' => 'technology',
+  'tags.name' => 'Laravel'
+])->get();
 
-            // Deep nested filtering
-            $orders = Order::filter([
-            'customer.company.country.code' => 'US',
-            'items.product.category.name' => 'Electronics'
-            ])->get();</code></div>
+// Deep nested filtering
+$orders = Order::filter([
+  'customer.company.country.code' => 'US',
+  'items.product.category.name' => 'Electronics'
+])->get();</code>
+        </pre>
 
         <div class="bg-blue-50 p-6 rounded-lg mb-8">
           <h4 class="font-semibold mb-2">Filtering Features:</h4>
@@ -292,24 +303,25 @@
           Sorting Operations
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// Basic sorting
-            $posts = Post::evolve(null, ['created_at' => 'desc'])->get();
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// Basic sorting
+$posts = Post::evolve(null, ['created_at' => 'desc'])->get();
 
-            // Multiple field sorting
-            $posts = Post::evolve(null, [
-            'featured' => 'desc',
-            'created_at' => 'desc'
-            ])->get();
+// Multiple field sorting
+$posts = Post::evolve(null, [
+  'featured' => 'desc',
+  'created_at' => 'desc'
+])->get();
 
-            // Relation sorting
-            $posts = Post::evolve(null, [
-            'author.name' => 'asc',
-            'category.name' => 'desc'
-            ])->get();
+// Relation sorting
+$posts = Post::evolve(null, [
+  'author.name' => 'asc',
+  'category.name' => 'desc'
+])->get();
 
-            // String format sorting
-            $posts = Post::evolve(null, '-created_at,author.name')->get();</code></div>
+// String format sorting
+$posts = Post::evolve(null, '-created_at,author.name')->get();</code>
+        </pre>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div class="bg-white p-6 rounded-lg shadow">
@@ -332,6 +344,7 @@
           </div>
         </div>
       </div>
+
       <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h3 id="events" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Event System
@@ -358,40 +371,42 @@
           </div>
         </div>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// In EventServiceProvider.php
-            protected $listen = [
-            EvolveModelCreated::class => [
-            HandleModelCreated::class,
-            ],
-            EvolveModelUpdated::class => [
-            HandleModelUpdated::class,
-            ],
-            EvolveModelDeleted::class => [
-            HandleModelDeleted::class,
-            ],
-            EvolveModelRestored::class => [
-            HandleModelRestored::class,
-            ],
-            ];</code></div>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// In EventServiceProvider.php
+protected $listen = [
+  EvolveModelCreated::class => [
+    HandleModelCreated::class,
+  ],
+  EvolveModelUpdated::class => [
+    HandleModelUpdated::class,
+  ],
+  EvolveModelDeleted::class => [
+    HandleModelDeleted::class,
+  ],
+  EvolveModelRestored::class => [
+    HandleModelRestored::class,
+  ],
+];</code>
+        </pre>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// Example event handler
-            class HandleModelCreated
-            {
-            public function handle(EvolveModelCreated $event)
-            {
-            $model = $event->model;
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// Example event handler
+class HandleModelCreated
+{
+  public function handle(EvolveModelCreated $event)
+  {
+    $model = $event->model;
 
-            if ($model instanceof Order) {
-            // Handle order creation
-            $this->processOrder($model);
-            }
+    if ($model instanceof Order) {
+      // Handle order creation
+      $this->processOrder($model);
+    }
 
-            // Log the event
-            Log::info("Model created: " . get_class($model) . " #{$model->id}");
-            }
-            }</code></div>
+    // Log the event
+    Log::info("Model created: " . get_class($model) . " #{$model->id}");
+  }
+}</code>
+        </pre>
 
         <h3 id="policies" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Authorization Policies
@@ -408,58 +423,60 @@
           </ul>
         </div>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>// Default policy implementation
-            class EvolvePolicy
-            {
-            public function viewAny(User $user)
-            {
-            return $user->hasPermissionTo('view any');
-            }
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>// Default policy implementation
+class EvolvePolicy
+{
+  public function viewAny(User $user)
+  {
+    return $user->hasPermissionTo('view any');
+  }
 
-            public function view(User $user, $model)
-            {
-            return $user->hasPermissionTo('view');
-            }
+  public function view(User $user, $model)
+  {
+    return $user->hasPermissionTo('view');
+  }
 
-            public function create(User $user)
-            {
-            return $user->hasPermissionTo('create');
-            }
+  public function create(User $user)
+  {
+    return $user->hasPermissionTo('create');
+  }
 
-            public function update(User $user, $model)
-            {
-            return $user->hasPermissionTo('update');
-            }
-            }</code></div>
+  public function update(User $user, $model)
+  {
+    return $user->hasPermissionTo('update');
+  }
+}</code>
+        </pre>
 
         <h4 class="text-xl font-semibold mb-4">Custom Policy Example</h4>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>class OrderPolicy extends EvolvePolicy
-            {
-            public function update(User $user, Order $order)
-            {
-            // Basic permission check
-            if (!$user->hasPermissionTo('update orders')) {
-            return false;
-            }
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>class OrderPolicy extends EvolvePolicy
+{
+  public function update(User $user, Order $order)
+  {
+    // Basic permission check
+    if (!$user->hasPermissionTo('update orders')) {
+      return false;
+    }
 
-            // Order-specific rules
-            if ($order->status === 'completed') {
-            return false;
-            }
+    // Order-specific rules
+    if ($order->status === 'completed') {
+      return false;
+    }
 
-            // Organization check
-            return $user->organization_id === $order->organization_id;
-            }
+    // Organization check
+    return $user->organization_id === $order->organization_id;
+  }
 
-            public function delete(User $user, Order $order)
-            {
-            // Only admins can delete orders
-            return $user->hasRole('admin');
-            }
-            }</code></div>
+  public function delete(User $user, Order $order)
+  {
+    // Only admins can delete orders
+    return $user->hasRole('admin');
+  }
+}</code>
+        </pre>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div class="bg-white p-6 rounded-lg shadow">
@@ -482,6 +499,7 @@
           </div>
         </div>
       </div>
+
       <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h2 id="advanced" class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Advanced Usage
@@ -506,96 +524,98 @@
           Complex Model Configuration
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>class Order extends Model implements EvolveModelInterface
-            {
-            use EvolveModelTrait;
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>class Order extends Model implements EvolveModelInterface
+{
+  use EvolveModelTrait;
 
-            public static function validationRules(): array
-            {
-            return [
-            'items' => ['required', 'array', 'min:1'],
-            'items.*.product_id' => ['required', 'exists:products,id'],
-            'items.*.quantity' => ['required', 'integer', 'min:1'],
-            'shipping_address' => ['required', 'array'],
-            'shipping_address.street' => ['required', 'string'],
-            'shipping_address.city' => ['required', 'string'],
-            'shipping_address.country' => ['required', 'string', 'size:2'],
-            'payment_method' => ['required', 'in:credit_card,paypal,bank_transfer'],
-            'customer_id' => [
-            'required',
-            'exists:customers,id',
-            function ($attribute, $value, $fail) {
-            $customer = Customer::find($value);
-            if ($customer && !$customer->can_place_orders) {
+  public static function validationRules(): array
+  {
+    return [
+      'items' => ['required', 'array', 'min:1'],
+      'items.*.product_id' => ['required', 'exists:products,id'],
+      'items.*.quantity' => ['required', 'integer', 'min:1'],
+      'shipping_address' => ['required', 'array'],
+      'shipping_address.street' => ['required', 'string'],
+      'shipping_address.city' => ['required', 'string'],
+      'shipping_address.country' => ['required', 'string', 'size:2'],
+      'payment_method' => ['required', 'in:credit_card,paypal,bank_transfer'],
+      'customer_id' => [
+        'required',
+        'exists:customers,id',
+        function ($attribute, $value, $fail) {
+          $customer = Customer::find($value);
+          if ($customer && !$customer->can_place_orders) {
             $fail('This customer is not allowed to place orders.');
-            }
-            }
-            ]
-            ];
-            }
+          }
+        }
+      ]
+    ];
+  }
 
-            public static function uniqueFields(): array
-            {
-            return ['order_number', 'transaction_id'];
-            }
+  public static function uniqueFields(): array
+  {
+    return ['order_number', 'transaction_id'];
+  }
 
-            public static function excludedFields(): array
-            {
-            return [
-            'payment_details',
-            'internal_notes',
-            'risk_score'
-            ];
-            }
-            }</code></div>
+  public static function excludedFields(): array
+  {
+    return [
+      'payment_details',
+      'internal_notes',
+      'risk_score'
+    ];
+  }
+}</code>
+        </pre>
 
         <h3 id="advanced-events" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Advanced Event Handling
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
-          <code>class HandleOrderCreated
-            {
-            protected $notificationService;
-            protected $inventoryService;
-            protected $analyticsService;
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+<code>class HandleOrderCreated
+{
+  protected $notificationService;
+  protected $inventoryService;
+  protected $analyticsService;
 
-            public function handle(EvolveModelCreated $event)
-            {
-            if (!($event->model instanceof Order)) {
-            return;
-            }
+  public function handle(EvolveModelCreated $event)
+  {
+    if (!($event->model instanceof Order)) {
+      return;
+    }
 
-            $order = $event->model;
+    $order = $event->model;
 
-            // Process inventory
-            collect($order->items)->each(function($item) {
-            $this->inventoryService->decreaseStock(
-            $item->product_id,
-            $item->quantity
-            );
-            });
+    // Process inventory
+    collect($order->items)->each(function($item) {
+      $this->inventoryService->decreaseStock(
+        $item->product_id,
+        $item->quantity
+      );
+    });
 
-            // Send notifications
-            $this->notificationService->sendOrderConfirmation($order);
+    // Send notifications
+    $this->notificationService->sendOrderConfirmation($order);
 
-            if ($order->total > 1000) {
-            $this->notificationService->notifyAdmins(
-            "High-value order #{$order->id} received"
-            );
-            }
+    if ($order->total > 1000) {
+      $this->notificationService->notifyAdmins(
+        "High-value order #{$order->id} received"
+      );
+    }
 
-            // Track analytics
-            $this->analyticsService->trackOrder($order);
-            }
-            }</code></div>
+    // Track analytics
+    $this->analyticsService->trackOrder($order);
+  }
+}</code>
+        </pre>
 
         <h3 id="complex-queries" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Complex Query Operations
         </h3>
 
-        <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+        <p class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
           <code>// Complex filtering with nested relations
             $orders = Order::with(['items.product', 'customer'])
             ->filter([
@@ -620,7 +640,8 @@
             'author.reputation' => 'desc',
             'created_at' => 'desc'
             ]
-            )->get();</code></div>
+            )->get();</code>
+        </p>
 
         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
           <h4 class="font-semibold mb-2">Performance Considerations:</h4>
@@ -633,6 +654,7 @@
           </ul>
         </div>
       </div>
+
       <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h2 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
           Troubleshooting & Resources
@@ -664,7 +686,8 @@
               <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
                 <code>composer config --global github-oauth.github.com YOUR-TOKEN
                   composer clear-cache
-                  composer update</code></div>
+                  composer update</code>
+              </div>
               <p class="text-gray-600">Ensure your GitHub token has the correct permissions and your composer.json is properly configured.</p>
             </div>
           </div>
@@ -683,7 +706,8 @@
                   // Your rules here
                   ];
                   }
-                  }</code></div>
+                  }</code>
+              </div>
             </div>
           </div>
           <div class="p-4">
@@ -696,7 +720,8 @@
                 }
 
                 // Use proper dot notation
-                Post::filter(['author.name' => 'John'])->get();</code></div>
+                Post::filter(['author.name' => 'John'])->get();</code>
+            </div>
           </div>
         </div>
 
@@ -755,5 +780,6 @@
     </UContainer>
   </div>
 </template>
+
 <script setup lang="ts">
 </script>
