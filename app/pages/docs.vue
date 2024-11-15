@@ -17,21 +17,21 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <a href="/core" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+          <a href="/evolve-core-documentation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-2">Core Package</h3>
             <p class="text-gray-600">Foundation layer providing enhanced model capabilities, validation, filtering, and authorization.</p>
             <div class="mt-4 text-sm text-blue-600">
               View Documentation →
             </div>
           </a>
-          <a href="/api" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+          <a href="/evolve-api-documentation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-2">API Package</h3>
             <p class="text-gray-600">RESTful API implementation with automatic endpoint generation and response handling.</p>
             <div class="mt-4 text-sm text-blue-600">
               View Documentation →
             </div>
           </a>
-          <a href="/ui" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+          <a href="/evolve-ui-documentation" class="block p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-2">UI Package</h3>
             <p class="text-gray-600">Pre-built UI components and interfaces that integrate with Core and API packages.</p>
             <div class="mt-4 text-sm text-blue-600">
@@ -57,6 +57,9 @@
               <li>Policy-based authorization</li>
               <li>Relationship management</li>
             </ul>
+            <a href="/evolve-core-documentation" class="mt-4 text-sm text-blue-600">
+              View Documentation →
+            </a>
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow">
@@ -71,6 +74,9 @@
               <li>Query parameter handling</li>
               <li>Error handling and logging</li>
             </ul>
+            <a href="/evolve-api-documentation" class="mt-4 text-sm text-blue-600">
+              View Documentation →
+            </a>
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow">
@@ -85,6 +91,9 @@
               <li>Authentication views</li>
               <li>Customizable components</li>
             </ul>
+            <a href="/evolve-ui-documentation" class="mt-4 text-sm text-blue-600">
+              View Documentation →
+            </a>
           </div>
         </div>
 
