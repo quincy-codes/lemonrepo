@@ -46,7 +46,7 @@
               <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
               <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
               <li><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
-              <li><strong>Role-Based Access Control</strong>: Automatically enforces evolveCORE permissions on each request.</li>
+              <li><strong>Role-Based Access Control</strong>: Automatically enforces EvolveCORE permissions on each request.</li>
               <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
             </ul>
 

@@ -41,27 +41,27 @@ const items = [
   {
     label: "What is Evolve?",
     content:
-        "Evolve is a modular Laravel package suite designed to provide powerful, customizable CRUD operations, RESTful API endpoints, and a Livewire-based user interface. Evolve is split into three packages—evolveCORE, evolveAPI, and evolveUI—so you can tailor it to your app’s needs.",
+        "Evolve is a modular Laravel package suite designed to provide powerful, customizable CRUD operations, RESTful API endpoints, and a Livewire-based user interface. Evolve is split into three packages—EvolveCORE, EvolveAPI, and EvolveUI—so you can tailor it to your app’s needs.",
   },
   {
     label: "What are the three packages?",
     content:
-        "Evolve consists of three packages: evolveCORE, evolveAPI, and evolveUI. evolveCORE is the foundational package that provides core CRUD functionality, evolveAPI adds RESTful endpoints for CRUD actions, and evolveUI provides a Livewire-powered user interface. EvolveAPI and EvolveUI are optional extensions.",
+        "Evolve consists of three packages: EvolveCORE, EvolveAPI, and EvolveUI. EvolveCORE is the foundational package that provides core CRUD functionality, EvolveAPI adds RESTful endpoints for CRUD actions, and EvolveUI provides a Livewire-powered user interface. EvolveAPI and EvolveUI are optional extensions.",
   },
   {
     label: "What features are provided by each package?",
     content:
-        "evolveCORE: Model-defined configuration, dynamic filtering and sorting, permissions, event hooks, and validation.\n\nevolveAPI: API routes with standardized JSON responses, batch operations, and optional Swagger documentation.\n\nevolveUI: A responsive UI with searchable, filterable, and sortable fields, along with a role-based dynamic menu.",
+        "EvolveCORE: Model-defined configuration, dynamic filtering and sorting, permissions, event hooks, and validation.\n\nEvolveAPI: API routes with standardized JSON responses, batch operations, and optional Swagger documentation.\n\nEvolveUI: A responsive UI with searchable, filterable, and sortable fields, along with a role-based dynamic menu.",
   },
   {
     label: "How do I install the packages?",
     content:
-        "Each package can be installed individually via Composer. Start with evolveCORE as the base package, and add evolveAPI and/or evolveUI as needed for additional API or UI functionality.",
+        "Each package can be installed individually via Composer. Start with EvolveCORE as the base package, and add EvolveAPI and/or EvolveUI as needed for additional API or UI functionality.",
   },
   {
     label: "Can I customize fields, filters, and permissions?",
     content:
-        "Yes! In evolveCORE, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
+        "Yes! In EvolveCORE, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
   },
   {
     label: "How do CRUD event hooks work?",
@@ -81,15 +81,15 @@ const items = [
   {
     label: "Is EvolveUI dependent on EvolveAPI?",
     content:
-        "No, evolveUI only requires evolveCORE. You can use evolveUI without evolveAPI if you only need a UI for CRUD operations without API endpoints.",
+        "No, EvolveUI only requires EvolveCORE. You can use EvolveUI without EvolveAPI if you only need a UI for CRUD operations without API endpoints.",
   },
   {
     label: "What optional packages are supported?",
     content:
-        "Evolve integrates with Spatie Permissions for role-based access, DaisyUI for styling, and Swagger for API documentation (optional with evolveAPI).",
+        "Evolve integrates with Spatie Permissions for role-based access, DaisyUI for styling, and Swagger for API documentation (optional with EvolveAPI).",
   },
   {
-    label: "Where can I find API documentation for evolveAPI?",
+    label: "Where can I find API documentation for EvolveAPI?",
     content:
         "If Swagger is installed, API documentation is generated automatically and can be accessed at `/api/documentation`.",
   },
