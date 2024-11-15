@@ -54,15 +54,15 @@
           @click="toggleMobileMenu"
           variant="ghost"
           color="gray"
-          >Faq</UButton
+          >FAQ</UButton
         >
-<!--        <UButton-->
-<!--          to="/#docs"-->
-<!--          @click="toggleMobileMenu"-->
-<!--          variant="ghost"-->
-<!--          color="gray"-->
-<!--          >Docs</UButton-->
-<!--        >-->
+        <UButton
+          to="/docs"
+          @click="toggleMobileMenu"
+          variant="ghost"
+          color="gray"
+          >Docs</UButton
+        >
       </div>
     </div>
   </header>
