@@ -86,8 +86,7 @@
         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mt-12">
           <h4 class="font-semibold mb-2">Getting Started</h4>
           <p class="text-gray-700">
-            We MUST the EvolveCore package installation and then progressively adding the optional API and optional UI packages as needed. Each package can be used independently, but they're designed to work together seamlessly.
-          </p>
+            The EvolveCore package is required for installation, and the optional API and UI packages can be added progressively as needed. Each package can be used independently, but they are designed to work together seamlessly.          </p>
         </div>
     </UContainer>
   </div>
