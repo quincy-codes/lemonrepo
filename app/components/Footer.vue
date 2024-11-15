@@ -92,7 +92,7 @@ const navigation = {
   ],
   support: [
     { name: "Activate License", href: "/activate-license" },
-    { name: "Think Never Land", href: "https://thinkneverland.com" },
+    { name: "Think Neverland", href: "https://thinkneverland.com" },
     // { name: "Discord", href: "#" },
     // { name: "Documentation", href: "#" },
     { name: "Email Us", href: "mailto:hello@thinkneverland.com" },
