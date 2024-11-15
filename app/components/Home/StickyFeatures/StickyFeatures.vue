@@ -41,7 +41,7 @@
 
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveAPI (Optional / Prerelease)</h3>
+            >EvolveAPI (Optional Free Extension)</h3>
             <ul>
               <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
               <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
@@ -52,7 +52,7 @@
 
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveUI (Optional / Prerelease)</h3>
+            >EvolveUI (Optional Free Extension)</h3>
             <ul>
               <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
               <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>

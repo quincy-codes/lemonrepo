@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-xl mx-auto">
+  <div class="max-w-8xl mx-auto">
     <UContainer class="max-w-4xl py-12 space-y-6">
       <h1 
           class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black"

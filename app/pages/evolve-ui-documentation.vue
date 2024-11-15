@@ -12,7 +12,7 @@
       </div>
 
       <h3 class="text-center text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
-        EvolveUI (Extension / Prerelease)
+        EvolveUI (Optional Free Extension)
       </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">

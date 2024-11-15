@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="max-w-8xl mx-auto">
     <HomeHero :count="count" />
 <!--    <HomeVideoIntro />-->
     <HomeStickyFeatures />
