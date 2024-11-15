@@ -57,9 +57,7 @@
               <li>Policy-based authorization</li>
               <li>Relationship management</li>
             </ul>
-            <a href="/evolve-core-documentation" class="mt-4 text-sm text-blue-600">
-              View Documentation →
-            </a>
+            <ButtonLink label="View Documentation →" size="sm" rounded="md" href="/evolve-core-documentation" />
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow">
@@ -74,9 +72,8 @@
               <li>Query parameter handling</li>
               <li>Error handling and logging</li>
             </ul>
-            <a href="/evolve-api-documentation" class="mt-4 text-sm text-blue-600">
-              View Documentation →
-            </a>
+            <ButtonLink label="View Documentation →" size="sm" rounded="md" href="/evolve-api-documentation" />
+
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow">
@@ -91,9 +88,7 @@
               <li>Authentication views</li>
               <li>Customizable components</li>
             </ul>
-            <a href="/evolve-ui-documentation" class="mt-4 text-sm text-blue-600">
-              View Documentation →
-            </a>
+            <ButtonLink label="View Documentation →" size="sm" rounded="md" href="/evolve-ui-documentation" />
           </div>
         </div>
 
