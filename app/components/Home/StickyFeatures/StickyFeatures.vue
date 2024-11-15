@@ -30,7 +30,7 @@
 
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveCORE (Foundation / Prerelease)</h3>
+            >EvolveCORE (Foundation)</h3>
           <ul class="list-disc ml-6">
               <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
               <li class="mb-2"><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
