@@ -29,7 +29,7 @@ class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">5.
 
       <h3
 class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">Contact Us</h3>
-      <p>If you have any questions about this Agreement, please contact us at hello@thinkneverland.com.</p>
+      <p>If you have any questions about this Agreement, please contact us at <a href="mailto:hello@thinkneverland.com">hello@thinkneverland.com</a>.</p>
 
       <hr>
 
@@ -42,8 +42,10 @@ class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">Co
 
       <h3
 class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">Contact Us</h3>
-      <p>If you have any questions about this Agreement, please contact us at hello@thinkneverland.com.</p>
+      <p>If you have any questions about this Agreement, please contact us at <a href="mailto:hello@thinkneverland.com">hello@thinkneverland.com</a>.</p>
 
     </UContainer>
   </div>
 </template>
+<script setup lang="ts">
+</script>

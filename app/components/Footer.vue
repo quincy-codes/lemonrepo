@@ -7,7 +7,7 @@
           <div>
             <div class="flex items-center gap-2 text-white">
               <Logo class="h-7 w-auto fill-white" />
-              <p>Think Never Land</p>
+              <p>Think Neverland</p>
             </div>
             <p class="text-white text-sm mt-4">
               Laravel Packages Inspired By What If.

@@ -10,7 +10,7 @@
 <script setup>
 import { Toaster } from "vue-sonner";
 useSeoMeta({
-  title: "Think Never Land - Evolve | Powerful Modular Laravel CRUD, API, and UI Solutions",
+  title: "Think Neverland - Evolve | Powerful Modular Laravel CRUD, API, and UI Solutions",
   description: "Sell templates, codebases, websites, and more with Lemonrepo.",
   ogImage: "https://supersaas.dev/og-image.png",
 });
