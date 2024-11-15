@@ -31,7 +31,7 @@
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveCORE (Foundation / Prerelease)</h3>
-            <ul>
+          <ul class="list-disc ml-6">
               <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
               <li class="mb-2"><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
               <li class="mb-2"><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
@@ -42,7 +42,7 @@
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveAPI (Optional Free Extension)</h3>
-            <ul>
+      <ul class="list-disc ml-6">
               <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
               <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
               <li><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
@@ -53,7 +53,7 @@
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
             >EvolveUI (Optional Free Extension)</h3>
-            <ul>
+      <ul class="list-disc ml-6">
               <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
               <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
               <li><strong>DaisyUI Styling</strong>: Consistent styling across all components, with Jetstream compatibility.</li>
