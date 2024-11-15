@@ -11,8 +11,8 @@
 import { Toaster } from "vue-sonner";
 useSeoMeta({
   title: "Think Neverland - Evolve | Powerful Modular Laravel CRUD, API, and UI Solutions",
-  description: "Sell templates, codebases, websites, and more with Lemonrepo.",
-  ogImage: "https://supersaas.dev/og-image.png",
+  description: "A Laravel suite for seamless CRUD, customizable APIs, and Livewire UI. Build, refine, and scale your vision with powerful, flexible tools at your fingertips.",
+  ogImage: "https://assets.zyrosite.com/Y4LJNpxjPJc2N8ky/banner-dJo4a24WwgTG2lqW.png",
 });
 </script>
 
