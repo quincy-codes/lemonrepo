@@ -615,33 +615,34 @@ class EvolvePolicy
           Complex Query Operations
         </h3>
 
-        <p class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
           <code>// Complex filtering with nested relations
-            $orders = Order::with(['items.product', 'customer'])
-            ->filter([
-            'status' => 'processing',
-            'customer.type' => 'vip',
-            'items.product.category.name' => 'Electronics',
-            'created_at' => Carbon::today(),
-            'total_amount' => 1000
-            ])
-            ->evolve(null, [
-            'created_at' => 'desc',
-            'customer.name' => 'asc'
-            ])
-            ->paginate(20);
+$orders = Order::with(['items.product', 'customer'])
+    ->filter([
+        'status' => 'processing',
+        'customer.type' => 'vip',
+        'items.product.category.name' => 'Electronics',
+        'created_at' => Carbon::today(),
+        'total_amount' => 1000
+    ])
+    ->evolve(null, [
+        'created_at' => 'desc',
+        'customer.name' => 'asc'
+    ])
+    ->paginate(20);
 
-            // Advanced sorting with multiple conditions
-            $posts = Post::evolve(
-            ['status' => 'published'],
-            [
-            'featured' => 'desc',
-            'category.priority' => 'asc',
-            'author.reputation' => 'desc',
-            'created_at' => 'desc'
-            ]
-            )->get();</code>
-        </p>
+// Advanced sorting with multiple conditions
+$posts = Post::evolve(
+    ['status' => 'published'],
+    [
+        'featured' => 'desc',
+        'category.priority' => 'asc',
+        'author.reputation' => 'desc',
+        'created_at' => 'desc'
+    ]
+)->get();
+          </code>
+        </pre>
 
         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
           <h4 class="font-semibold mb-2">Performance Considerations:</h4>
@@ -683,36 +684,37 @@ class EvolvePolicy
           <div class="border-b">
             <div class="p-4">
               <h4 class="font-semibold mb-2">Package Installation Fails</h4>
-              <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
+              <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
                 <code>composer config --global github-oauth.github.com YOUR-TOKEN
                   composer clear-cache
                   composer update</code>
-              </div>
+              </pre>
               <p class="text-gray-600">Ensure your GitHub token has the correct permissions and your composer.json is properly configured.</p>
             </div>
           </div>
           <div class="border-b">
             <div class="p-4">
               <h4 class="font-semibold mb-2">Validation Rules Not Working</h4>
-              <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
+              <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
                 <code>// Check implementation
-                  class YourModel extends Model implements EvolveModelInterface
-                  {
-                  use EvolveModelTrait;
+class YourModel extends Model implements EvolveModelInterface
+{
+    use EvolveModelTrait;
 
-                  public static function validationRules(): array
-                  {
-                  return [
-                  // Your rules here
-                  ];
-                  }
-                  }</code>
-              </div>
+    public static function validationRules(): array
+    {
+        return [
+            // Your rules here
+        ];
+    }
+}
+                </code>
+              </pre>
             </div>
           </div>
           <div class="p-4">
             <h4 class="font-semibold mb-2">Relationship Filtering Issues</h4>
-            <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
+            <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-4">
               <code>// Ensure proper relationship definition
                 public function author()
                 {
@@ -721,7 +723,7 @@ class EvolvePolicy
 
                 // Use proper dot notation
                 Post::filter(['author.name' => 'John'])->get();</code>
-            </div>
+            </pre>
           </div>
         </div>
 
