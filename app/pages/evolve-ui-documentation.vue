@@ -11,7 +11,7 @@
         <ButtonLink label="UI" size="sm" rounded="md" href="/evolve-UI-documentation" />
       </div>
 
-      <h3 class="text-center max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
+      <h3 class="text-center text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8">
         EvolveUI (Extension / Prerelease)
       </h3>
 
