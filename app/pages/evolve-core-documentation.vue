@@ -84,8 +84,7 @@
       <h3 id="composer-setup" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
         2. Add Repository to composer.json
       </h3>
-
-      <div class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
+      <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto mb-8">
         <code>{
           "repositories": [
           {
@@ -93,7 +92,7 @@
           "url": "https://github.com/thinkneverland/evolve-core"
           }
           ]
-          }</code></div>
+          }</code></pre>
 
       <h3 id="package-install" class="text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4">
         3. Install Package
