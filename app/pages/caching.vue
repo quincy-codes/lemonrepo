@@ -6,7 +6,7 @@
       </h1>
 
       <div class="w-full columns-2 py-4">
-          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" />
+          <ButtonLink label="Documentation Home" rounded="md" href="/docs" />
       </div>
 
       <div class="bg-gray-100 p-6 rounded-lg mb-8">
