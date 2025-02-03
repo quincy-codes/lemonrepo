@@ -33,7 +33,8 @@
         <h3 class="text-xl font-semibold mb-4">Basic Setup</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// config/evolve.php
+&lt;?php
+
 return [
     'cache' => [
         'enabled' => env('EVOLVE_CACHE_ENABLED', true),
@@ -61,6 +62,8 @@ EVOLVE_CACHE_STORE=redis</pre>
         <h3 class="text-xl font-semibold mb-4">Model Caching</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
+&lt;?php
+
 use ThinkNeverland\Evolve\Traits\HasEvolve;
 
 class User extends Model

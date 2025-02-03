@@ -69,6 +69,8 @@ return [
         <h3 class="text-xl font-semibold mb-4">Model Settings</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
+&lt;?php
+
 // User Model Configuration
 class User extends Model
 {

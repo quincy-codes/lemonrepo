@@ -39,6 +39,8 @@ GET /api/users?filter[posts][status]=published&filter[posts][category]=tech</pre
         <h3 class="text-xl font-semibold mb-4">Custom Filter Implementation</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
+&lt;?php
+
 class User extends Model
 {
     use HasEvolve;

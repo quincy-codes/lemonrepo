@@ -35,6 +35,8 @@
           <pre class="text-green-400">
 use ThinkNeverland\Evolve\Traits\HasEvolve;
 
+&lt;?php
+
 class User extends Model
 {
     use HasEvolve;

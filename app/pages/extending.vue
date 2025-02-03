@@ -33,6 +33,8 @@
         <h3 class="text-xl font-semibold mb-4">Service Provider</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
+&lt;?php
+
 namespace App\Providers;
 
 use ThinkNeverland\Evolve\Support\ServiceProvider;
