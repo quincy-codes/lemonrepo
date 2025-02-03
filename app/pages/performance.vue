@@ -5,7 +5,7 @@
         Performance Guide
       </h1>
 
-      <div class="w-full columns-2 py-4">
+      <div class="w-full py-4">
           <ButtonLink label="Documentation Home" size="md" rounded="md" href="/docs" />
       </div>
 
