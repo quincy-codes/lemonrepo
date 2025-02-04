@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full">
-    <UContainer class="py-12 space-y-6">
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display mx-auto">
+  <div class="max-w-4xl mx-auto">
+    <UContainer class="max-w-8xl py-12 space-y-6">
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
         Database Guide
       </h1>
 
-      <div class="w-full py-4">
-          <ButtonLink label="Documentation Home" size="md" rounded="md" href="/docs" />
+      <div class="w-full columns-2 py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" />
       </div>
 
       <div class="bg-gray-100 p-6 rounded-lg mb-8">
@@ -34,8 +34,6 @@
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 use ThinkNeverland\Evolve\Traits\HasEvolve;
-
-&lt;?php
 
 class User extends Model
 {
@@ -78,6 +76,9 @@ protected $evolveConfig = [
       <section id="relationships" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">3. Relationships</h2>
         
+        <h3 class="text-xl font-semibold mb-4">Relationship Discovery</h3>
+        <p class="mb-4">Relationships are automatically discovered through reflection. Configuration is optional and only needed for customization.</p>
+        
         <h3 class="text-xl font-semibold mb-4">Defining Relationships</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
@@ -85,42 +86,65 @@ class User extends Model
 {
     use HasEvolve;
 
+    // Relationships are automatically discovered
     public function posts()
     {
-        return $this->hasMany(Post::class)
-            ->withEvolve()
-            ->defaultSort('-created_at');
+        return $this->hasMany(Post::class);
     }
 
     public function profile()
     {
-        return $this->hasOne(Profile::class)
-            ->withEvolve()
-            ->withDefault();
+        return $this->hasOne(Profile::class);
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class)
-            ->withEvolve()
-            ->withTimestamps();
-    }
+    // Optional configuration for customization
+    protected $evolveConfig = [
+        'relationships' => [
+            'posts' => [
+                'fields' => ['title', 'content'],  // Only include specific fields
+                'type' => 'hasMany',              // Optional - discovered automatically
+                'constraints' => [                 // Optional - add query constraints
+                    'published' => function($query) {
+                        return $query->where('status', 'published');
+                    },
+                    'recent' => function($query) {
+                        return $query->where('created_at', '>=', now()->subDays(7));
+                    }
+                ]
+            ],
+            'profile' => [
+                'fields' => ['bio', 'avatar']     // Only include specific fields
+            ]
+        ],
+        
+        // Exclude specific relationships globally
+        'exclude' => [
+            'relationships' => ['audits']
+        ]
+    ];
 }</pre>
         </div>
 
-        <h3 class="text-xl font-semibold mb-4">Relationship Loading</h3>
+        <h3 class="text-xl font-semibold mb-4">Loading Relationships</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Eager loading with constraints
-$users = User::with(['posts' => function($query) {
-    $query->published()->recent();
-}])->get();
+// All discovered relationships are loaded by default unless excluded
+$users = User::all();
 
-// Lazy eager loading
-$user->load(['profile', 'roles']);
+// Load specific relationships
+$users = User::with(['posts', 'profile'])->get();
 
-// Conditional loading
-$user->loadWhen($condition, ['posts', 'profile']);</pre>
+// Load with specific fields
+GET /api/users?include=posts:title,content,profile:bio
+
+// Load with constraints
+GET /api/users?include=posts:published:recent
+
+// Exclude specific relationships
+GET /api/users?exclude=audits
+
+// Load nested relationships
+GET /api/users?include=posts.comments,profile</pre>
         </div>
       </section>
 
@@ -167,42 +191,86 @@ Schema::table('users', function (Blueprint $table) {
       <section id="querying" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">5. Querying</h2>
         
+        <h3 class="text-xl font-semibold mb-4">Basic Queries</h3>
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <pre class="text-green-400">
+// Basic CRUD operations
+$users = User::all();
+$user = User::find(1);
+$users = User::where('status', 'active')->get();</pre>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">Relationship Queries</h3>
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <pre class="text-green-400">
+// Automatic relationship loading (default behavior)
+$users = User::all();  // Loads all discovered relationships unless excluded
+
+// Specific relationships
+$users = User::with(['posts', 'profile'])->get();
+
+// With constraints
+$users = User::with(['posts' => function($query) {
+    $query->where('status', 'published')
+         ->where('created_at', '>=', now()->subDays(7));
+}])->get();
+
+// Using predefined constraints
+$users = User::with(['posts:published:recent'])->get();
+
+// Nested relationships with constraints
+$users = User::with([
+    'posts.comments' => function($query) {
+        $query->where('approved', true);
+    },
+    'roles:active'
+])->get();</pre>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">API Queries</h3>
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <pre class="text-green-400">
+// Basic filtering
+GET /api/users?filter[status]=active
+
+// Include relationships
+GET /api/users?include=posts,profile
+
+// Include with specific fields
+GET /api/users?include=posts:title,content,profile:bio
+
+// Include with constraints
+GET /api/users?include=posts:published:recent
+
+// Nested relationships
+GET /api/users?include=posts.comments:approved,roles:active
+
+// Exclude relationships
+GET /api/users?exclude=audits,deleted_records
+
+// Combining filters
+GET /api/users?filter[status]=active&include=posts:published&exclude=audits</pre>
+        </div>
+
         <h3 class="text-xl font-semibold mb-4">Advanced Queries</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Complex where clauses
-User::query()
-    ->where('status', 'active')
-    ->whereHas('posts', function($query) {
-        $query->published();
-    })
-    ->whereJsonContains('settings->permissions', 'admin')
-    ->get();
-
-// Dynamic scopes
-User::withScope('active')
-    ->withScope('hasVerifiedEmail')
-    ->paginate();</pre>
-        </div>
-
-        <h3 class="text-xl font-semibold mb-4">Query Builders</h3>
-        <div class="bg-gray-800 rounded-lg p-4 mb-6">
-          <pre class="text-green-400">
-// Custom query builder
-class UserQueryBuilder extends EvolveQueryBuilder
-{
-    public function withActiveSubscription()
-    {
-        return $this->whereHas('subscription', function($query) {
-            $query->active();
-        });
+// Complex relationship queries
+$users = User::whereHas('posts', function($query) {
+    $query->published()->recent();
+})->with([
+    'posts' => function($query) {
+        $query->select(['id', 'title', 'content'])
+              ->published()
+              ->recent();
+    },
+    'profile' => function($query) {
+        $query->select(['id', 'user_id', 'bio']);
     }
+])->get();
 
-    public function searchByName($name)
-    {
-        return $this->where('name', 'like', "%{$name}%");
-    }
-}</pre>
+// API equivalent
+GET /api/users?filter[has_posts]=true&include=posts:published:recent:fields(title|content),profile:fields(bio)</pre>
         </div>
       </section>
 
@@ -214,6 +282,14 @@ class UserQueryBuilder extends EvolveQueryBuilder
           <pre class="text-green-400">
 // Enable query logging for debugging
 DB::enableQueryLog();
+
+// Use configurable pagination
+$users = User::paginate(
+    config('evolve.pagination.per_page', 15),
+    ['*'],
+    'page',
+    request('page', 1)
+);
 
 // Chunk results for large datasets
 User::chunk(100, function($users) {
@@ -228,13 +304,64 @@ User::lazy()->each(function($user) {
 });</pre>
         </div>
 
+        <h3 class="text-xl font-semibold mb-4">Relationship Optimization</h3>
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <pre class="text-green-400">
+// Selective relationship loading
+protected $evolveConfig = [
+    'relationships' => [
+        'posts' => [
+            'fields' => ['id', 'title'],  // Select only needed fields
+            'constraints' => [
+                'summary' => function($query) {
+                    return $query->select(['id', 'title', 'created_at'])
+                                ->latest()
+                                ->limit(5);
+                }
+            ]
+        ]
+    ]
+];
+
+// Efficient nested relationship loading
+$users = User::with([
+    'posts' => function($query) {
+        $query->select(['id', 'user_id', 'title'])  // Select only needed fields
+              ->latest()
+              ->limit(10);
+    },
+    'posts.comments' => function($query) {
+        $query->select(['id', 'post_id', 'content'])
+              ->latest()
+              ->limit(5);
+    }
+])->get();
+
+// API optimization examples
+GET /api/users?include=posts:fields(id|title):limit(10)
+GET /api/users?include=posts.comments:fields(content):limit(5)
+
+// Batch relationship loading
+User::with(['posts', 'profile'])
+    ->chunk(100, function($users) {
+        foreach ($users as $user) {
+            // Process user and relationships
+        }
+    });</pre>
+        </div>
+
         <h3 class="text-xl font-semibold mb-4">Performance Tips</h3>
         <ul class="list-disc pl-6 space-y-2 text-gray-700">
           <li>Use appropriate indexes for frequently queried columns</li>
           <li>Implement database caching for frequently accessed data</li>
           <li>Use eager loading to prevent N+1 query problems</li>
-          <li>Consider using cursor pagination for large datasets</li>
+          <li>Configure pagination settings in config/evolve.php</li>
           <li>Optimize JSON column queries with indexes</li>
+          <li>Select only needed fields in relationships to reduce memory usage</li>
+          <li>Use relationship constraints to limit data fetched</li>
+          <li>Consider caching frequently accessed relationship data</li>
+          <li>Use batch processing for large relationship operations</li>
+          <li>Monitor relationship query performance with query logging</li>
         </ul>
       </section>
     </UContainer>

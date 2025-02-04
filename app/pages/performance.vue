@@ -5,8 +5,8 @@
         Performance Guide
       </h1>
 
-      <div class="w-full py-4">
-          <ButtonLink label="Documentation Home" size="md" rounded="md" href="/docs" />
+      <div class="w-full columns-2 py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" />
       </div>
 
       <div class="bg-gray-100 p-6 rounded-lg mb-8">
@@ -99,9 +99,9 @@ Schema::table('posts', function (Blueprint $table) {
         <h3 class="text-xl font-semibold mb-4">Memory Optimization</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Use cursor pagination for large datasets
+// Use standard pagination with configurable page size
 Route::get('/users', function () {
-    return User::cursorPaginate(100);
+    return User::paginate(config('evolve.pagination.per_page', 15));
 });
 
 // Chunk processing for large operations
@@ -174,7 +174,7 @@ DB::enableQueryLog();
           <li>Use appropriate caching strategies for your use case</li>
           <li>Implement eager loading to prevent N+1 queries</li>
           <li>Optimize database indexes for common queries</li>
-          <li>Use cursor pagination for large datasets</li>
+          <li>Configure pagination settings in config/evolve.php</li>
           <li>Monitor and log performance metrics</li>
           <li>Set appropriate resource limits</li>
           <li>Use queue workers for heavy operations</li>

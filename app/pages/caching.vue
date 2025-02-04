@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full">
-    <UContainer class="py-12 space-y-6">
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display mx-auto">
+  <div class="max-w-4xl mx-auto">
+    <UContainer class="max-w-8xl py-12 space-y-6">
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
         Caching Guide
       </h1>
 
-      <div class="w-full py-4">
-          <ButtonLink label="Documentation Home" size="md" rounded="md" href="/docs" />
+      <div class="w-full columns-2 py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" />
       </div>
 
       <div class="bg-gray-100 p-6 rounded-lg mb-8">
@@ -33,8 +33,7 @@
         <h3 class="text-xl font-semibold mb-4">Basic Setup</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-&lt;?php
-
+// config/evolve.php
 return [
     'cache' => [
         'enabled' => env('EVOLVE_CACHE_ENABLED', true),
@@ -62,8 +61,6 @@ EVOLVE_CACHE_STORE=redis</pre>
         <h3 class="text-xl font-semibold mb-4">Model Caching</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-&lt;?php
-
 use ThinkNeverland\Evolve\Traits\HasEvolve;
 
 class User extends Model

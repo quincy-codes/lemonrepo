@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full">
-    <UContainer class="py-12 space-y-6">
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display mx-auto">
+  <div class="max-w-4xl mx-auto">
+    <UContainer class="max-w-8xl py-12 space-y-6">
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
         Advanced Usage Guide
       </h1>
 
-      <div class="w-full py-4">
-          <ButtonLink label="Documentation Home" size="md" rounded="md" href="/docs" />
+      <div class="w-full columns-2 py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" />
       </div>
 
       <div class="bg-gray-100 p-6 rounded-lg mb-8">
@@ -39,8 +39,6 @@ GET /api/users?filter[posts][status]=published&filter[posts][category]=tech</pre
         <h3 class="text-xl font-semibold mb-4">Custom Filter Implementation</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-&lt;?php
-
 class User extends Model
 {
     use HasEvolve;
@@ -101,15 +99,19 @@ class User extends Model
       <section id="complex-relations" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">3. Complex Relations</h2>
         
-        <h3 class="text-xl font-semibold mb-4">Relation Loading with Constraints</h3>
+        <h3 class="text-xl font-semibold mb-4">Advanced Relationship Configuration</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // In your model
 protected $evolveConfig = [
     'relationships' => [
         'posts' => [
-            'type' => 'hasMany',
+            'fields' => ['title', 'content', 'status'],
+            'type' => 'hasMany',              // Optional - discovered automatically
             'constraints' => [
+                'published' => function($query) {
+                    return $query->where('status', 'published');
+                },
                 'recent' => function($query) {
                     return $query->where('created_at', '>=', now()->subDays(7));
                 },
@@ -117,12 +119,48 @@ protected $evolveConfig = [
                     return $query->where('views', '>=', 1000);
                 }
             ]
+        ],
+        'profile' => [
+            'fields' => ['bio', 'avatar'],
+            'type' => 'hasOne'               // Optional - discovered automatically
+        ],
+        'roles' => [
+            'fields' => ['name', 'permissions'],
+            'type' => 'belongsToMany',       // Optional - discovered automatically
+            'constraints' => [
+                'active' => function($query) {
+                    return $query->where('active', true);
+                }
+            ]
         ]
+    ],
+    
+    // Global relationship exclusions
+    'exclude' => [
+        'relationships' => ['audits', 'deleted_records']
     ]
 ];
 
-// In your request
-GET /api/users?include=posts:recent:popular</pre>
+// In your API requests
+GET /api/users?include=posts:published:recent
+GET /api/users?include=posts.comments,profile
+GET /api/users?include=roles:active
+GET /api/users?exclude=audits,deleted_records
+
+// In your code
+$users = User::with(['posts' => function($query) {
+    $query->published()->recent();
+}])->get();
+
+// With nested constraints
+$users = User::with([
+    'posts.comments' => function($query) {
+        $query->where('approved', true);
+    },
+    'roles' => function($query) {
+        $query->active();
+    }
+])->get();</pre>
         </div>
       </section>
 
