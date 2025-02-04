@@ -112,6 +112,57 @@ GET /api/users?page=2&per_page=15
 # Including Relations
 GET /api/users?include=profile,posts</pre>
         </div>
+
+        <h3 class="text-xl font-semibold mb-4">Foreign Key Search</h3>
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <pre class="text-green-400">
+# Create/Update with foreign key search
+POST /api/orders
+{
+    "company": "Acme Corp",        # Will resolve to company_id
+    "customer": "john@example.com" # Will resolve to customer_id
+}
+
+# Model Configuration
+class Order extends Model {
+    use HasEvolveConfig;
+
+    public static function evolveConfig(): array {
+        return [
+            'foreign_keys' => [
+                'company_id' => [
+                    'model' => Company::class,
+                    'search_fields' => ['name', 'code'],
+                    'strategy' => 'first',
+                    'fuzzy' => true
+                ],
+                'customer_id' => [
+                    'model' => Customer::class,
+                    'search_fields' => ['email', 'name'],
+                    'strategy' => 'error_if_multiple',
+                    'required' => true
+                ]
+            ]
+        ];
+    }
+}</pre>
+        </div>
+
+        <h4 class="text-lg font-semibold mb-2">Foreign Key Search Options</h4>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+          <li><strong>model</strong>: Target model class to search in</li>
+          <li><strong>search_fields</strong>: Fields to search (defaults to ['name', 'title', 'label'])</li>
+          <li><strong>strategy</strong>: How to handle multiple matches:
+            <ul class="list-disc pl-6 mt-2">
+              <li><code>first</code>: Use first match (default)</li>
+              <li><code>latest</code>: Use most recent match</li>
+              <li><code>error_if_multiple</code>: Error if multiple matches found</li>
+            </ul>
+          </li>
+          <li><strong>fuzzy</strong>: Enable fuzzy matching (default: true)</li>
+          <li><strong>required</strong>: Whether the field must resolve to a match</li>
+          <li><strong>conditions</strong>: Additional conditions to filter matches</li>
+        </ul>
       </section>
 
       <section id="response-format" class="mb-12">
