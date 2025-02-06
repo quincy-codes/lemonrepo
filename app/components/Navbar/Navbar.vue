@@ -12,21 +12,10 @@
       <div class="hidden items-center gap-2 sm:flex">
         <UButton to="/#faq" variant="ghost" color="gray">FAQ</UButton>
         <UButton to="/docs" variant="ghost" color="gray">Docs</UButton>
-        <ScriptLemonSqueezy class="w-full block">
-          <UButton
-            :ui="{ rounded: 'rounded-full' }"
-            color="black"
-            :to="productUrl"
-            class="shiny-button px-6 py-2"
-          >
-            Buy Now for $149
-          </UButton>
-        </ScriptLemonSqueezy>
+        <StripeBuyButton />
       </div>
       <div class="sm:hidden flex items-center gap-2">
-        <ScriptLemonSqueezy class="w-full block">
-          <UButton label="Buy Now for $149" color="black" :to="productUrl" />
-        </ScriptLemonSqueezy>
+        <StripeBuyButton />
         <button
           aria-label="Toggle menu"
           class="menu-toggle relative flex h-8 w-8 items-center justify-center rounded-full border bg-white hover:bg-gray-100 flex-shrink-0"
@@ -69,12 +58,15 @@
 </template>
 
 <script setup>
-const mobileMenu = ref(false);
-const { productUrl } = useRuntimeConfig().public;
+import { ref } from 'vue'
+import StripeBuyButton from '~/components/StripeBuyButton.vue'
+
+const mobileMenu = ref(false)
+
 const toggleMobileMenu = () => {
-  document.body.style.overflow = mobileMenu.value ? "auto" : "hidden";
-  mobileMenu.value = !mobileMenu.value;
-};
+  document.body.style.overflow = mobileMenu.value ? "auto" : "hidden"
+  mobileMenu.value = !mobileMenu.value
+}
 </script>
 
 <style scoped>

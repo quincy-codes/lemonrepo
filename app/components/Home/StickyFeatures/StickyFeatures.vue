@@ -41,7 +41,7 @@
 
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveAPI (Optional Free Extension)</h3>
+            >EvolveAPI</h3>
       <ul class="list-disc ml-6">
               <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
               <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
@@ -50,18 +50,8 @@
               <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
             </ul>
 
-            <h3
-                class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveUI (Optional Free Extension)</h3>
-      <ul class="list-disc ml-6">
-              <li><strong>Livewire-Based CRUD Interface</strong>: Fully-interactive Livewire components for index, create, edit, and show actions.</li>
-              <li><strong>Dynamic Navigation Menu</strong>: Builds menus from model configurations, showing only accessible options based on role.</li>
-              <li><strong>DaisyUI Styling</strong>: Consistent styling across all components, with Jetstream compatibility.</li>
-              <li><strong>Model-Defined Fields</strong>: Respects searchable, sortable, and filterable fields defined in each model’s configuration.</li>
-            </ul>
-
             <p>
-              Each package is built to be flexible, allowing you to expand functionality as your application grows.
+              Evolve is built to be flexible, allowing you to expand functionality as your application grows.
               Transform your app with Evolve's effortless customization, bringing agile and powerful development tools to your fingertips.
             </p>
           </div>
