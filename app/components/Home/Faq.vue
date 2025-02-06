@@ -39,29 +39,14 @@ const { copy, copied } = useClipboard();
 
 const items = [
   {
-    label: "What is Evolve?",
+    label: "What features are provided?",
     content:
-        "Evolve is a modular Laravel package suite designed to provide powerful, customizable CRUD operations, RESTful API endpoints, and a Livewire-based user interface. Evolve is split into three packages—EvolveCORE, EvolveAPI, and EvolveUI—so you can tailor it to your app’s needs.",
-  },
-  {
-    label: "What are the three packages?",
-    content:
-        "Evolve consists of three packages: EvolveCORE, EvolveAPI, and EvolveUI. EvolveCORE is the foundational package that provides core CRUD functionality, EvolveAPI adds RESTful endpoints for CRUD actions, and EvolveUI provides a Livewire-powered user interface. EvolveAPI and EvolveUI are optional extensions.",
-  },
-  {
-    label: "What features are provided by each package?",
-    content:
-        "EvolveCORE: Model-defined configuration, dynamic filtering and sorting, permissions, event hooks, and validation.\n\nEvolveAPI: API routes with standardized JSON responses, batch operations, and optional Swagger documentation.\n\nEvolveUI: A responsive UI with searchable, filterable, and sortable fields, along with a role-based dynamic menu.",
-  },
-  {
-    label: "How do I install the packages?",
-    content:
-        "Each package can be installed individually via Composer. Start with EvolveCORE as the base package, and add EvolveAPI and/or EvolveUI as needed for additional API or UI functionality.",
+        "Model-defined configuration, dynamic filtering and sorting, permissions, event hooks, and validation. API routes with standardized JSON responses, batch operations, and optional Swagger documentation.",
   },
   {
     label: "Can I customize fields, filters, and permissions?",
     content:
-        "Yes! In EvolveCORE, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
+        "Yes! In Evolve, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
   },
   {
     label: "How do CRUD event hooks work?",
@@ -71,27 +56,7 @@ const items = [
   {
     label: "What is the tech stack for Evolve?",
     content:
-        "Laravel (10+), Livewire (3+), DaisyUI (with Tailwind CSS), Spatie Permissions (Optional), Swagger (Optional)."
-  },
-  {
-    label: "How does filtering work with nested relationships?",
-    content:
-        "Evolve’s filtering supports infinitely nested relationships using dot notation (e.g., `department.manager.name`). You can define filterable relationships and fields within each model.",
-  },
-  {
-    label: "Is EvolveUI dependent on EvolveAPI?",
-    content:
-        "No, EvolveUI only requires EvolveCORE. You can use EvolveUI without EvolveAPI if you only need a UI for CRUD operations without API endpoints.",
-  },
-  {
-    label: "What optional packages are supported?",
-    content:
-        "Evolve integrates with Spatie Permissions for role-based access, DaisyUI for styling, and Swagger for API documentation (optional with EvolveAPI).",
-  },
-  {
-    label: "Where can I find API documentation for EvolveAPI?",
-    content:
-        "If Swagger is installed, API documentation is generated automatically and can be accessed at `/api/documentation`.",
+        "Laravel (10+).",
   },
   {
     label: "Is Evolve suitable for large applications?",
@@ -101,7 +66,7 @@ const items = [
   {
     label: "Can I use Evolve with my existing models?",
     content:
-        "Absolutely. Simply add the EvolveModelInterface and EvolveTrait to your models, and they’ll be ready to interact with the evolve ecosystem, inheriting configuration and CRUD capabilities.",
+        "Absolutely. Simply install the package. Zero Required Setup After Initial Install.",
   },
 ];
 </script>
