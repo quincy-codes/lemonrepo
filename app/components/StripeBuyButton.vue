@@ -8,7 +8,7 @@
     target="_blank"
     rel="noopener"
   >
-    Buy Now for $149
+    Get Accessfor $149
   </UButton>
 </template>
 

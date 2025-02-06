@@ -27,11 +27,8 @@
       <div
         class="max-w-max mx-auto rounded-xl bg-gray-100 ring-4 ring-gray-500/10 border p-1 space-y-2"
       >
-        <BuyButton
-          label="Buy Now for $149"
+        <StripeBuyButton
           class="flex items-center justify-center w-full"
-          size="md"
-          rounded="lg"
         />
       </div>
     </div>
@@ -40,6 +37,8 @@
 </template>
 
 <script setup>
+import StripeBuyButton from '~/components/StripeBuyButton.vue'
+
 defineProps({
   count: {
     type: Number,
