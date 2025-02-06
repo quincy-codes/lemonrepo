@@ -18,10 +18,10 @@
               Unlock Boundless Development Magic
             </h2>
             <p>
-              Experience the limitless potential of Evolve, a suite of Laravel packages that bring agile CRUD operations, effortless API endpoints,
-              and an elegant user interface to your applications. EvolveCORE is the essential guide, built to empower your app with rich features like
-              model-defined validation, infinitely nested filtering, and event-driven hooks. With the optional EvolveAPI and EvolveUI packages, bring
-              added realms of interactivity and RESTful accessibility to your projects.
+              Experience the limitless potential of Evolve, a package that bring agile CRUD operations, 
+              effortless API endpoints, Evolve is the essential guide, built to empower your app with rich features like
+              model-defined validation, infinitely nested filtering, and event-driven hooks. With the
+              added realm of interactivity and RESTful accessibility to your projects.
             </p>
 
             <h2
@@ -30,24 +30,18 @@
 
             <h3
                 class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveCORE (Foundation)</h3>
+            >Evolve</h3>
           <ul class="list-disc ml-6">
               <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
               <li class="mb-2"><strong>Event Hooks on Controllers</strong>: Controllers trigger <code>beforeCreate</code>, <code>afterUpdate</code>, and similar hooks, for seamless action customization.</li>
               <li class="mb-2"><strong>Dynamic Filtering & Sorting</strong>: Supports traditional operators (<code>&lt;</code>, <code>&gt;</code>, <code>=</code>) and string-based (<code>lt</code>, <code>gt</code>, <code>eq</code>) with multi-level relationship filtering.</li>
               <li class="mb-2"><strong>Role-Based Permissions</strong>: Integrates with Spatie Permissions, registering policies dynamically based on model configuration.</li>
               <li class="mb-2"><strong>Automatic Validation Rules</strong>: Generates validation rules from database constraints, with model overrides as needed.</li>
-            </ul>
-
-            <h3
-                class="max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-8"
-            >EvolveAPI</h3>
-      <ul class="list-disc ml-6">
-              <li><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
-              <li><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
-              <li><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
-              <li><strong>Role-Based Access Control</strong>: Automatically enforces EvolveCORE permissions on each request.</li>
-              <li><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
+              <li class="mb-2"><<strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
+              <li class="mb-2"><<strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
+              <li class="mb-2"><<strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
+              <li class="mb-2"><<strong>Role-Based Access Control</strong>: Automatically enforces Evolve permissions on each request.</li>
+              <li class="mb-2"><<strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
             </ul>
 
             <p>
