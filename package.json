@@ -2,6 +2,9 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -20,24 +23,24 @@
     "@nuxt/ui": "^2.19.2",
     "@nuxthub/core": "^0.8.6",
     "@octokit/rest": "^21.0.2",
-    "apexcharts": "^4.0.0",
+    "apexcharts": "^3.45.0",
     "canvas-confetti": "^1.9.3",
-    "date-fns": "^4.1.0",
-    "nuxt": "^3.14.159",
+    "date-fns": "^3.3.1",
+    "nuxt": "^3.10.0",
     "nuxt-auth-utils": "^0.5.2",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5",
-    "vue-sonner": "^1.2.5",
-    "vue3-apexcharts": "^1.7.0",
-    "vue3-marquee": "^4.2.2",
-    "zod": "^3.23.8"
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "vue-sonner": "^1.0.0",
+    "vue3-apexcharts": "^1.4.4",
+    "vue3-marquee": "^4.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.6.1",
-    "@vueuse/core": "^11.2.0",
-    "@vueuse/nuxt": "^11.2.0",
-    "eslint": "^9.14.0",
-    "vue-tsc": "^2.1.10",
-    "wrangler": "^3.86.0"
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/nuxt": "^10.7.0",
+    "eslint": "^8.56.0",
+    "vue-tsc": "^1.8.27",
+    "wrangler": "^3.22.1"
   }
 }
