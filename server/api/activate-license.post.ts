@@ -28,7 +28,7 @@ export default defineEventHandler(
       // Invite user to GitHub repository
       await inviteToGitHubRepository(username);
 
-      // Activate license
+      // Activate license 
       const activatedLicenseKey = await activateLicenseKey(
         licenseKey,
         username
