@@ -15,15 +15,16 @@
           <li><a href="#architecture" class="text-blue-600 hover:underline">2. Architecture</a></li>
           <li><a href="#services" class="text-blue-600 hover:underline">3. Core Services</a></li>
           <li><a href="#models" class="text-blue-600 hover:underline">4. Model Integration</a></li>
-          <li><a href="#lifecycle" class="text-blue-600 hover:underline">5. Request Lifecycle</a></li>
-          <li><a href="#patterns" class="text-blue-600 hover:underline">6. Design Patterns</a></li>
+          <li><a href="#api" class="text-blue-600 hover:underline">5. API Features</a></li>
+          <li><a href="#lifecycle" class="text-blue-600 hover:underline">6. Request Lifecycle</a></li>
+          <li><a href="#patterns" class="text-blue-600 hover:underline">7. Design Patterns</a></li>
         </ul>
       </div>
 
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve is built on a foundation of robust core concepts that enable powerful API development. This guide explains the fundamental principles and components that make up the Evolve framework.
+          Evolve is a powerful Laravel package that provides automatic API generation, model discovery, and advanced query capabilities. This guide explains the core concepts and features that make Evolve an essential tool for rapid API development.
         </p>
       </section>
 
@@ -34,31 +35,30 @@
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 evolve/
-├── Core/
-│   ├── Services/
-│   ├── Models/
-│   └── Contracts/
+├── Services/
+│   ├── EvolveService.php
+│   ├── Registry/
+│   └── Response/
 ├── Http/
 │   ├── Controllers/
-│   ├── Middleware/
 │   └── Resources/
-├── Database/
-│   ├── Repositories/
-│   └── Factories/
+├── Contracts/
+│   ├── Services/
+│   └── Query/
 └── Support/</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Service Container</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Service registration
-$this->app->singleton('evolve', function ($app) {
-    return new EvolveService($app);
-});
-
 // Service resolution
-$evolve = app('evolve');
-$evolve->model(User::class)->find(1);</pre>
+public function __construct(EvolveService $evolve)
+{
+    $this->evolve = $evolve;
+}
+
+// Basic usage
+return $evolve->handleIndex('users');</pre>
         </div>
       </section>
 
@@ -68,32 +68,26 @@ $evolve->model(User::class)->find(1);</pre>
         <h3 class="text-xl font-semibold mb-4">Model Registry</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Register model
-ModelRegistry::register(User::class, [
-    'resource' => UserResource::class,
-    'policy' => UserPolicy::class,
-]);
+// Models are automatically discovered
+class User extends Model
+{
+    use HasEvolve;
 
-// Access registered model
-$model = ModelRegistry::get(User::class);
-$resource = $model->resource;</pre>
+    protected $evolveConfig = [
+        'searchable' => ['name', 'email'],
+        'cache' => true
+    ];
+}</pre>
         </div>
 
-        <h3 class="text-xl font-semibold mb-4">Query Builder</h3>
+        <h3 class="text-xl font-semibold mb-4">Query Service</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Build complex queries
-$users = $evolve->model(User::class)
-    ->filter(['status' => 'active'])
-    ->sort('-created_at')
-    ->include(['posts', 'profile'])
-    ->paginate();
-
-// Custom query methods
-$posts = $evolve->model(Post::class)
-    ->withScope('published')
-    ->withCount('comments')
-    ->get();</pre>
+// API query parameters
+GET /evolve-api/users?filter[status]=active
+GET /evolve-api/users?sort=-created_at
+GET /evolve-api/users?include=posts,profile
+GET /evolve-api/users?search=john</pre>
         </div>
       </section>
 
@@ -108,111 +102,126 @@ class User extends Model
     use HasEvolve;
 
     protected $evolveConfig = [
-        'resource' => UserResource::class,
-        'policy' => UserPolicy::class,
+        'searchable' => ['name', 'email'],
+        'filterable' => ['status', 'role'],
+        'sortable' => ['created_at'],
+        'relationships' => [
+            'posts' => [
+                'fields' => ['title'],
+                'constraints' => [
+                    'published' => fn($q) => $q->where('status', 'published')
+                ]
+            ]
+        ],
         'validation' => [
             'rules' => [
-                'email' => 'required|email|unique:users',
-            ],
-        ],
-        'search' => [
-            'columns' => ['name', 'email'],
-        ],
+                'email' => 'required|email|unique:users'
+            ]
+        ]
     ];
 }</pre>
         </div>
+      </section>
 
-        <h3 class="text-xl font-semibold mb-4">Model Events</h3>
+      <section id="api" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">5. API Features</h2>
+        
+        <h3 class="text-xl font-semibold mb-4">Automatic Endpoints</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-protected static function booted()
-{
-    static::created(function ($model) {
-        event(new ModelCreated($model));
-    });
+// Configuration
+'auto_generate_api' => true,
+'api_route_prefix' => 'evolve-api',
+'api_auth_middleware' => ['api']
 
-    static::updated(function ($model) {
-        Cache::tags($model->getCacheTags())->flush();
-    });
+// Generated endpoints
+GET    /evolve-api/{model}
+POST   /evolve-api/{model}
+GET    /evolve-api/{model}/{id}
+PUT    /evolve-api/{model}/{id}
+DELETE /evolve-api/{model}/{id}</pre>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">Response Format</h3>
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <pre class="text-green-400">
+{
+    "success": true,
+    "data": [...],
+    "meta": {
+        "filters": [...],
+        "sorts": [...],
+        "includes": [...],
+        "pagination": {
+            "current_page": 1,
+            "per_page": 15,
+            "total": 100
+        }
+    }
 }</pre>
         </div>
       </section>
 
       <section id="lifecycle" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">5. Request Lifecycle</h2>
+        <h2 class="text-2xl font-semibold mb-4">6. Request Lifecycle</h2>
         
         <h3 class="text-xl font-semibold mb-4">Request Processing</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// Request lifecycle
 1. Route matching
 2. Middleware processing
-3. Authentication
-4. Authorization
-5. Input validation
-6. Query building
-7. Model operations
-8. Resource transformation
-9. Response formatting</pre>
+3. Model resolution
+4. Query parameter parsing
+5. Validation
+6. Authorization
+7. Data retrieval/mutation
+8. Response transformation</pre>
         </div>
 
-        <h3 class="text-xl font-semibold mb-4">Middleware Pipeline</h3>
+        <h3 class="text-xl font-semibold mb-4">Error Handling</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-protected $middleware = [
-    \App\Http\Middleware\TrustProxies::class,
-    \ThinkNeverland\Evolve\Http\Middleware\HandleCors::class,
-    \ThinkNeverland\Evolve\Http\Middleware\AuthenticateRequest::class,
-    \ThinkNeverland\Evolve\Http\Middleware\ValidateRequest::class,
-];</pre>
+{
+    "error": true,
+    "message": "Validation failed",
+    "errors": {
+        "email": ["The email field is required"]
+    },
+    "code": 422
+}</pre>
         </div>
       </section>
 
       <section id="patterns" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">6. Design Patterns</h2>
+        <h2 class="text-2xl font-semibold mb-4">7. Design Patterns</h2>
         
-        <h3 class="text-xl font-semibold mb-4">Repository Pattern</h3>
+        <h3 class="text-xl font-semibold mb-4">Service Pattern</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-class UserRepository implements Repository
+class EvolveService implements EvolveServiceInterface
 {
-    public function find($id)
+    public function handleIndex(string $model, array $options = []): JsonResponse
     {
-        return User::findOrFail($id);
-    }
-
-    public function create(array $data)
-    {
-        return User::create($data);
-    }
-
-    public function update($id, array $data)
-    {
-        $user = $this->find($id);
-        $user->update($data);
-        return $user;
+        try {
+            $modelClass = $this->resolveModelClass($model);
+            $data = $this->getModelData($modelClass, $options);
+            return $this->responseService->success($data);
+        } catch (\Exception $e) {
+            return $this->handleException($e);
+        }
     }
 }</pre>
         </div>
 
-        <h3 class="text-xl font-semibold mb-4">Service Layer</h3>
+        <h3 class="text-xl font-semibold mb-4">Query Coordinator</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-class UserService
+class QueryCoordinator implements QueryCoordinatorInterface
 {
-    protected $repository;
-
-    public function __construct(UserRepository $repository)
+    public function getModelData(string $modelClass, array $options = []): array
     {
-        $this->repository = $repository;
-    }
-
-    public function createUser(array $data)
-    {
-        // Business logic
-        $user = $this->repository->create($data);
-        event(new UserCreated($user));
-        return $user;
+        $query = $this->buildQuery($modelClass, $options);
+        return $this->executeQuery($query, $options);
     }
 }</pre>
         </div>

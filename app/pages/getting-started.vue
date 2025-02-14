@@ -54,7 +54,7 @@ EVOLVE_API_PREFIX=api/v1
         <h3 class="text-xl font-semibold mb-4">Creating Your First Model</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-&lt;?php
+<?php
 
 namespace App\Models;
 

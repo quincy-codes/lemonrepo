@@ -91,7 +91,6 @@ const navigation = {
     { name: "File Storage", href: "#" },
   ],
   support: [
-    { name: "Activate License", href: "/activate-license" },
     { name: "Think Neverland", href: "https://thinkneverland.com" },
     // { name: "Discord", href: "#" },
     // { name: "Documentation", href: "#" },
