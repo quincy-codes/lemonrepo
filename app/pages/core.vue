@@ -5,8 +5,8 @@
         Core Concepts
       </h1>
 
-      <div class="w-full columns-2 py-4">
-          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" />
+      <div class="w-full flex justify-center py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" class="w-full max-w-md" />
       </div>
 
       <div class="bg-gray-100 p-6 rounded-lg mb-8">

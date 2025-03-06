@@ -9,11 +9,11 @@
         Thank you for considering contributing to Shadow! This document outlines the process and guidelines for contributing to the project.
       </p>
 
-      <div class="w-full columns-2 py-4">
-          <ButtonLink label="Documentation" size="sm" rounded="md" href="/" />
+      <div class="w-full flex justify-center py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/" class="w-full max-w-md" />
       </div>
 
-      <div class="prose prose-lg max-w-none">
+      <div class="bg-gray-100 p-6 rounded-lg mb-8">
         <h2>Welcome Contributors!</h2>
         
         <p>By participating in this project, you agree to abide by our <NuxtLink to="/code-of-conduct" class="text-blue-600 hover:underline">Code of Conduct</NuxtLink>.</p>

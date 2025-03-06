@@ -5,8 +5,8 @@
         Authentication
       </h1>
 
-      <div class="w-full columns-2 py-4">
-          <ButtonLink label="Documentation" size="sm" rounded="md" href="/" />
+      <div class="w-full flex justify-center py-4">
+          <ButtonLink label="Documentation" size="sm" rounded="md" href="/" class="w-full max-w-md" />
       </div>
 
       <div class="prose prose-lg max-w-none">

@@ -60,12 +60,7 @@ const showBanner = computed(() => data.value && data.value.enabled);
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: white;
   transform: rotate(30deg);
   animation: shimmer 3s infinite;
 }

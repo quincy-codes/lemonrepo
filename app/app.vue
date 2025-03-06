@@ -18,9 +18,7 @@ useSeoMeta({
 
 <style>
 html {
-  @apply [background-image:radial-gradient(hsla(0,0%,10%,0.2)1px,transparent_0)];
-  background-size: 12px 12px;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .shiny-button {
