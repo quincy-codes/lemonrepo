@@ -24,7 +24,7 @@
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve is a powerful Laravel package that provides automatic API generation, model discovery, and advanced query capabilities. This guide explains the core concepts and features that make Evolve an essential tool for rapid API development.
+          Shadow is a powerful Laravel package that provides automatic API generation, model discovery, and advanced query capabilities. This guide explains the core concepts and features that make Shadow an essential tool for rapid API development.
         </p>
       </section>
 
@@ -34,9 +34,9 @@
         <h3 class="text-xl font-semibold mb-4">Component Structure</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-evolve/
+shadow/
 ├── Services/
-│   ├── EvolveService.php
+│   ├── ShadowService.php
 │   ├── Registry/
 │   └── Response/
 ├── Http/
@@ -52,13 +52,13 @@ evolve/
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // Service resolution
-public function __construct(EvolveService $evolve)
+public function __construct(ShadowService $shadow)
 {
-    $this->evolve = $evolve;
+    $this->shadow = $shadow;
 }
 
 // Basic usage
-return $evolve->handleIndex('users');</pre>
+return $shadow->handleIndex('users');</pre>
         </div>
       </section>
 
@@ -71,9 +71,9 @@ return $evolve->handleIndex('users');</pre>
 // Models are automatically discovered
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
 
-    protected $evolveConfig = [
+    protected $shadowConfig = [
         'searchable' => ['name', 'email'],
         'cache' => true
     ];
@@ -84,10 +84,10 @@ class User extends Model
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // API query parameters
-GET /evolve-api/users?filter[status]=active
-GET /evolve-api/users?sort=-created_at
-GET /evolve-api/users?include=posts,profile
-GET /evolve-api/users?search=john</pre>
+GET /shadow-api/users?filter[status]=active
+GET /shadow-api/users?sort=-created_at
+GET /shadow-api/users?include=posts,profile
+GET /shadow-api/users?search=john</pre>
         </div>
       </section>
 
@@ -99,9 +99,9 @@ GET /evolve-api/users?search=john</pre>
           <pre class="text-green-400">
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
 
-    protected $evolveConfig = [
+    protected $shadowConfig = [
         'searchable' => ['name', 'email'],
         'filterable' => ['status', 'role'],
         'sortable' => ['created_at'],
@@ -131,15 +131,15 @@ class User extends Model
           <pre class="text-green-400">
 // Configuration
 'auto_generate_api' => true,
-'api_route_prefix' => 'evolve-api',
+'api_route_prefix' => 'shadow-api',
 'api_auth_middleware' => ['api']
 
 // Generated endpoints
-GET    /evolve-api/{model}
-POST   /evolve-api/{model}
-GET    /evolve-api/{model}/{id}
-PUT    /evolve-api/{model}/{id}
-DELETE /evolve-api/{model}/{id}</pre>
+GET    /shadow-api/{model}
+POST   /shadow-api/{model}
+GET    /shadow-api/{model}/{id}
+PUT    /shadow-api/{model}/{id}
+DELETE /shadow-api/{model}/{id}</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Response Format</h3>
@@ -198,7 +198,7 @@ DELETE /evolve-api/{model}/{id}</pre>
         <h3 class="text-xl font-semibold mb-4">Service Pattern</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-class EvolveService implements EvolveServiceInterface
+class ShadowService implements ShadowServiceInterface
 {
     public function handleIndex(string $model, array $options = []): JsonResponse
     {

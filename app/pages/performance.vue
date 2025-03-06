@@ -23,7 +23,7 @@
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve provides comprehensive performance optimization features to ensure your API remains fast and efficient under high load. This guide covers key strategies and best practices for optimizing your application's performance.
+          Shadow provides comprehensive performance optimization features to ensure your API remains fast and efficient under high load. This guide covers key strategies and best practices for optimizing your application's performance.
         </p>
       </section>
 
@@ -34,7 +34,7 @@
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // Enable response caching
-protected $evolveConfig = [
+protected $shadowConfig = [
     'cache' => [
         'ttl' => 3600,
         'tags' => ['api', 'users'],
@@ -70,7 +70,7 @@ $posts = Post::cacheTag(['posts', 'recent'])
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // Configure default eager loads
-protected $evolveConfig = [
+protected $shadowConfig = [
     'with' => ['profile', 'settings'],
     'withCount' => ['posts'],
     'withExists' => ['subscription'],
@@ -101,7 +101,7 @@ Schema::table('posts', function (Blueprint $table) {
           <pre class="text-green-400">
 // Use standard pagination with configurable page size
 Route::get('/users', function () {
-    return User::paginate(config('evolve.pagination.per_page', 15));
+    return User::paginate(config('shadow.pagination.per_page', 15));
 });
 
 // Chunk processing for large operations
@@ -174,7 +174,7 @@ DB::enableQueryLog();
           <li>Use appropriate caching strategies for your use case</li>
           <li>Implement eager loading to prevent N+1 queries</li>
           <li>Optimize database indexes for common queries</li>
-          <li>Configure pagination settings in config/evolve.php</li>
+          <li>Configure pagination settings in config/shadow.php</li>
           <li>Monitor and log performance metrics</li>
           <li>Set appropriate resource limits</li>
           <li>Use queue workers for heavy operations</li>

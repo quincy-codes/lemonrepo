@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <footer class="bg-gray-900 rounded-3xl" aria-labelledby="footer-heading">
+    <footer class="bg-slate-900 rounded-3xl" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
         <div class="xl:grid xl:grid-cols-3 xl:gap-12">

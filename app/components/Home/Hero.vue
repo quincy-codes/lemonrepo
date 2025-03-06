@@ -1,31 +1,31 @@
 <template>
   <section class="pt-20 pb-24">
     <div class="flex justify-center items-center">
-      <Logo class="h-36 w-auto fill-black mb-8" alt="Thing Neverland logo" />
+      <Logo class="h-36 w-auto fill-slate-800 mb-8" alt="Think Neverland logo" />
     </div>
     <h1
       class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto"
     >
-      Things will change why shouldn't your
+      Your Laravel app deserves a faithful
       <span
         class="inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden"
       >
         <ul
           class="block text-left leading-tight [&_li]:block animate-text-slide-5"
         >
-          <li>App</li>
-          <li>API</li>
-          <li>UI</li>
-          <li>API</li>
-          <li>UI</li>
-          <li aria-hidden="true">App</li>
+          <li>companion</li>
+          <li>guardian</li>
+          <li>protector</li>
+          <li>ally</li>
+          <li>sentinel</li>
+          <li aria-hidden="true">companion</li>
         </ul>
       </span>
-      <span class="block"> Evolve Too?</span>
+      <span class="block"> Shadow</span>
     </h1>
     <div class="mt-8">
       <div
-        class="max-w-max mx-auto rounded-xl bg-gray-100 ring-4 ring-gray-500/10 border p-1 space-y-2"
+        class="max-w-max mx-auto rounded-xl bg-slate-100 ring-4 ring-slate-500/10 border p-1 space-y-2"
       >
         <StripeBuyButton
           class="flex items-center justify-center w-full"

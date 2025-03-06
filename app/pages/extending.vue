@@ -2,7 +2,7 @@
   <div class="max-w-4xl mx-auto">
     <UContainer class="max-w-8xl py-12 space-y-6">
       <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
-        Extending Evolve
+        Extending Shadow
       </h1>
 
       <div class="w-full columns-2 py-4">
@@ -23,7 +23,7 @@
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve is designed to be highly extensible, allowing you to customize and extend its functionality through various extension points. This guide covers the different ways you can extend Evolve to meet your specific needs.
+          Shadow is designed to be highly extensible, allowing you to customize and extend its functionality through various extension points. This guide covers the different ways you can extend Shadow to meet your specific needs.
         </p>
       </section>
 
@@ -35,9 +35,9 @@
           <pre class="text-green-400">
 namespace App\Providers;
 
-use ThinkNeverland\Evolve\Support\ServiceProvider;
+use ThinkNeverland\Shadow\Support\ServiceProvider;
 
-class CustomEvolveServiceProvider extends ServiceProvider
+class CustomShadowServiceProvider extends ServiceProvider
 {
     public function register()
     {
@@ -83,7 +83,7 @@ class CustomService implements CustomServiceInterface
           <pre class="text-green-400">
 namespace App\Http\Middleware;
 
-class CustomEvolveMiddleware
+class CustomShadowMiddleware
 {
     public function handle($request, Closure $next)
     {
@@ -96,13 +96,13 @@ class CustomEvolveMiddleware
 
 // Register middleware
 protected $middleware = [
-    CustomEvolveMiddleware::class,
+    CustomShadowMiddleware::class,
 ];
 
 // Register middleware with options
 protected $middlewareGroups = [
-    'evolve' => [
-        CustomEvolveMiddleware::class . ':option1,option2',
+    'shadow' => [
+        CustomShadowMiddleware::class . ':option1,option2',
     ],
 ];</pre>
         </div>
@@ -116,7 +116,7 @@ protected $middlewareGroups = [
           <pre class="text-green-400">
 namespace App\Events;
 
-class CustomEvolveEvent
+class CustomShadowEvent
 {
     public $data;
 
@@ -127,9 +127,9 @@ class CustomEvolveEvent
 }
 
 // Event listener
-class CustomEvolveListener
+class CustomShadowListener
 {
-    public function handle(CustomEvolveEvent $event)
+    public function handle(CustomShadowEvent $event)
     {
         // Handle the event
     }
@@ -140,8 +140,8 @@ class CustomEvolveListener
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 protected $listen = [
-    CustomEvolveEvent::class => [
-        CustomEvolveListener::class,
+    CustomShadowEvent::class => [
+        CustomShadowListener::class,
     ],
 ];
 
@@ -149,8 +149,8 @@ protected $listen = [
 public function boot()
 {
     Event::listen(
-        CustomEvolveEvent::class,
-        [CustomEvolveListener::class, 'handle']
+        CustomShadowEvent::class,
+        [CustomShadowListener::class, 'handle']
     );
 }</pre>
         </div>
@@ -164,7 +164,7 @@ public function boot()
           <pre class="text-green-400">
 namespace App\Http\Resources;
 
-use ThinkNeverland\Evolve\Http\Resources\JsonResource;
+use ThinkNeverland\Shadow\Http\Resources\JsonResource;
 
 class CustomResource extends JsonResource
 {
@@ -197,7 +197,7 @@ class CustomResource extends JsonResource
         <h3 class="text-xl font-semibold mb-4">Package Structure</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-my-evolve-extension/
+my-shadow-extension/
 ├── src/
 │   ├── Providers/
 │   │   └── ServiceProvider.php
@@ -215,21 +215,21 @@ my-evolve-extension/
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 {
-    "name": "vendor/my-evolve-extension",
-    "description": "Custom extension for Evolve",
+    "name": "vendor/my-shadow-extension",
+    "description": "Custom extension for Shadow",
     "type": "library",
     "require": {
-        "thinkneverland/evolve": "^1.0"
+        "thinkneverland/shadow": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Vendor\\MyEvolveExtension\\": "src/"
+            "Vendor\\MyShadowExtension\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vendor\\MyEvolveExtension\\Providers\\ServiceProvider"
+                "Vendor\\MyShadowExtension\\Providers\\ServiceProvider"
             ]
         }
     }

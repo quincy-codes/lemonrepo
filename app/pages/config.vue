@@ -23,7 +23,7 @@
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve's configuration system is designed to be flexible and extensible, allowing you to customize every aspect of the framework to suit your needs.
+          Shadow's configuration system is designed to be flexible and extensible, allowing you to customize every aspect of the framework to suit your needs.
         </p>
       </section>
 
@@ -34,18 +34,18 @@
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Publish configuration file
-php artisan vendor:publish --provider="ThinkNeverland\Evolve\EvolveServiceProvider" --tag="config"</pre>
+php artisan vendor:publish --provider="ThinkNeverland\Shadow\ShadowServiceProvider" --tag="config"</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Core Settings</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// config/evolve.php
+// config/shadow.php
 return [
-    'name' => env('EVOLVE_NAME', 'Evolve API'),
-    'debug' => env('EVOLVE_DEBUG', false),
-    'timezone' => env('EVOLVE_TIMEZONE', 'UTC'),
-    'locale' => env('EVOLVE_LOCALE', 'en'),
+    'name' => env('SHADOW_NAME', 'Shadow API'),
+    'debug' => env('SHADOW_DEBUG', false),
+    'timezone' => env('SHADOW_TIMEZONE', 'UTC'),
+    'locale' => env('SHADOW_LOCALE', 'en'),
     
     'paths' => [
         'api' => 'api',
@@ -72,7 +72,7 @@ return [
 // User Model Configuration
 class User extends Model
 {
-    protected $evolveConfig = [
+    protected $shadowConfig = [
         'resource' => [
             'type' => 'users',
             'attributes' => ['name', 'email'],
@@ -103,9 +103,9 @@ class User extends Model
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 'api' => [
-    'version' => env('EVOLVE_API_VERSION', 'v1'),
-    'prefix' => env('EVOLVE_API_PREFIX', 'api'),
-    'domain' => env('EVOLVE_API_DOMAIN', null),
+    'version' => env('SHADOW_API_VERSION', 'v1'),
+    'prefix' => env('SHADOW_API_PREFIX', 'api'),
+    'domain' => env('SHADOW_API_DOMAIN', null),
     
     'rate_limiting' => [
         'enabled' => true,
@@ -182,34 +182,34 @@ class User extends Model
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Core Settings
-EVOLVE_NAME=Evolve API
-EVOLVE_DEBUG=false
-EVOLVE_TIMEZONE=UTC
-EVOLVE_LOCALE=en
+SHADOW_NAME=Shadow API
+SHADOW_DEBUG=false
+SHADOW_TIMEZONE=UTC
+SHADOW_LOCALE=en
 
 # API Settings
-EVOLVE_API_VERSION=v1
-EVOLVE_API_PREFIX=api
-EVOLVE_API_DOMAIN=api.example.com
+SHADOW_API_VERSION=v1
+SHADOW_API_PREFIX=api
+SHADOW_API_DOMAIN=api.example.com
 
 # Authentication
-EVOLVE_AUTH_DRIVER=sanctum
-EVOLVE_AUTH_LIFETIME=3600
+SHADOW_AUTH_DRIVER=sanctum
+SHADOW_AUTH_LIFETIME=3600
 
 # Cache Settings
-EVOLVE_CACHE_DRIVER=redis
-EVOLVE_CACHE_PREFIX=evolve
-EVOLVE_CACHE_TTL=3600
+SHADOW_CACHE_DRIVER=redis
+SHADOW_CACHE_PREFIX=shadow
+SHADOW_CACHE_TTL=3600
 
 # Database
-EVOLVE_DB_CONNECTION=mysql
-EVOLVE_QUEUE_CONNECTION=redis</pre>
+SHADOW_DB_CONNECTION=mysql
+SHADOW_QUEUE_CONNECTION=redis</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Environment Specific Configuration</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// config/evolve.php
+// config/shadow.php
 'environment_specific' => [
     'local' => [
         'debug' => true,

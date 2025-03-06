@@ -86,7 +86,7 @@ const experiences = [
   {
     title: "Easy to Customize",
     description:
-      "A comprehensive Laravel package suite for dynamic CRUD operations with optional API and UI solutions. Evolve includes EvolveCORE for foundational CRUD, EvolveAPI for RESTful endpoints, and EvolveUI for a reactive Livewire interface.",
+      "A comprehensive Laravel package suite for dynamic CRUD operations with optional API and UI solutions. Shadow includes ShadowCORE for foundational CRUD, ShadowAPI for RESTful endpoints, and ShadowUI for a reactive Livewire interface.",
     color: "bg-indigo-500",
     initialPosition: "translate-x-0 lg:translate-x-[-80px]",
     initialRotate: "rotate-0 lg:-rotate-2",

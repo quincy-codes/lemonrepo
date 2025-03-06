@@ -1,6 +1,6 @@
 <template>
   <NuxtRouteAnnouncer />
-  <NuxtLoadingIndicator color="#000000" />
+  <NuxtLoadingIndicator color="#1e293b" />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -10,20 +10,21 @@
 <script setup>
 import { Toaster } from "vue-sonner";
 useSeoMeta({
-  title: "Think Neverland - Evolve | Powerful Modular Laravel CRUD, API, and UI Solutions",
-  description: "A Laravel suite for seamless CRUD, customizable APIs, and Livewire UI. Build, refine, and scale your vision with powerful, flexible tools at your fingertips.",
+  title: "Think Neverland - Shadow | Powerful Modular Laravel CRUD, API, and UI Solutions",
+  description: "A Laravel suite that follows your application, adapting seamlessly in the background. Build, refine, and scale your vision with powerful, flexible tools at your fingertips.",
   ogImage: "https://assets.zyrosite.com/Y4LJNpxjPJc2N8ky/banner-dJo4a24WwgTG2lqW.png",
 });
 </script>
 
 <style>
 html {
-  @apply [background-image:radial-gradient(hsla(0,0%,86%,0.3)1px,transparent_0)];
+  @apply [background-image:radial-gradient(hsla(0,0%,10%,0.2)1px,transparent_0)];
   background-size: 12px 12px;
+  background-color: #f8f9fa;
 }
 
 .shiny-button {
-  @apply relative ring-black/20 transition-shadow duration-300 before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:ring hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms];
+  @apply relative ring-black/20 transition-shadow duration-300 before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.3)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:ring hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms];
 }
 
 .metal-shadow {

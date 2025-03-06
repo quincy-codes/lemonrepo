@@ -41,7 +41,7 @@ GET /api/users?filter[posts][status]=published&filter[posts][category]=tech</pre
           <pre class="text-green-400">
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
     
     protected function setupFilters()
     {
@@ -73,7 +73,7 @@ class User extends Model
           <pre class="text-green-400">
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
     
     protected function setupSorting()
     {
@@ -103,7 +103,7 @@ class User extends Model
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // In your model
-protected $evolveConfig = [
+protected $shadowConfig = [
     'relationships' => [
         'posts' => [
             'fields' => ['title', 'content', 'status'],
@@ -173,12 +173,12 @@ $users = User::with([
 // In your controller
 public function batchUpdate(Request $request)
 {
-    return Evolve::transaction(function($evolve) use ($request) {
+    return Shadow::transaction(function($shadow) use ($request) {
         $results = [];
         
         foreach ($request->items as $item) {
             try {
-                $results[] = $evolve->model(User::class)
+                $results[] = $shadow->model(User::class)
                     ->findOrFail($item['id'])
                     ->update($item['data']);
             } catch (Exception $e) {
@@ -206,7 +206,7 @@ class UserEvents
 {
     public static function register()
     {
-        Evolve::defineEvents([
+        Shadow::defineEvents([
             'users.verified' => function($user) {
                 return $user->email_verified_at !== null;
             },
@@ -218,12 +218,12 @@ class UserEvents
 }
 
 // Listen for events
-Evolve::on('users.verified', function($user) {
+Shadow::on('users.verified', function($user) {
     // Send welcome email
 });
 
 // Conditional events
-Evolve::on('users.became_premium', function($user) {
+Shadow::on('users.became_premium', function($user) {
     // Grant premium benefits
 })->when(function() {
     return config('features.premium_enabled');
@@ -237,17 +237,17 @@ Evolve::on('users.became_premium', function($user) {
         <h3 class="text-xl font-semibold mb-4">Creating Custom Functionality</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-class CustomEvolveFunctionality
+class CustomShadowFunctionality
 {
     public static function register()
     {
         // Add custom query method
-        Evolve::macro('withCustomLogic', function($params) {
+        Shadow::macro('withCustomLogic', function($params) {
             return $this->query->where(...);
         });
         
         // Add custom response formatter
-        Evolve::formatter('custom', function($data, $options) {
+        Shadow::formatter('custom', function($data, $options) {
             return [
                 'data' => $data,
                 'custom' => $options
@@ -255,7 +255,7 @@ class CustomEvolveFunctionality
         });
         
         // Add custom validation rule
-        Evolve::rule('custom_rule', function($value, $params) {
+        Shadow::rule('custom_rule', function($value, $params) {
             return // validation logic;
         });
     }

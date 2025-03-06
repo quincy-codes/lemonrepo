@@ -27,23 +27,23 @@
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Install via Composer
-composer require thinkneverland/evolve
+composer require thinkneverland/shadow
 
 # Publish configuration
-php artisan vendor:publish --provider="Evolve\EvolveServiceProvider" --tag="config"</pre>
+php artisan vendor:publish --provider="Shadow\ShadowServiceProvider" --tag="config"</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Basic Setup</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // Add to .env
-EVOLVE_DEBUG=true
-EVOLVE_API_PREFIX=api/v1
+SHADOW_DEBUG=true
+SHADOW_API_PREFIX=api/v1
 
 // Register service provider in config/app.php
 'providers' => [
     // ...
-    Evolve\EvolveServiceProvider::class,
+    Shadow\ShadowServiceProvider::class,
 ];</pre>
         </div>
       </section>
@@ -54,16 +54,16 @@ EVOLVE_API_PREFIX=api/v1
         <h3 class="text-xl font-semibold mb-4">Creating Your First Model</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-&lt;?php
+<?php
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Evolve\Traits\HasEvolve;
+use Shadow\Traits\HasShadow;
 
 class Post extends Model
 {
-    use HasEvolve;
+    use HasShadow;
 
     protected $fillable = [
         'title',
@@ -71,7 +71,7 @@ class Post extends Model
         'status',
     ];
 
-    protected $evolveConfig = [
+    protected $shadowConfig = [
         'searchable' => ['title', 'content'],
         'filterable' => ['status', 'created_at'],
         'sortable' => ['created_at', 'updated_at'],
@@ -86,7 +86,7 @@ class Post extends Model
         <h3 class="text-xl font-semibold mb-4">Configuration Options</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-protected $evolveConfig = [
+protected $shadowConfig = [
     // Define searchable fields
     'searchable' => ['title', 'content'],
     
@@ -135,11 +135,11 @@ GET /api/v1/posts?page=1&per_page=15</pre>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // In your controller
-use Evolve\Services\EvolveService;
+use Shadow\Services\ShadowService;
 
-public function index(EvolveService $evolve)
+public function index(ShadowService $shadow)
 {
-    return $evolve->model(Post::class)
+    return $shadow->model(Post::class)
         ->filter(['status' => 'published'])
         ->search('Laravel')
         ->sort('-created_at')
@@ -158,7 +158,7 @@ public function index(EvolveService $evolve)
 GET /api/v1/posts?include=author,comments
 
 # In PHP
-$evolve->model(Post::class)
+$shadow->model(Post::class)
     ->with(['author', 'comments'])
     ->get();</pre>
         </div>
@@ -182,14 +182,14 @@ GET /api/v1/posts?filter[comments.created_at][gt]=2024-01-01</pre>
           <li>Explore <a href="/advanced-usage" class="text-blue-600 hover:underline">Advanced Usage</a> for custom filters and complex queries</li>
           <li>Learn about <a href="/authentication" class="text-blue-600 hover:underline">Authentication</a> and security</li>
           <li>Configure <a href="/configuration" class="text-blue-600 hover:underline">Advanced Settings</a></li>
-          <li>Build <a href="/evolve-extension-documentation" class="text-blue-600 hover:underline">Custom Extensions</a></li>
+          <li>Build <a href="/shadow-extension-documentation" class="text-blue-600 hover:underline">Custom Extensions</a></li>
         </ul>
 
         <h3 class="text-xl font-semibold mb-4 mt-6">Community Resources</h3>
         <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Join our <a href="https://discord.gg/evolve" class="text-blue-600 hover:underline">Discord Community</a></li>
-          <li>Check out the <a href="https://github.com/thinkneverland/evolve" class="text-blue-600 hover:underline">GitHub Repository</a></li>
-          <li>Browse <a href="https://github.com/thinkneverland/evolve/examples" class="text-blue-600 hover:underline">Example Projects</a></li>
+          <li>Join our <a href="https://discord.gg/shadow" class="text-blue-600 hover:underline">Discord Community</a></li>
+          <li>Check out the <a href="https://github.com/thinkneverland/shadow" class="text-blue-600 hover:underline">GitHub Repository</a></li>
+          <li>Browse <a href="https://github.com/thinkneverland/shadow/examples" class="text-blue-600 hover:underline">Example Projects</a></li>
         </ul>
       </section>
     </UContainer>

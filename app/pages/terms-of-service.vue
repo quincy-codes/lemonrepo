@@ -6,7 +6,9 @@
       >
         Terms of Service</h1>
 
-      <p>These Terms of Service ("Terms") govern your access to and use of Evolve products and services ("Services") provided by ThinkNeverland. By using our Services, you agree to comply with these Terms.</p>
+      <p class="text-gray-700 mb-4">
+        These Terms of Service ("Terms") govern your access to and use of Shadow products and services ("Services") provided by ThinkNeverland. By using our Services, you agree to comply with these Terms.
+      </p>
 
       <h3
 class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">1. Use of Services</h3>

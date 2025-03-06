@@ -5,7 +5,7 @@
     >
       <div class="flex items-center gap-5">
         <NuxtLink to="/" class="flex items-center gap-2">
-          <p class="font-bold tracking-tight">Think Neverland : Evolve</p>
+          <p class="font-bold tracking-tight">Think Neverland : Shadow</p>
         </NuxtLink>
         <NavbarWhatsNew />
       </div>

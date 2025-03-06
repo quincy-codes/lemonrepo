@@ -46,7 +46,7 @@ const items = [
   {
     label: "Can I customize fields, filters, and permissions?",
     content:
-        "Yes! In Evolve, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
+        "Yes! In Shadow, each model can define its own displayable fields, searchable fields, filterable fields, and validation rules. Permissions can be set up using Spatie Permissions if installed.",
   },
   {
     label: "How do CRUD event hooks work?",
@@ -54,19 +54,19 @@ const items = [
         "Hooks like `beforeCreate` and `afterUpdate` are defined directly in controllers named after each model, allowing you to insert custom logic at different stages of CRUD operations.",
   },
   {
-    label: "What is the tech stack for Evolve?",
+    label: "What is the tech stack for Shadow?",
     content:
-        "Laravel (10+).",
+        "Shadow is built on Laravel and follows Laravel's best practices. It integrates seamlessly with Laravel's existing features like Eloquent ORM, validation, and authentication.",
   },
   {
-    label: "Is Evolve suitable for large applications?",
+    label: "Is Shadow suitable for large applications?",
     content:
-        "Yes, Evolve is designed to scale. Its modular design and configuration-based control make it suitable for both small projects and large applications with complex relationships and access requirements.",
+        "Yes, Shadow is designed to scale. Its modular design and configuration-based control make it suitable for both small projects and large applications with complex relationships and access requirements.",
   },
   {
-    label: "Can I use Evolve with my existing models?",
+    label: "Can I use Shadow with my existing models?",
     content:
-        "Absolutely. Simply install the package. Zero Required Setup After Initial Install.",
+        "Absolutely! Shadow is designed to work with your existing models. Simply add the HasShadow trait and configure the options you need.",
   },
 ];
 </script>

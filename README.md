@@ -1,15 +1,17 @@
-# Lemonrepo
+# Lemonrepo - Shadow Theme
 
 Lemonrepo allows you sell access to Private GitHub repositories using Lemonsqueezy. Everything is automated, license activation to repo read only invite management.
 
-Lemonrepo is the tech behind I use to sell https://supersaas.dev, a fullstack Nuxt 3 starter kit
+This version uses the Shadow theme, which emphasizes the quiet, adaptive, and ever-present nature of a shadow. The design features darker hues, gradients, and soft transitions to represent shadows, silhouettes, and contrast.
+
+Lemonrepo is the tech behind I use to sell <https://supersaas.dev>, a fullstack Nuxt 3 starter kit
 
 [![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?template=lemonrepo)
 
 ## Features
 
-- A modern website template to sell your repo
-- Feature sections
+- A modern website template with Shadow theme to sell your repo
+- Feature sections with shadow-inspired design elements
 - Show realtime sales
 - A public changelog showing your GitHub commits
 - Testimonials
@@ -43,7 +45,6 @@ ADMIN_PASSWORD=
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_CHAT_ID=
 ```
-
 
 ## Setup
 
@@ -82,4 +83,3 @@ npx nuxthub deploy
 Then checkout your server logs, analytics and more in the [NuxtHub Admin](https://admin.hub.nuxt.com).
 
 You can also deploy using [Cloudflare Pages CI](https://hub.nuxt.com/docs/getting-started/deploy#cloudflare-pages-ci).
-

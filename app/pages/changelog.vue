@@ -10,13 +10,13 @@
       </div>
 
       <div class="prose prose-lg max-w-none">
-        <p class="lead">All notable changes to the Evolve framework will be documented in this file.</p>
+        <p class="lead">All notable changes to the Shadow framework will be documented in this file.</p>
 
         <h2>[1.0.0] - 2024-03-20</h2>
         
         <h3>Added</h3>
         <ul>
-          <li>Initial release of Evolve framework</li>
+          <li>Initial release of Shadow framework</li>
           <li>Core framework architecture and components</li>
           <li>Basic authentication and authorization system</li>
           <li>Database integration and ORM</li>

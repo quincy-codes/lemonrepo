@@ -23,8 +23,8 @@
 
         <section id="overview" class="mb-12">
           <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
-          <p class="text-gray-700 mb-4">
-            Evolve provides a robust authorization system to control access to your application's resources.
+          <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+            Shadow provides a robust authorization system to control access to your application's resources.
           </p>
           <p class="text-gray-700 mb-4">
             For authentication setup, see our <NuxtLink to="/authentication" class="text-blue-600 hover:underline">Authentication Guide</NuxtLink>.
@@ -37,11 +37,12 @@
             Implement role-based access control to manage user permissions effectively.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Role Configuration</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Role-Based Access Control</h3>
+          <p class="mb-4">Implement RBAC with Shadow:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Define roles and permissions
-use Evolve\Auth\RBAC;
+use Shadow\Auth\RBAC;
 
 RBAC::configure([
     'roles' => [
@@ -73,11 +74,12 @@ RBAC::configure([
             Use policies to organize authorization logic around specific models or resources.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Policy Implementation</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Policy-Based Authorization</h3>
+          <p class="mb-4">Define policies for your models:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Post policy example
-use Evolve\Auth\Policy;
+use Shadow\Auth\Policy;
 
 class PostPolicy extends Policy
 {
@@ -113,8 +115,9 @@ class PostPolicy extends Policy
             Protect routes using authorization middleware.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Route Protection</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Route Protection</h3>
+          <p class="mb-4">Secure routes with middleware:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Route middleware
 Route::middleware(['auth', 'can:posts.create'])->group(function () {
@@ -139,11 +142,12 @@ class PostController extends Controller
             Define custom authorization rules using gates.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Custom Gates</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Gate-Based Authorization</h3>
+          <p class="mb-4">Define custom authorization gates:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Define custom gates
-use Evolve\Auth\Gate;
+use Shadow\Auth\Gate;
 
 Gate::define('publish-post', function (User $user, Post $post) {
     return $user->hasRole('editor') || 

@@ -5,15 +5,17 @@
         Database Management
       </h1>
 
-      <h2 class="text-2xl font-semibold text-gray-900">Model Configuration</h2>
-      <p class="text-gray-700">Define Evolve model configurations for structured database access.</p>
+      <h2 class="text-2xl font-semibold text-gray-900">Database Management</h2>
+      <p class="text-gray-700">Define Shadow model configurations for structured database access.</p>
 
-      <pre class="bg-gray-800 rounded-lg p-4 overflow-x-auto text-green-400">
+      <pre class="bg-slate-800 rounded-lg p-4 overflow-x-auto text-green-400">
         <code>
-use ThinkNeverland\Evolve\Traits\HasEvolve;
+use ThinkNeverland\Shadow\Traits\HasShadow;
 
 class User extends Model {
-    use HasEvolve;
+    use HasShadow;
+    
+    // Shadow will automatically handle database operations
 }
         </code>
       </pre>

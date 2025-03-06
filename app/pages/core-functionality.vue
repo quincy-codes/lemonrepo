@@ -5,15 +5,17 @@
         Core Functionality
       </h1>
 
-      <h2 class="text-2xl font-semibold text-gray-900">Model Integration</h2>
-      <p class="text-gray-700">Evolve simplifies model management by adding smart utilities.</p>
+      <h2 class="text-2xl font-semibold text-gray-900">Model Management</h2>
+      <p class="text-gray-700">Shadow simplifies model management by adding smart utilities.</p>
 
-      <pre class="bg-gray-800 rounded-lg p-4 overflow-x-auto text-green-400">
+      <pre class="bg-slate-800 rounded-lg p-4 overflow-x-auto text-green-400">
         <code>
-use ThinkNeverland\Evolve\Traits\HasEvolve;
+use ThinkNeverland\Shadow\Traits\HasShadow;
 
-class Post extends Model {
-    use HasEvolve;
+class User extends Model {
+    use HasShadow;
+    
+    // Shadow will automatically handle validation, filtering, and API endpoints
 }
         </code>
       </pre>

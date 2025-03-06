@@ -6,11 +6,11 @@
       </h1>
 
       <h2 class="text-2xl font-semibold text-gray-900">Basic Configuration</h2>
-      <p class="text-gray-700">Publish the Evolve configuration file:</p>
+      <p class="text-gray-700">Publish the Shadow configuration file:</p>
 
-      <pre class="bg-gray-800 rounded-lg p-4 overflow-x-auto text-green-400">
+      <pre class="bg-slate-800 rounded-lg p-4 overflow-x-auto text-green-400">
         <code>
-php artisan vendor:publish --provider="ThinkNeverland\\Evolve\\EvolveServiceProvider"
+php artisan vendor:publish --provider="ThinkNeverland\\Shadow\\ShadowServiceProvider"
         </code>
       </pre>
     </UContainer>

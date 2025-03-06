@@ -1,6 +1,6 @@
 export default defineAppConfig({
   ui: {
-    primary: "indigo",
+    primary: "slate",
     gray: "neutral",
     button: {
       default: { loadingIcon: "i-ph-spinner" },

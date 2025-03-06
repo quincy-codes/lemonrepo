@@ -5,7 +5,7 @@
           class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black"
       >Privacy Policy</h1>
 
-      <p>ThinkNeverland ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose your information in connection with Evolve and its associated services.</p>
+      <p class="text-gray-700 mb-4">This Privacy Policy describes how we collect, use, and disclose your information in connection with Shadow and its associated services.</p>
 
       <h3
 class="font-display text-2xl sm:text-2xl font-bold tracking-tight text-black">1. Information Collection</h3>

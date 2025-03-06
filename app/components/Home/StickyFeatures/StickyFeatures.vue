@@ -15,18 +15,18 @@
             <h2
               class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
             >
-              Unlock Boundless Development Magic
+              Seamless Development in the Background
             </h2>
             <p>
-              Experience the limitless potential of Evolve, a package that bring agile CRUD operations, 
-              effortless API endpoints, Evolve is the essential guide, built to empower your app with rich features like
-              model-defined validation, infinitely nested filtering, and event-driven hooks. With the
-              added realm of interactivity and RESTful accessibility to your projects.
+              Experience the adaptive power of Shadow, a package that follows your Laravel application, 
+              making enhancements without stepping into the light. Shadow adapts seamlessly in the background, 
+              empowering your app with rich features like model-defined validation, infinitely nested filtering, 
+              and event-driven hooks - all while maintaining a quiet, unobtrusive presence.
             </p>
 
             <h2
                 class="text-center mx-auto max-w-xl text-2xl sm:text-2xl font-semibold tracking-tight text-gray-900 font-display mb-4 mt-24"
-            >What is Evolve?</h2>
+            >What is Shadow?</h2>
 
           <ul class="list-disc ml-6">
               <li class="mb-2"><strong>Model-Defined Configuration</strong>: Models define their own validation, displayable fields, searchable, and sortable fields.</li>
@@ -37,13 +37,13 @@
               <li class="mb-2"><strong>Dynamic API Routes</strong>: Creates RESTful endpoints with filtering, sorting, and pagination.</li>
               <li class="mb-2"><strong>Standardized JSON Responses</strong>: Consistent, customizable success and error formats.</li>
               <li class="mb-2"><strong>Batch Operations</strong>: Supports batch create, update, and delete requests.</li>
-              <li class="mb-2"><strong>Role-Based Access Control</strong>: Automatically enforces Evolve permissions on each request.</li>
+              <li class="mb-2"><strong>Role-Based Access Control</strong>: Automatically enforces Shadow permissions on each request.</li>
               <li class="mb-2"><strong>Swagger Documentation (Optional)</strong>: Generate API docs with Swagger for seamless endpoint navigation.</li>
             </ul>
 
             <p>
-              Evolve is built to be flexible, allowing you to expand functionality as your application grows.
-              Transform your app with Evolve's effortless customization, bringing agile and powerful development tools to your fingertips.
+              Shadow is built to be flexible, adapting to your application's needs without disruption.
+              Let Shadow follow your Laravel application, making enhancements without stepping into the light.
             </p>
           </div>
       <!--    <div class="lg:sticky lg:top-0 lg:h-screen space-y-12 lg:space-y-0">-->

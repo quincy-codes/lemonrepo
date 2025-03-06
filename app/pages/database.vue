@@ -23,7 +23,7 @@
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve extends Laravel's database functionality with additional features for API-focused applications, including advanced querying, relationship handling, and performance optimizations.
+          Shadow extends Laravel's database functionality with additional features for API-focused applications, including advanced querying, relationship handling, and performance optimizations.
         </p>
       </section>
 
@@ -33,11 +33,11 @@
         <h3 class="text-xl font-semibold mb-4">Basic Model Configuration</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-use ThinkNeverland\Evolve\Traits\HasEvolve;
+use ThinkNeverland\Shadow\Traits\HasShadow;
 
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
 
     protected $fillable = [
         'name', 'email', 'password',
@@ -57,7 +57,7 @@ class User extends Model
         <h3 class="text-xl font-semibold mb-4">Model Attributes</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-protected $evolveConfig = [
+protected $shadowConfig = [
     'attributes' => [
         'computed' => [
             'full_name' => fn() => $this->first_name . ' ' . $this->last_name,
@@ -84,7 +84,7 @@ protected $evolveConfig = [
           <pre class="text-green-400">
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
 
     // Relationships are automatically discovered
     public function posts()
@@ -98,7 +98,7 @@ class User extends Model
     }
 
     // Optional configuration for customization
-    protected $evolveConfig = [
+    protected $shadowConfig = [
         'relationships' => [
             'posts' => [
                 'fields' => ['title', 'content'],  // Only include specific fields
@@ -154,7 +154,7 @@ GET /api/users?include=posts.comments,profile</pre>
         <h3 class="text-xl font-semibold mb-4">Creating Migrations</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-php artisan evolve:make:migration create_users_table
+php artisan shadow:make:migration create_users_table
 
 // Migration file
 public function up()
@@ -285,7 +285,7 @@ DB::enableQueryLog();
 
 // Use configurable pagination
 $users = User::paginate(
-    config('evolve.pagination.per_page', 15),
+    config('shadow.pagination.per_page', 15),
     ['*'],
     'page',
     request('page', 1)
@@ -308,7 +308,7 @@ User::lazy()->each(function($user) {
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 // Selective relationship loading
-protected $evolveConfig = [
+protected $shadowConfig = [
     'relationships' => [
         'posts' => [
             'fields' => ['id', 'title'],  // Select only needed fields
@@ -355,7 +355,7 @@ User::with(['posts', 'profile'])
           <li>Use appropriate indexes for frequently queried columns</li>
           <li>Implement database caching for frequently accessed data</li>
           <li>Use eager loading to prevent N+1 query problems</li>
-          <li>Configure pagination settings in config/evolve.php</li>
+          <li>Configure pagination settings in config/shadow.php</li>
           <li>Optimize JSON column queries with indexes</li>
           <li>Select only needed fields in relationships to reduce memory usage</li>
           <li>Use relationship constraints to limit data fetched</li>

@@ -24,7 +24,7 @@
         <section id="overview" class="mb-12">
           <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
           <p class="text-gray-700 mb-4">
-            Evolve provides comprehensive security features to protect your application and its data. This guide covers essential security measures and best practices for securing your Evolve application.
+            Shadow provides comprehensive security features to protect your application and its data. This guide covers essential security measures and best practices for securing your Shadow application.
           </p>
           <p class="text-gray-700 mb-4">
             For security policies and vulnerability reporting, please see our <NuxtLink to="/security-policy" class="text-blue-600 hover:underline">Security Policy</NuxtLink>.
@@ -58,7 +58,7 @@
           <div class="bg-gray-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Enable MFA
-protected $evolveConfig = [
+protected $shadowConfig = [
     'mfa' => [
         'enabled' => true,
         'methods' => ['totp', 'sms'],

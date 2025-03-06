@@ -23,7 +23,7 @@
       <section id="overview" class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
         <p class="text-gray-700 mb-4">
-          Evolve automatically generates RESTful APIs for your Laravel models. It provides powerful querying capabilities, relationship handling, and comprehensive response formatting out of the box.
+          Shadow automatically generates RESTful APIs for your Laravel models. It provides powerful querying capabilities, relationship handling, and comprehensive response formatting out of the box.
         </p>
       </section>
 
@@ -33,10 +33,10 @@
         <h3 class="text-xl font-semibold mb-4">Basic Setup</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-// config/evolve.php
+// config/shadow.php
 return [
     'auto_generate_api' => true,
-    'api_route_prefix' => 'evolve-api',
+    'api_route_prefix' => 'shadow-api',
     'api_auth_middleware' => ['api'],
     
     'response' => [
@@ -55,19 +55,19 @@ return [
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # List resources
-GET /evolve-api/{model}
+GET /shadow-api/{model}
 
 # Create resource
-POST /evolve-api/{model}
+POST /shadow-api/{model}
 
 # Show resource
-GET /evolve-api/{model}/{id}
+GET /shadow-api/{model}/{id}
 
 # Update resource
-PUT /evolve-api/{model}/{id}
+PUT /shadow-api/{model}/{id}
 
 # Delete resource
-DELETE /evolve-api/{model}/{id}</pre>
+DELETE /shadow-api/{model}/{id}</pre>
         </div>
       </section>
 
@@ -78,56 +78,56 @@ DELETE /evolve-api/{model}/{id}</pre>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Simple filters
-GET /evolve-api/users?filter[status]=active
+GET /shadow-api/users?filter[status]=active
 
 # Multiple filters
-GET /evolve-api/users?filter[status]=active&filter[role]=admin
+GET /shadow-api/users?filter[status]=active&filter[role]=admin
 
 # Range filters
-GET /evolve-api/users?filter[created_at][from]=2024-01-01</pre>
+GET /shadow-api/users?filter[created_at][from]=2024-01-01</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Sorting</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Ascending sort
-GET /evolve-api/users?sort=name
+GET /shadow-api/users?sort=name
 
 # Descending sort
-GET /evolve-api/users?sort=-name
+GET /shadow-api/users?sort=-name
 
 # Multiple fields
-GET /evolve-api/users?sort=-created_at,name</pre>
+GET /shadow-api/users?sort=-created_at,name</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Including Relations</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Single relation
-GET /evolve-api/users?include=profile
+GET /shadow-api/users?include=profile
 
 # Multiple relations
-GET /evolve-api/users?include=profile,posts
+GET /shadow-api/users?include=profile,posts
 
 # Nested relations
-GET /evolve-api/users?include=posts.comments</pre>
+GET /shadow-api/users?include=posts.comments</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Pagination</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Page-based pagination
-GET /evolve-api/users?page=1&per_page=15</pre>
+GET /shadow-api/users?page=1&per_page=15</pre>
         </div>
 
         <h3 class="text-xl font-semibold mb-4">Search</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
 # Global search
-GET /evolve-api/users?search=john
+GET /shadow-api/users?search=john
 
 # Field-specific search
-GET /evolve-api/users?search[name]=john</pre>
+GET /shadow-api/users?search[name]=john</pre>
         </div>
       </section>
 
@@ -174,13 +174,13 @@ GET /evolve-api/users?search[name]=john</pre>
         <h3 class="text-xl font-semibold mb-4">Model Setup</h3>
         <div class="bg-gray-800 rounded-lg p-4 mb-6">
           <pre class="text-green-400">
-use Thinkneverland\Evolve\Traits\HasEvolve;
+use Thinkneverland\Shadow\Traits\HasShadow;
 
 class User extends Model
 {
-    use HasEvolve;
+    use HasShadow;
 
-    protected $evolveConfig = [
+    protected $shadowConfig = [
         // Searchable fields
         'searchable' => ['name', 'email'],
         

@@ -23,8 +23,8 @@
 
         <section id="overview" class="mb-12">
           <h2 class="text-2xl font-semibold mb-4">1. Overview</h2>
-          <p class="text-gray-700 mb-4">
-            Evolve provides multiple authentication methods to secure your application. This guide covers all available authentication options and their implementation.
+          <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+            Shadow provides multiple authentication methods to secure your application. This guide covers all available authentication options and their implementation.
           </p>
           <p class="text-gray-700 mb-4">
             For general security guidelines, see our <NuxtLink to="/security" class="text-blue-600 hover:underline">Security Guide</NuxtLink>.
@@ -37,11 +37,12 @@
             Token-based authentication is the recommended method for API authentication.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Implementation</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Implementation</h3>
+          <p class="mb-4">Configure token-based authentication:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Configure token authentication
-use Evolve\Auth\Token;
+use Shadow\Auth\Token;
 
 class AuthConfig extends Config
 {
@@ -52,8 +53,7 @@ class AuthConfig extends Config
             'refresh_lifetime' => 86400,
             'rotation' => true,
         ]);
-    }
-}</pre>
+    }</pre>
           </div>
         </section>
 
@@ -63,11 +63,12 @@ class AuthConfig extends Config
             Session-based authentication is suitable for traditional web applications.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Configuration</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Configuration</h3>
+          <p class="mb-4">Configure session-based authentication:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Configure session authentication
-use Evolve\Auth\Session;
+use Shadow\Auth\Session;
 
 Session::configure([
     'lifetime' => 120,
@@ -84,11 +85,12 @@ Session::configure([
             Enhance security with multi-factor authentication support.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Setup</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Setup</h3>
+          <p class="mb-4">Configure multi-factor authentication:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Enable MFA
-use Evolve\Auth\MFA;
+use Shadow\Auth\MFA;
 
 MFA::configure([
     'methods' => ['totp', 'sms'],
@@ -104,11 +106,12 @@ MFA::configure([
             Integrate with popular OAuth providers.
           </p>
           
-          <h3 class="text-xl font-semibold mb-4">Provider Setup</h3>
-          <div class="bg-gray-800 rounded-lg p-4 mb-6">
+          <h3 class="text-xl font-semibold mb-2">Provider Setup</h3>
+          <p class="mb-4">Configure OAuth providers:</p>
+          <div class="bg-slate-800 rounded-lg p-4 mb-6">
             <pre class="text-green-400">
 // Configure OAuth providers
-use Evolve\Auth\OAuth;
+use Shadow\Auth\OAuth;
 
 OAuth::configure([
     'providers' => [

@@ -12,7 +12,7 @@
       <div class="prose prose-lg max-w-none">
         <h2>Security Policy</h2>
         
-        <p>We take the security of Evolve framework seriously. If you believe you have found a security vulnerability, please report it to us as described below.</p>
+        <p>We take the security of Shadow framework seriously. If you believe you have found a security vulnerability, please report it to us as described below.</p>
 
         <h2>Supported Versions</h2>
         
@@ -44,7 +44,7 @@
         <p>Please follow these steps to report a security vulnerability:</p>
         <ol>
           <li>DO NOT report security vulnerabilities through public GitHub issues.</li>
-          <li>Email your findings to security@evolveframework.dev</li>
+          <li>Email your findings to security@shadowframework.dev</li>
           <li>Include detailed steps to reproduce the vulnerability</li>
           <li>If possible, provide a proof of concept</li>
           <li>Allow up to 48 hours for an initial response</li>
@@ -60,9 +60,9 @@
 
         <h2>Security Best Practices</h2>
         
-        <p>When using Evolve framework, we recommend following these security practices:</p>
+        <p>When using Shadow framework, we recommend following these security practices:</p>
         <ul>
-          <li>Keep Evolve and all dependencies up to date</li>
+          <li>Keep Shadow and all dependencies up to date</li>
           <li>Use HTTPS for all production deployments</li>
           <li>Implement proper authentication and authorization</li>
           <li>Enable rate limiting for APIs</li>
@@ -76,7 +76,7 @@
 
         <h2>Security Features</h2>
         
-        <p>Evolve includes several built-in security features:</p>
+        <p>Shadow includes several built-in security features:</p>
         <ul>
           <li>CSRF Protection</li>
           <li>XSS Prevention</li>
@@ -99,7 +99,7 @@
         <h2>Contact</h2>
         
         <p>For security-related inquiries, please contact:</p>
-        <p>Email: security@evolveframework.dev</p>
+        <p>Email: security@shadowframework.dev</p>
         <p>PGP Key: <a href="#" class="text-blue-600 hover:underline">Download PGP Key</a></p>
       </div>
     </UContainer>

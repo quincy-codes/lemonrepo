@@ -3,9 +3,9 @@
     <div class="relative max-w-6xl mx-auto">
       <div class="text-center">
         <h2
-          class="mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display"
+          class="text-center mx-auto max-w-xl text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900 font-display mb-8"
         >
-          How Does Evolve Work?
+          How Does Shadow Work?
         </h2>
         <p class="mx-auto mt-4 max-w-xl text-gray-600 text-2xl">
           Create Your App. Configure Your Models. Walk Away.

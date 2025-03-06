@@ -2,7 +2,7 @@
   <div class="max-w-4xl mx-auto">
     <UContainer class="max-w-8xl py-12 space-y-6">
       <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
-        Evolve Documentation
+        Shadow Documentation
       </h1>
 
       <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto">
@@ -16,7 +16,7 @@
           <ul class="space-y-3">
             <li>
               <NuxtLink to="/getting-started" class="text-blue-600 hover:underline">Getting Started</NuxtLink>
-              <p class="text-sm text-gray-600">Begin your journey with Evolve</p>
+              <p class="text-sm text-gray-600">Begin your journey with Shadow</p>
             </li>
             <li>
               <NuxtLink to="/core" class="text-blue-600 hover:underline">Core Concepts</NuxtLink>
@@ -24,7 +24,7 @@
             </li>
             <li>
               <NuxtLink to="/config" class="text-blue-600 hover:underline">Configuration</NuxtLink>
-              <p class="text-sm text-gray-600">Configure Evolve for your needs</p>
+              <p class="text-sm text-gray-600">Configure Shadow for your needs</p>
             </li>
           </ul>
         </div>
@@ -84,7 +84,7 @@
               <p class="text-sm text-gray-600">Optimization and tuning</p>
             </li>
             <li>
-              <NuxtLink to="/extending" class="text-blue-600 hover:underline">Extending Evolve</NuxtLink>
+              <NuxtLink to="/extending" class="text-blue-600 hover:underline">Extending Shadow</NuxtLink>
               <p class="text-sm text-gray-600">Customize and extend functionality</p>
             </li>
           </ul>
@@ -95,15 +95,15 @@
           <h2 class="text-2xl font-semibold mb-4">Community</h2>
           <ul class="space-y-3">
             <li>
-              <a href="https://github.com/thinkneverland/evolve" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a>
-              <p class="text-sm text-gray-600">Contribute to Evolve</p>
+              <a href="https://github.com/thinkneverland/shadow" target="_blank" class="text-blue-600 hover:underline">GitHub Repository</a>
+              <p class="text-sm text-gray-600">Contribute to Shadow</p>
             </li>
             <li>
-              <a href="https://discord.gg/evolve" target="_blank" class="text-blue-600 hover:underline">Discord Community</a>
+              <a href="https://discord.gg/shadow" target="_blank" class="text-blue-600 hover:underline">Discord Community</a>
               <p class="text-sm text-gray-600">Join our community</p>
             </li>
             <li>
-              <a href="https://evolve.thinkneverland.com/blog" target="_blank" class="text-blue-600 hover:underline">Blog</a>
+              <a href="https://shadow.thinkneverland.com/blog" target="_blank" class="text-blue-600 hover:underline">Blog</a>
               <p class="text-sm text-gray-600">Latest news and tutorials</p>
             </li>
           </ul>
@@ -114,15 +114,15 @@
           <h2 class="text-2xl font-semibold mb-4">Support</h2>
           <ul class="space-y-3">
             <li>
-              <a href="https://evolve.thinkneverland.com/support" target="_blank" class="text-blue-600 hover:underline">Professional Support</a>
+              <a href="https://shadow.thinkneverland.com/support" target="_blank" class="text-blue-600 hover:underline">Professional Support</a>
               <p class="text-sm text-gray-600">Enterprise support options</p>
             </li>
             <li>
-              <a href="https://github.com/thinkneverland/evolve/issues" target="_blank" class="text-blue-600 hover:underline">Issue Tracker</a>
+              <a href="https://github.com/thinkneverland/shadow/issues" target="_blank" class="text-blue-600 hover:underline">Issue Tracker</a>
               <p class="text-sm text-gray-600">Report bugs and request features</p>
             </li>
             <li>
-              <a href="https://stackoverflow.com/questions/tagged/evolve" target="_blank" class="text-blue-600 hover:underline">Stack Overflow</a>
+              <a href="https://stackoverflow.com/questions/tagged/shadow" target="_blank" class="text-blue-600 hover:underline">Stack Overflow</a>
               <p class="text-sm text-gray-600">Community Q&A</p>
             </li>
           </ul>
@@ -158,7 +158,7 @@
           <NuxtLink to="/getting-started" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
             Get Started
           </NuxtLink>
-          <a href="https://github.com/thinkneverland/evolve" target="_blank" class="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50">
+          <a href="https://github.com/thinkneverland/shadow" target="_blank" class="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50">
             View on GitHub
           </a>
         </div>
