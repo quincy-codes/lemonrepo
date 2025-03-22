@@ -6,9 +6,9 @@
     <h1
       class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto"
     >
-      <div>Your Laravel app evolves.</div>
+      <div>Your Laravel App Evolves.</div>
       <div>
-        <span>Shouldn't your </span>
+        <span>Shouldn't Your </span>
         <span
           class="inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden"
         >
@@ -23,7 +23,7 @@
             <li aria-hidden="true">Config</li>
           </ul>
         </span>
-        <span>evolve too?</span>
+        <span>Evolve Too?</span>
       </div>
       <div>Meet Shadow by Think Neverland.</div>
     </h1>
