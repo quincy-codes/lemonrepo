@@ -6,22 +6,24 @@
     <h1
       class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto"
     >
-      Your Laravel app deserves a faithful
+      Your Laravel app evolves.
+      <span class="block">Shouldn't your</span>
       <span
         class="inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] sm:h-[calc(theme(fontSize.6xl)*theme(lineHeight.tight))] lg:h-[calc(theme(fontSize.7xl)*theme(lineHeight.tight))] overflow-hidden"
       >
         <ul
           class="block text-left leading-tight [&_li]:block animate-text-slide-5"
         >
-          <li>companion</li>
-          <li>guardian</li>
-          <li>protector</li>
-          <li>ally</li>
-          <li>sentinel</li>
-          <li aria-hidden="true">companion</li>
+          <li>Config</li>
+          <li>Create</li>
+          <li>Select</li>
+          <li>Update</li>
+          <li>Delete</li>
+          <li aria-hidden="true">Config</li>
         </ul>
       </span>
-      <span class="block"> Shadow</span>
+      <span class="block">evolve too?</span>
+      <span class="block text-2xl sm:text-3xl lg:text-4xl mt-4">Meet Shadow by Think Neverland.</span>
     </h1>
     <div class="mt-8">
       <div
