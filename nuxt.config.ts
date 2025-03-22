@@ -10,7 +10,21 @@ export default defineNuxtConfig({
     "nuxt-auth-utils",
     "@nuxt/image",
     "@nuxt/icon",
+    "@nuxt/content",
   ],
+  content: {
+    documentDriven: true,
+    markdown: {
+      toc: {
+        depth: 3,
+        searchDepth: 3
+      },
+      anchorLinks: true
+    },
+    highlight: {
+      theme: 'github-dark'
+    }
+  },
   app: {
     head: {
       htmlAttrs: {

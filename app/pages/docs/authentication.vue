@@ -1,20 +1,12 @@
 <template>
   <div class="max-w-4xl mx-auto">
     <UContainer class="max-w-8xl py-12 space-y-6">
-      <div class="flex items-center justify-between mb-8">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold font-display">
-          Authentication
-        </h1>
-        <ButtonLink 
-          label="Back to Documentation" 
-          size="sm" 
-          rounded="md" 
-          href="/docs" 
-          class="flex items-center gap-2"
-        >
-          <Icon name="heroicons:arrow-left" class="w-4 h-4" />
-          Back
-        </ButtonLink>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl tracking-tight text-gray-800 font-bold text-center font-display max-w-4xl mx-auto">
+        Authentication Guide
+      </h1>
+
+      <div class="w-full flex justify-center py-4">
+        <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" class="w-full max-w-md" />
       </div>
 
       <div class="prose prose-lg max-w-none">

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@lemonsqueezy/lemonsqueezy.js": "^4.0.0",
+    "@nuxt/content": "^3.4.0",
     "@nuxt/eslint": "^0.6.1",
     "@nuxt/fonts": "^0.10.2",
     "@nuxt/icon": "^1.7.0",
