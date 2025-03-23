@@ -6,20 +6,18 @@
       </h1>
 
       <div class="w-full flex justify-center py-4">
-          <ButtonLink label="Documentation" size="sm" rounded="md" href="/" class="w-full max-w-md" />
+        <ButtonLink label="Documentation" size="sm" rounded="md" href="/docs" class="w-full max-w-md" />
       </div>
 
       <div class="prose prose-lg max-w-none">
-        <p>Proprietary Software License</p>
-
-        <p>Copyright © 2024 Think Neverland. All rights reserved.</p>
-
-        <p>This software is proprietary and confidential. Unauthorized copying, transfer, or use of this software, 
-        via any medium, is strictly prohibited. The receipt or possession of this software does not convey any 
-        rights to reproduce, disclose, or distribute its contents, or to manufacture, use, or sell anything that 
-        it may describe.</p>
-
-        <p>For licensing inquiries, please contact Think Neverland.</p>
+        <ContentDoc path="/license">
+          <template #not-found>
+            <p>This page could not be found</p>
+          </template>
+          <template #empty>
+            <p>This page is empty</p>
+          </template>
+        </ContentDoc>
       </div>
     </UContainer>
   </div>

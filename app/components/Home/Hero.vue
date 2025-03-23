@@ -25,7 +25,7 @@
         </span>
         <span>Evolve Too?</span>
       </div>
-      <div>Meet Shadow by Think Neverland.</div>
+      <div class="mt-8 text-2xl sm:text-3xl lg:text-4xl">Meet Shadow by Think Neverland.</div>
     </h1>
     <div class="mt-8">
       <div

@@ -10,7 +10,14 @@
       </div>
 
       <div class="prose prose-lg max-w-none">
-        <ContentDoc path="/docs/changelog" />
+        <ContentDoc path="/changelog">
+          <template #not-found>
+            <p>This page could not be found</p>
+          </template>
+          <template #empty>
+            <p>This page is empty</p>
+          </template>
+        </ContentDoc>
       </div>
     </UContainer>
   </div>
