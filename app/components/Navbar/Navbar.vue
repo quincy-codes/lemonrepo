@@ -11,7 +11,12 @@
       </div>
       <div class="hidden items-center gap-2 sm:flex">
         <UButton to="/#faq" variant="ghost" color="gray">FAQ</UButton>
-        <UButton to="/docs" variant="ghost" color="gray">Docs</UButton>
+        <UButton
+          href="https://think-neverland.gitbook.io/thinkneverland/"
+          target="_blank"
+          variant="ghost"
+          color="gray"
+        >Docs</UButton>
         <StripeBuyButton />
       </div>
       <div class="sm:hidden flex items-center gap-2">
@@ -46,7 +51,8 @@
           >FAQ</UButton
         >
         <UButton
-          to="/docs"
+          href="https://think-neverland.gitbook.io/thinkneverland/"
+          target="_blank"
           @click="toggleMobileMenu"
           variant="ghost"
           color="gray"
